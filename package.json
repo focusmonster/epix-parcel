@@ -1,0 +1,36 @@
+{
+  "name": "epix",
+  "version": "0.0.1",
+  "description": "Monorail Extension",
+  "author": "Bhumij, Parth",
+  "license": "ISC",
+  "scripts": {
+    "start": "parcel manifest.json --host localhost --target webext-dev",
+    "build": "parcel build manifest.json --target webext-prod"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "5.2.0",
+    "webextension-polyfill": "^0.10.0",
+    "webextension-polyfill-ts": "^0.26.0"
+  },
+  "devDependencies": {
+    "@parcel/config-webextension": "2.0.0-nightly.2312",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.26",
+    "parcel": "2.0.0-beta.3.1"
+  },
+  "targets": {
+    "webext-dev": {
+      "sourceMap": {
+        "inline": true,
+        "inlineSources": true
+      }
+    },
+    "webext-prod": {}
+  }
+}
