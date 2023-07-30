@@ -1,25 +1,18 @@
 import { browser } from "webextension-polyfill-ts";
 
-
 var token = "";
-
-// /**
-//  *
-//  * @returns {RequestInit}
-//  */
 
 // Make the `request` function generic
 // to specify the return data type:
 async function request<TResponse>(
   url: string,
-  // `RequestInit` is a type for configuring 
+  // `RequestInit` is a type for configuring
   // a `fetch` request. By default, an empty object.
   config: RequestInit = {}
 
   // This function is async, it will return a Promise:
 ): Promise<TResponse> {
-
-  // Inside, we call the `fetch` function with 
+  // Inside, we call the `fetch` function with
   // a URL and config given:
   const response = await fetch(url, config);
   const data = await response.json();
@@ -29,10 +22,9 @@ async function request<TResponse>(
   // data-transformations in the last `then` clause.
 }
 
-
-const commonApiConfig = () => {
-  return <RequestInit>{
-    credentials: <RequestCredentials>"include",
+const commonApiConfig: () => RequestInit = () => {
+  return {
+    credentials: "include",
     headers: <HeadersInit>{
       Accept: "application/json",
       "Accept-Language": "en-US,en;q=0.5",
@@ -128,31 +120,22 @@ let updateTicketLabel = async (payload: any, response: any) => {
 };
 
 // @ts-ignore
-if (typeof browser === "undefined") {
-  // @ts-ignore
-  browser = chrome;
-}
-
-// @ts-ignore
 browser.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   console.log({ msg, sender });
   switch (msg?.action) {
-    case "STORE_TOKEN":
+    case BackgroundActionTypes.STORE_TOKEN:
       token = msg.data;
       sendResponse({ ok: true });
       break;
-    case "GET_CONFIGS":
+    case BackgroundActionTypes.GET_CONFIGS:
       getAllConfigs(sendResponse);
       break;
-    case "UPDATE_TICKET_STATUS":
+    case BackgroundActionTypes.UPDATE_TICKET_STATUS:
       updateTicketStatus(msg?.payload, sendResponse);
       break;
-    case "UPDATE_TICKET_LABEL":
+    case BackgroundActionTypes.UPDATE_TICKET_LABEL:
       updateTicketLabel(msg?.payload, sendResponse);
       break;
-  }
-  if (msg?.action == "STORE_TOKEN") {
-    token = msg.data;
   }
   return true;
 });
