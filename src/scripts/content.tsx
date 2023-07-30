@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import BugLink from "./../pages/Issues/bugLinks";
 import backgroundAPI from "./backgroundApi";
+import { browser } from "webextension-polyfill-ts";
+import { BackgroundActionTypes } from "../types/messageAction";
 
 const newDiv = document.createElement("div");
 newDiv.setAttribute("id", "content-app-root");
@@ -19,7 +21,23 @@ let startTokenMonitor = () => {
     console.debug("Script does not exists, creating new instance");
     const script = document.createElement("script");
     // @ts-ignore
-    script.src = browser.runtime.getURL("/content_scripts/inject.js");
+    // script.src = browser.runtime.getURL("/src/scripts/page-inject.js");
+    let inlineCode = document.createTextNode(`(function () {
+  // @ts-ignore
+  if (window.prpcClient) {
+    let previousToken;
+    setInterval(() => {
+      // @ts-ignore
+      let token = window?.prpcClient?.token;
+      if (previousToken != token) {
+        previousToken = token;
+        window.postMessage({ type: "TOKEN", token: token }, "*");
+      }
+    }, 1000);
+  }
+})();
+`);
+    script.appendChild(inlineCode);
     script.id = "epifi-extension";
     document.documentElement.appendChild(script);
   } else {
@@ -32,7 +50,10 @@ let startTokenMonitor = () => {
       GLOBALS.tokenRecieved = true;
       console.debug({ token });
       // @ts-ignore
-      await browser.runtime.sendMessage({ action: "STORE_TOKEN", data: token });
+      await browser.runtime.sendMessage({
+        action: BackgroundActionTypes.STORE_TOKEN,
+        data: token,
+      });
     }
   });
 };
@@ -52,6 +73,9 @@ let waitForTableLoad = async () => {
 
   let configs = await api.GetAllConfigs();
   console.debug({ configs });
+
+  console.log(await api.GetTicketDetails({ ticketId: "30912" }));
+  console.log(await api.GetTicketComments({ ticketId: "30912" }));
 
   GLOBALS.cancelKey = window.setInterval(() => {
     const table = document
@@ -77,12 +101,10 @@ let waitForTableLoad = async () => {
 };
 
 let init = () => {
-  // @ts-ignore
   console.log("content script loaded");
 
   startTokenMonitor();
   let previousUrl = "";
-  // @ts-ignore
   const observer = new MutationObserver((mutations) => {
     if (location.href !== previousUrl) {
       clearInterval(GLOBALS.cancelKey);

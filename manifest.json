@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["src/scripts/content.tsx", "src/scripts/inject.ts"]
+      "js": ["src/scripts/content.tsx", "src/scripts/page-inject.js"]
     }
   ],
   "background": {

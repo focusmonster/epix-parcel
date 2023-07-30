@@ -1,4 +1,8 @@
 import { browser } from "webextension-polyfill-ts";
+import {
+  BackgroundActionTypes,
+  ContentScriptActionTypes,
+} from "../types/messageAction";
 
 var token = "";
 
@@ -25,7 +29,7 @@ async function request<TResponse>(
 const commonApiConfig: () => RequestInit = () => {
   return {
     credentials: "include",
-    headers: <HeadersInit>{
+    headers: {
       Accept: "application/json",
       "Accept-Language": "en-US,en;q=0.5",
       "content-type": "application/json",
@@ -50,12 +54,10 @@ let getAllConfigs = async (response: any) => {
   response({ ok: true, data: jsonData });
 };
 
-/**
- *
- * @param {{ticketId: string, status:string}} payload
- * @param {any} response
- */
-let updateTicketStatus = async (payload: any, response: any) => {
+let updateTicketStatus = async (
+  payload: { ticketId: string; status: string },
+  response: any
+) => {
   let resp = await fetch(
     "https://monorail.pointz.in/prpc/monorail.Issues/UpdateIssue",
     {
@@ -76,12 +78,10 @@ let updateTicketStatus = async (payload: any, response: any) => {
   response({ ok: resp.ok });
 };
 
-/**
- *
- * @param {{ticketId: string, labelToRemove:string, labelToAdd:string}} payload
- * @param {any} response
- */
-let updateTicketLabel = async (payload: any, response: any) => {
+let updateTicketLabel = async (
+  payload: { ticketId: string; labelToRemove: string; labelToAdd: string },
+  response: any
+) => {
   let delta: any = {};
   if (payload.labelToRemove !== "----") {
     delta["labelRefsRemove"] = [
@@ -119,6 +119,47 @@ let updateTicketLabel = async (payload: any, response: any) => {
   response({ ok: resp.ok });
 };
 
+let getTicketDetails = async (payload: { ticketId: string }, response: any) => {
+  let resp = await fetch(
+    "https://monorail.pointz.in/prpc/monorail.Issues/GetIssue",
+    {
+      ...commonApiConfig(),
+      body: JSON.stringify({
+        issueRef: {
+          localId: parseInt(payload.ticketId),
+          projectName: "fi-app",
+        },
+      }),
+    }
+  );
+  const jsonResp = (await resp.text()).substring(4);
+  let jsonData = JSON.parse(jsonResp);
+  console.log(jsonData);
+  response({ ok: true, data: jsonData });
+};
+
+let getTicketComments = async (
+  payload: { ticketId: string },
+  response: any
+) => {
+  let resp = await fetch(
+    "https://monorail.pointz.in/prpc/monorail.Issues/ListComments",
+    {
+      ...commonApiConfig(),
+      body: JSON.stringify({
+        issueRef: {
+          localId: parseInt(payload.ticketId),
+          projectName: "fi-app",
+        },
+      }),
+    }
+  );
+  const jsonResp = (await resp.text()).substring(4);
+  let jsonData = JSON.parse(jsonResp);
+  console.log(jsonData);
+  response({ ok: true, data: jsonData });
+};
+
 // @ts-ignore
 browser.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   console.log({ msg, sender });
@@ -135,6 +176,12 @@ browser.runtime.onMessage.addListener((msg, sender, sendResponse) => {
       break;
     case BackgroundActionTypes.UPDATE_TICKET_LABEL:
       updateTicketLabel(msg?.payload, sendResponse);
+      break;
+    case BackgroundActionTypes.GET_TICKET_DETAILS:
+      getTicketDetails(msg?.payload, sendResponse);
+      break;
+    case BackgroundActionTypes.GET_TICET_COMMENTS:
+      getTicketComments(msg?.payload, sendResponse);
       break;
   }
   return true;
