@@ -1,7 +1,0 @@
-import   "d501991075470c1114f3521588e6a40c:react";
-import   "d501991075470c1114f3521588e6a40c:../../utils/createSvgIcon";
-var /**
- * @ignore - internal component.
- */ $d501991075470c1114f3521588e6a40c$export$9099ad97b570f7c = $d501991075470c1114f3521588e6a40c$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $d501991075470c1114f3521588e6a40c$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
-    d: "M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm-2 17l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L19 8l-9 9z"
-}), 'CheckCircle');

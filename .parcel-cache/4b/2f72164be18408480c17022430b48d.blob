@@ -1,7 +1,0 @@
-import   "38c3e66e8db180541e2733a12e5cf26b:react";
-import   "38c3e66e8db180541e2733a12e5cf26b:../../utils/createSvgIcon";
-var /**
- * @ignore - internal component.
- */ $38c3e66e8db180541e2733a12e5cf26b$export$9099ad97b570f7c = $38c3e66e8db180541e2733a12e5cf26b$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $38c3e66e8db180541e2733a12e5cf26b$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
-    d: "M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
-}), 'KeyboardArrowLeft');

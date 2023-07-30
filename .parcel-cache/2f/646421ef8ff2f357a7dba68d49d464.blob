@@ -1,3 +1,0 @@
-var $038a1f132fb3495e9ee0504445ed4a02$export$f0e78445c9794313 = function forceReflow(node) {
-    return node.scrollTop;
-};

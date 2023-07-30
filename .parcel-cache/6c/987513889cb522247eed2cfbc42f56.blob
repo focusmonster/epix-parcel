@@ -1,7 +1,0 @@
-import   "88f6bf44416bc890f93e23896e2d8192:./typeof.js";
-import   "88f6bf44416bc890f93e23896e2d8192:./assertThisInitialized.js";
-function $88f6bf44416bc890f93e23896e2d8192$export$9099ad97b570f7c(self, call) {
-    if (call && ($88f6bf44416bc890f93e23896e2d8192$import$5a0c995f1c5c9de1$9099ad97b570f7c(call) === "object" || typeof call === "function")) return call;
-    else if (call !== void 0) throw new TypeError("Derived constructors may only return object or undefined");
-    return $88f6bf44416bc890f93e23896e2d8192$import$d27acd175bd9d706$9099ad97b570f7c(self);
-}

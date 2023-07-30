@@ -1,6 +1,0 @@
-import   "f8df9da3abb90daf3ee5b61f9033d451:./typeof.js";
-import   "f8df9da3abb90daf3ee5b61f9033d451:./toPrimitive.js";
-function $f8df9da3abb90daf3ee5b61f9033d451$export$9099ad97b570f7c(arg) {
-    var key = $f8df9da3abb90daf3ee5b61f9033d451$import$36b6e3016f74ba2e$9099ad97b570f7c(arg, "string");
-    return $f8df9da3abb90daf3ee5b61f9033d451$import$5a0c995f1c5c9de1$9099ad97b570f7c(key) === "symbol" ? key : String(key);
-}

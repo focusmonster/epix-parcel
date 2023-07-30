@@ -1,7 +1,0 @@
-import   "97eb48e8838148895d19ffb4cf60ce94:react";
-import   "97eb48e8838148895d19ffb4cf60ce94:../../utils/createSvgIcon";
-var /**
- * @ignore - internal component.
- */ $97eb48e8838148895d19ffb4cf60ce94$export$9099ad97b570f7c = $97eb48e8838148895d19ffb4cf60ce94$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $97eb48e8838148895d19ffb4cf60ce94$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
-    d: "M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
-}), 'Warning');

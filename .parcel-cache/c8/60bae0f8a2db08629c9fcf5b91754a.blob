@@ -1,7 +1,0 @@
-import   "ef44f2e2007913457adcaf61fa701583:react";
-import   "ef44f2e2007913457adcaf61fa701583:../../utils/createSvgIcon";
-var /**
- * @ignore - internal component.
- */ $ef44f2e2007913457adcaf61fa701583$export$9099ad97b570f7c = $ef44f2e2007913457adcaf61fa701583$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $ef44f2e2007913457adcaf61fa701583$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
-    d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-}), 'RadioButtonUnchecked');

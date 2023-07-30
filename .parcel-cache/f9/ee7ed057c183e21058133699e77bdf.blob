@@ -1,6 +1,0 @@
-import   "fa645c2ce7754ee5a6d3bff8369b5105:@material-ui/styles";
-import   "fa645c2ce7754ee5a6d3bff8369b5105:./defaultTheme";
-var $fa645c2ce7754ee5a6d3bff8369b5105$var$withTheme = $fa645c2ce7754ee5a6d3bff8369b5105$import$c5d6394d37751b43$f17f2ddc2792887b({
-    defaultTheme: $fa645c2ce7754ee5a6d3bff8369b5105$import$2db9e05cc982790c$9099ad97b570f7c
-});
-var $fa645c2ce7754ee5a6d3bff8369b5105$export$9099ad97b570f7c = $fa645c2ce7754ee5a6d3bff8369b5105$var$withTheme;

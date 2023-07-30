@@ -1,5 +1,0 @@
-import   "18b23b7d0c36a1468622794fe0c4ce31:react";
-/**
- * @ignore - internal component.
- */ var $18b23b7d0c36a1468622794fe0c4ce31$var$Tablelvl2Context = $18b23b7d0c36a1468622794fe0c4ce31$import$f02ba03fc070e88c$a4ff86cea5c8127e();
-var $18b23b7d0c36a1468622794fe0c4ce31$export$9099ad97b570f7c = $18b23b7d0c36a1468622794fe0c4ce31$var$Tablelvl2Context;

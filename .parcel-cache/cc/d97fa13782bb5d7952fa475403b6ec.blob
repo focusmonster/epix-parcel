@@ -1,7 +1,0 @@
-import   "e46a31753c209d420a32eca3e26003bd:react";
-import   "e46a31753c209d420a32eca3e26003bd:../../utils/createSvgIcon";
-var /**
- * @ignore - internal component.
- */ $e46a31753c209d420a32eca3e26003bd$export$9099ad97b570f7c = $e46a31753c209d420a32eca3e26003bd$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $e46a31753c209d420a32eca3e26003bd$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
-    d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-}), 'MoreHoriz');
