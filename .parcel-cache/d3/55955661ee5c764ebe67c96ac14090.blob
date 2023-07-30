@@ -1,0 +1,7 @@
+import   "1b1235da20f9bfcd15f8fa156fe48f0d:react";
+import   "1b1235da20f9bfcd15f8fa156fe48f0d:../../utils/createSvgIcon";
+var /**
+ * @ignore - internal component.
+ */ $1b1235da20f9bfcd15f8fa156fe48f0d$export$9099ad97b570f7c = $1b1235da20f9bfcd15f8fa156fe48f0d$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $1b1235da20f9bfcd15f8fa156fe48f0d$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
+    d: "M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+}), 'KeyboardArrowRight');

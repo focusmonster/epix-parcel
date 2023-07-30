@@ -1,0 +1,7 @@
+import   "501166647532416515cf40b6405c6312:react";
+/**
+ * @ignore - internal component.
+ * @type {React.Context<{} | {expanded: boolean, disabled: boolean, toggle: () => void}>}
+ */ var $501166647532416515cf40b6405c6312$var$AccordionContext = $501166647532416515cf40b6405c6312$import$f02ba03fc070e88c$a4ff86cea5c8127e({
+});
+var $501166647532416515cf40b6405c6312$export$9099ad97b570f7c = $501166647532416515cf40b6405c6312$var$AccordionContext;

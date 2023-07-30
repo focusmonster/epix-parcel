@@ -1,0 +1,51 @@
+import   "4cae05cf6161ad0c02e9c904fb170bf3:@babel/runtime/helpers/esm/extends";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:@babel/runtime/helpers/esm/slicedToArray";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:react";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:prop-types";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:../FormGroup";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:../utils/useForkRef";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:../utils/useControlled";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:./RadioGroupContext";
+import   "4cae05cf6161ad0c02e9c904fb170bf3:../utils/unstable_useId";
+var $4cae05cf6161ad0c02e9c904fb170bf3$var$RadioGroup = /*#__PURE__*/ $4cae05cf6161ad0c02e9c904fb170bf3$import$f02ba03fc070e88c$ac92bb288368c37c(function RadioGroup(props, ref) {
+    var actions = props.actions, children = props.children, nameProp = props.name, valueProp = props.value, onChange = props.onChange, other = $4cae05cf6161ad0c02e9c904fb170bf3$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "actions",
+        "children",
+        "name",
+        "value",
+        "onChange"
+    ]);
+    var rootRef = $4cae05cf6161ad0c02e9c904fb170bf3$import$f02ba03fc070e88c$575893c07881cfe8(null);
+    var _useControlled = $4cae05cf6161ad0c02e9c904fb170bf3$import$ec153815d5f7d5c0$9099ad97b570f7c({
+        controlled: valueProp,
+        default: props.defaultValue,
+        name: 'RadioGroup'
+    }), _useControlled2 = $4cae05cf6161ad0c02e9c904fb170bf3$import$d595881c45598ae7$9099ad97b570f7c(_useControlled, 2), value = _useControlled2[0], setValue = _useControlled2[1];
+    $4cae05cf6161ad0c02e9c904fb170bf3$import$f02ba03fc070e88c$718bc1f42abf35a1(actions, function() {
+        return {
+            focus: function focus() {
+                var input = rootRef.current.querySelector('input:not(:disabled):checked');
+                if (!input) input = rootRef.current.querySelector('input:not(:disabled)');
+                if (input) input.focus();
+            }
+        };
+    }, []);
+    var handleRef = $4cae05cf6161ad0c02e9c904fb170bf3$import$f0ac2eb29a789ac2$9099ad97b570f7c(ref, rootRef);
+    var handleChange = function handleChange1(event) {
+        setValue(event.target.value);
+        if (onChange) onChange(event, event.target.value);
+    };
+    var name = $4cae05cf6161ad0c02e9c904fb170bf3$import$e0e6653ad55e6d52$9099ad97b570f7c(nameProp);
+    return(/*#__PURE__*/ $4cae05cf6161ad0c02e9c904fb170bf3$import$f02ba03fc070e88c$2f8418d37d4320b9($4cae05cf6161ad0c02e9c904fb170bf3$import$dcae7076187c64cb$9099ad97b570f7c.Provider, {
+        value: {
+            name: name,
+            onChange: handleChange,
+            value: value
+        }
+    }, /*#__PURE__*/ $4cae05cf6161ad0c02e9c904fb170bf3$import$f02ba03fc070e88c$2f8418d37d4320b9($4cae05cf6161ad0c02e9c904fb170bf3$import$9b95fb8c0c7d154f$9099ad97b570f7c, $4cae05cf6161ad0c02e9c904fb170bf3$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        role: "radiogroup",
+        ref: handleRef
+    }, other), children)));
+});
+var $4cae05cf6161ad0c02e9c904fb170bf3$export$9099ad97b570f7c = $4cae05cf6161ad0c02e9c904fb170bf3$var$RadioGroup;

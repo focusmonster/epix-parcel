@@ -1,0 +1,126 @@
+import   "b0f6f4eb49cd2e86350e1267f40c117e:@babel/runtime/helpers/esm/slicedToArray";
+import   "b0f6f4eb49cd2e86350e1267f40c117e:./responsivePropType";
+import   "b0f6f4eb49cd2e86350e1267f40c117e:./breakpoints";
+import   "b0f6f4eb49cd2e86350e1267f40c117e:./merge";
+import   "b0f6f4eb49cd2e86350e1267f40c117e:./memoize";
+var $b0f6f4eb49cd2e86350e1267f40c117e$var$properties = {
+    m: 'margin',
+    p: 'padding'
+};
+var $b0f6f4eb49cd2e86350e1267f40c117e$var$directions = {
+    t: 'Top',
+    r: 'Right',
+    b: 'Bottom',
+    l: 'Left',
+    x: [
+        'Left',
+        'Right'
+    ],
+    y: [
+        'Top',
+        'Bottom'
+    ]
+};
+var $b0f6f4eb49cd2e86350e1267f40c117e$var$aliases = {
+    marginX: 'mx',
+    marginY: 'my',
+    paddingX: 'px',
+    paddingY: 'py'
+}; // memoize() impact:
+// From 300,000 ops/sec
+// To 350,000 ops/sec
+var $b0f6f4eb49cd2e86350e1267f40c117e$var$getCssProperties = $b0f6f4eb49cd2e86350e1267f40c117e$import$80674cd762dee61f$9099ad97b570f7c(function(prop) {
+    // It's not a shorthand notation.
+    if (prop.length > 2) {
+        if ($b0f6f4eb49cd2e86350e1267f40c117e$var$aliases[prop]) prop = $b0f6f4eb49cd2e86350e1267f40c117e$var$aliases[prop];
+        else return [
+            prop
+        ];
+    }
+    var _prop$split = prop.split(''), _prop$split2 = $b0f6f4eb49cd2e86350e1267f40c117e$import$d595881c45598ae7$9099ad97b570f7c(_prop$split, 2), a = _prop$split2[0], b = _prop$split2[1];
+    var property = $b0f6f4eb49cd2e86350e1267f40c117e$var$properties[a];
+    var direction = $b0f6f4eb49cd2e86350e1267f40c117e$var$directions[b] || '';
+    return Array.isArray(direction) ? direction.map(function(dir) {
+        return property + dir;
+    }) : [
+        property + direction
+    ];
+});
+var $b0f6f4eb49cd2e86350e1267f40c117e$var$spacingKeys = [
+    'm',
+    'mt',
+    'mr',
+    'mb',
+    'ml',
+    'mx',
+    'my',
+    'p',
+    'pt',
+    'pr',
+    'pb',
+    'pl',
+    'px',
+    'py',
+    'margin',
+    'marginTop',
+    'marginRight',
+    'marginBottom',
+    'marginLeft',
+    'marginX',
+    'marginY',
+    'padding',
+    'paddingTop',
+    'paddingRight',
+    'paddingBottom',
+    'paddingLeft',
+    'paddingX',
+    'paddingY'
+];
+function $b0f6f4eb49cd2e86350e1267f40c117e$export$c9bba8b095b47a2e(theme) {
+    var themeSpacing = theme.spacing || 8;
+    if (typeof themeSpacing === 'number') return function(abs) {
+        return themeSpacing * abs;
+    };
+    if (Array.isArray(themeSpacing)) return function(abs) {
+        return themeSpacing[abs];
+    };
+    if (typeof themeSpacing === 'function') return themeSpacing;
+    return function() {
+        return undefined;
+    };
+}
+function $b0f6f4eb49cd2e86350e1267f40c117e$var$getValue(transformer, propValue) {
+    if (typeof propValue === 'string' || propValue == null) return propValue;
+    var abs = Math.abs(propValue);
+    var transformed = transformer(abs);
+    if (propValue >= 0) return transformed;
+    if (typeof transformed === 'number') return -transformed;
+    return "-".concat(transformed);
+}
+function $b0f6f4eb49cd2e86350e1267f40c117e$var$getStyleFromPropValue(cssProperties, transformer) {
+    return function(propValue) {
+        return cssProperties.reduce(function(acc, cssProperty) {
+            acc[cssProperty] = $b0f6f4eb49cd2e86350e1267f40c117e$var$getValue(transformer, propValue);
+            return acc;
+        }, {
+        });
+    };
+}
+function $b0f6f4eb49cd2e86350e1267f40c117e$var$spacing(props) {
+    var theme = props.theme;
+    var transformer = $b0f6f4eb49cd2e86350e1267f40c117e$export$c9bba8b095b47a2e(theme);
+    return Object.keys(props).map(function(prop) {
+        // Using a hash computation over an array iteration could be faster, but with only 28 items,
+        // it's doesn't worth the bundle size.
+        if ($b0f6f4eb49cd2e86350e1267f40c117e$var$spacingKeys.indexOf(prop) === -1) return null;
+        var cssProperties = $b0f6f4eb49cd2e86350e1267f40c117e$var$getCssProperties(prop);
+        var styleFromPropValue = $b0f6f4eb49cd2e86350e1267f40c117e$var$getStyleFromPropValue(cssProperties, transformer);
+        var propValue = props[prop];
+        return $b0f6f4eb49cd2e86350e1267f40c117e$import$be54aed858ff1317$8a326a3690773c3e(props, propValue, styleFromPropValue);
+    }).reduce($b0f6f4eb49cd2e86350e1267f40c117e$import$1d8eb37588603931$9099ad97b570f7c, {
+    });
+}
+$b0f6f4eb49cd2e86350e1267f40c117e$var$spacing.propTypes = {
+};
+$b0f6f4eb49cd2e86350e1267f40c117e$var$spacing.filterProps = $b0f6f4eb49cd2e86350e1267f40c117e$var$spacingKeys;
+var $b0f6f4eb49cd2e86350e1267f40c117e$export$9099ad97b570f7c = $b0f6f4eb49cd2e86350e1267f40c117e$var$spacing;

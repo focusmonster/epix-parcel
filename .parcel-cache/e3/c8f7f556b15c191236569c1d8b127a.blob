@@ -1,0 +1,48 @@
+import   "c355d274f8ffcea449d4dae147d352dc:react";
+import   "c355d274f8ffcea449d4dae147d352dc:prop-types";
+import   "c355d274f8ffcea449d4dae147d352dc:clsx";
+import   "c355d274f8ffcea449d4dae147d352dc:../internal/svg-icons/RadioButtonUnchecked";
+import   "c355d274f8ffcea449d4dae147d352dc:../internal/svg-icons/RadioButtonChecked";
+import   "c355d274f8ffcea449d4dae147d352dc:../styles/withStyles";
+var $c355d274f8ffcea449d4dae147d352dc$export$1155669653ed4fad = function styles(theme) {
+    return {
+        root: {
+            position: 'relative',
+            display: 'flex',
+            '&$checked $layer': {
+                transform: 'scale(1)',
+                transition: theme.transitions.create('transform', {
+                    easing: theme.transitions.easing.easeOut,
+                    duration: theme.transitions.duration.shortest
+                })
+            }
+        },
+        layer: {
+            left: 0,
+            position: 'absolute',
+            transform: 'scale(0)',
+            transition: theme.transitions.create('transform', {
+                easing: theme.transitions.easing.easeIn,
+                duration: theme.transitions.duration.shortest
+            })
+        },
+        checked: {
+        }
+    };
+};
+/**
+ * @ignore - internal component.
+ */ function $c355d274f8ffcea449d4dae147d352dc$var$RadioButtonIcon(props) {
+    var checked = props.checked, classes = props.classes, fontSize = props.fontSize;
+    return(/*#__PURE__*/ $c355d274f8ffcea449d4dae147d352dc$import$f02ba03fc070e88c$2f8418d37d4320b9("div", {
+        className: $c355d274f8ffcea449d4dae147d352dc$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, checked && classes.checked)
+    }, /*#__PURE__*/ $c355d274f8ffcea449d4dae147d352dc$import$f02ba03fc070e88c$2f8418d37d4320b9($c355d274f8ffcea449d4dae147d352dc$import$ed754eed8454cc6d$9099ad97b570f7c, {
+        fontSize: fontSize
+    }), /*#__PURE__*/ $c355d274f8ffcea449d4dae147d352dc$import$f02ba03fc070e88c$2f8418d37d4320b9($c355d274f8ffcea449d4dae147d352dc$import$717ebc26dc8e1cef$9099ad97b570f7c, {
+        fontSize: fontSize,
+        className: classes.layer
+    })));
+}
+var $c355d274f8ffcea449d4dae147d352dc$export$9099ad97b570f7c = $c355d274f8ffcea449d4dae147d352dc$import$abdf0c7fda13cc01$9099ad97b570f7c($c355d274f8ffcea449d4dae147d352dc$export$1155669653ed4fad, {
+    name: 'PrivateRadioButtonIcon'
+})($c355d274f8ffcea449d4dae147d352dc$var$RadioButtonIcon);

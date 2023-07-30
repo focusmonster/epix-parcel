@@ -1,0 +1,6 @@
+import   "8ba890583a3c0b2533dbe9bb6b21042f:./style";
+var $8ba890583a3c0b2533dbe9bb6b21042f$var$boxShadow = $8ba890583a3c0b2533dbe9bb6b21042f$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'boxShadow',
+    themeKey: 'shadows'
+});
+var $8ba890583a3c0b2533dbe9bb6b21042f$export$9099ad97b570f7c = $8ba890583a3c0b2533dbe9bb6b21042f$var$boxShadow;

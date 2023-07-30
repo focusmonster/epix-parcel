@@ -1,0 +1,51 @@
+import   "6b580ee25ce6a7a6a249017ad142172d:@babel/runtime/helpers/esm/extends";
+import   "6b580ee25ce6a7a6a249017ad142172d:react";
+import   "6b580ee25ce6a7a6a249017ad142172d:@material-ui/styles";
+function $6b580ee25ce6a7a6a249017ad142172d$export$9099ad97b570f7c(queryInput) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    };
+    var theme = $6b580ee25ce6a7a6a249017ad142172d$import$c5d6394d37751b43$7917f75332968a34();
+    var props = $6b580ee25ce6a7a6a249017ad142172d$import$c5d6394d37751b43$3921ac7c6261f66e({
+        theme: theme,
+        name: 'MuiUseMediaQuery',
+        props: {
+        }
+    });
+    var query = typeof queryInput === 'function' ? queryInput(theme) : queryInput;
+    query = query.replace(/^@media( ?)/m, ''); // Wait for jsdom to support the match media feature.
+    // All the browsers Material-UI support have this built-in.
+    // This defensive check is here for simplicity.
+    // Most of the time, the match media logic isn't central to people tests.
+    var supportMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
+    var _props$options = $6b580ee25ce6a7a6a249017ad142172d$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+    }, props, options), _props$options$defaul = _props$options.defaultMatches, defaultMatches = _props$options$defaul === void 0 ? false : _props$options$defaul, _props$options$matchM = _props$options.matchMedia, matchMedia = _props$options$matchM === void 0 ? supportMatchMedia ? window.matchMedia : null : _props$options$matchM, _props$options$noSsr = _props$options.noSsr, noSsr = _props$options$noSsr === void 0 ? false : _props$options$noSsr, _props$options$ssrMat = _props$options.ssrMatchMedia, ssrMatchMedia = _props$options$ssrMat === void 0 ? null : _props$options$ssrMat;
+    var _React$useState = $6b580ee25ce6a7a6a249017ad142172d$import$f02ba03fc070e88c$f54936751fc2c51(function() {
+        if (noSsr && supportMatchMedia) return matchMedia(query).matches;
+        if (ssrMatchMedia) return ssrMatchMedia(query).matches;
+         // Once the component is mounted, we rely on the
+        // event listeners to return the correct matches value.
+        return defaultMatches;
+    }), match = _React$useState[0], setMatch = _React$useState[1];
+    $6b580ee25ce6a7a6a249017ad142172d$import$f02ba03fc070e88c$7e977b4ca969aabd(function() {
+        var active = true;
+        if (!supportMatchMedia) return undefined;
+        var queryList = matchMedia(query);
+        var updateMatch = function updateMatch1() {
+            // Workaround Safari wrong implementation of matchMedia
+            // TODO can we remove it?
+            // https://github.com/mui-org/material-ui/pull/17315#issuecomment-528286677
+            if (active) setMatch(queryList.matches);
+        };
+        updateMatch();
+        queryList.addListener(updateMatch);
+        return function() {
+            active = false;
+            queryList.removeListener(updateMatch);
+        };
+    }, [
+        query,
+        matchMedia,
+        supportMatchMedia
+    ]);
+    return match;
+}

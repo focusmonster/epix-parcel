@@ -1,0 +1,57 @@
+import   "033fe34ca19579a4ce051f37a026f68c:@babel/runtime/helpers/esm/extends";
+import   "033fe34ca19579a4ce051f37a026f68c:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "033fe34ca19579a4ce051f37a026f68c:react";
+import   "033fe34ca19579a4ce051f37a026f68c:prop-types";
+import   "033fe34ca19579a4ce051f37a026f68c:clsx";
+import   "033fe34ca19579a4ce051f37a026f68c:../styles/withStyles";
+import   "033fe34ca19579a4ce051f37a026f68c:../utils/capitalize";
+var $033fe34ca19579a4ce051f37a026f68c$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            boxSizing: 'border-box',
+            lineHeight: '48px',
+            listStyle: 'none',
+            color: theme.palette.text.secondary,
+            fontFamily: theme.typography.fontFamily,
+            fontWeight: theme.typography.fontWeightMedium,
+            fontSize: theme.typography.pxToRem(14)
+        },
+        /* Styles applied to the root element if `color="primary"`. */ colorPrimary: {
+            color: theme.palette.primary.main
+        },
+        /* Styles applied to the root element if `color="inherit"`. */ colorInherit: {
+            color: 'inherit'
+        },
+        /* Styles applied to the inner `component` element if `disableGutters={false}`. */ gutters: {
+            paddingLeft: 16,
+            paddingRight: 16
+        },
+        /* Styles applied to the root element if `inset={true}`. */ inset: {
+            paddingLeft: 72
+        },
+        /* Styles applied to the root element if `disableSticky={false}`. */ sticky: {
+            position: 'sticky',
+            top: 0,
+            zIndex: 1,
+            backgroundColor: 'inherit'
+        }
+    };
+};
+var $033fe34ca19579a4ce051f37a026f68c$var$ListSubheader = /*#__PURE__*/ $033fe34ca19579a4ce051f37a026f68c$import$f02ba03fc070e88c$ac92bb288368c37c(function ListSubheader(props, ref) {
+    var classes = props.classes, className = props.className, _props$color = props.color, color = _props$color === void 0 ? 'default' : _props$color, _props$component = props.component, Component = _props$component === void 0 ? 'li' : _props$component, _props$disableGutters = props.disableGutters, disableGutters = _props$disableGutters === void 0 ? false : _props$disableGutters, _props$disableSticky = props.disableSticky, disableSticky = _props$disableSticky === void 0 ? false : _props$disableSticky, _props$inset = props.inset, inset = _props$inset === void 0 ? false : _props$inset, other = $033fe34ca19579a4ce051f37a026f68c$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "color",
+        "component",
+        "disableGutters",
+        "disableSticky",
+        "inset"
+    ]);
+    return(/*#__PURE__*/ $033fe34ca19579a4ce051f37a026f68c$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $033fe34ca19579a4ce051f37a026f68c$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $033fe34ca19579a4ce051f37a026f68c$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, color !== 'default' && classes["color".concat($033fe34ca19579a4ce051f37a026f68c$import$f35500a7ba1578c4$9099ad97b570f7c(color))], inset && classes.inset, !disableSticky && classes.sticky, !disableGutters && classes.gutters),
+        ref: ref
+    }, other)));
+});
+var $033fe34ca19579a4ce051f37a026f68c$export$9099ad97b570f7c = $033fe34ca19579a4ce051f37a026f68c$import$abdf0c7fda13cc01$9099ad97b570f7c($033fe34ca19579a4ce051f37a026f68c$export$1155669653ed4fad, {
+    name: 'MuiListSubheader'
+})($033fe34ca19579a4ce051f37a026f68c$var$ListSubheader);

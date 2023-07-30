@@ -1,0 +1,110 @@
+import   "34a086edf97707f6b7c3bca2c17fe7cd:@babel/runtime/helpers/esm/extends";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:@babel/runtime/helpers/esm/slicedToArray";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:react";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:prop-types";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:react-transition-group";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:../styles/transitions";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:../styles/useTheme";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:../transitions/utils";
+import   "34a086edf97707f6b7c3bca2c17fe7cd:../utils/useForkRef";
+var $34a086edf97707f6b7c3bca2c17fe7cd$var$styles = {
+    entering: {
+        transform: 'none'
+    },
+    entered: {
+        transform: 'none'
+    }
+};
+var $34a086edf97707f6b7c3bca2c17fe7cd$var$defaultTimeout = {
+    enter: $34a086edf97707f6b7c3bca2c17fe7cd$import$b1e0cdbd228fdc15$cf96e0e36f6240f8.enteringScreen,
+    exit: $34a086edf97707f6b7c3bca2c17fe7cd$import$b1e0cdbd228fdc15$cf96e0e36f6240f8.leavingScreen
+};
+/**
+ * The Zoom transition can be used for the floating variant of the
+ * [Button](/components/buttons/#floating-action-buttons) component.
+ * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
+ */ var $34a086edf97707f6b7c3bca2c17fe7cd$var$Zoom = /*#__PURE__*/ $34a086edf97707f6b7c3bca2c17fe7cd$import$f02ba03fc070e88c$ac92bb288368c37c(function Zoom(props, ref) {
+    var children = props.children, _props$disableStrictM = props.disableStrictModeCompat, disableStrictModeCompat = _props$disableStrictM === void 0 ? false : _props$disableStrictM, inProp = props.in, onEnter = props.onEnter, onEntered = props.onEntered, onEntering = props.onEntering, onExit = props.onExit, onExited = props.onExited, onExiting = props.onExiting, style = props.style, _props$timeout = props.timeout, timeout = _props$timeout === void 0 ? $34a086edf97707f6b7c3bca2c17fe7cd$var$defaultTimeout : _props$timeout, _props$TransitionComp = props.TransitionComponent, TransitionComponent = _props$TransitionComp === void 0 ? $34a086edf97707f6b7c3bca2c17fe7cd$import$b5d0cefceca9e025$b23ee92531043003 : _props$TransitionComp, other = $34a086edf97707f6b7c3bca2c17fe7cd$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "disableStrictModeCompat",
+        "in",
+        "onEnter",
+        "onEntered",
+        "onEntering",
+        "onExit",
+        "onExited",
+        "onExiting",
+        "style",
+        "timeout",
+        "TransitionComponent"
+    ]);
+    var theme = $34a086edf97707f6b7c3bca2c17fe7cd$import$d08d112fbc8a4e1d$9099ad97b570f7c();
+    var enableStrictModeCompat = theme.unstable_strictMode && !disableStrictModeCompat;
+    var nodeRef = $34a086edf97707f6b7c3bca2c17fe7cd$import$f02ba03fc070e88c$575893c07881cfe8(null);
+    var foreignRef = $34a086edf97707f6b7c3bca2c17fe7cd$import$f0ac2eb29a789ac2$9099ad97b570f7c(children.ref, ref);
+    var handleRef = $34a086edf97707f6b7c3bca2c17fe7cd$import$f0ac2eb29a789ac2$9099ad97b570f7c(enableStrictModeCompat ? nodeRef : undefined, foreignRef);
+    var normalizedTransitionCallback = function normalizedTransitionCallback1(callback) {
+        return function(nodeOrAppearing, maybeAppearing) {
+            if (callback) {
+                var _ref = enableStrictModeCompat ? [
+                    nodeRef.current,
+                    nodeOrAppearing
+                ] : [
+                    nodeOrAppearing,
+                    maybeAppearing
+                ], _ref2 = $34a086edf97707f6b7c3bca2c17fe7cd$import$d595881c45598ae7$9099ad97b570f7c(_ref, 2), node = _ref2[0], isAppearing = _ref2[1]; // onEnterXxx and onExitXxx callbacks have a different arguments.length value.
+                if (isAppearing === undefined) callback(node);
+                else callback(node, isAppearing);
+            }
+        };
+    };
+    var handleEntering = normalizedTransitionCallback(onEntering);
+    var handleEnter = normalizedTransitionCallback(function(node, isAppearing) {
+        $34a086edf97707f6b7c3bca2c17fe7cd$import$12a01df6e73ce411$3ebce82aa299620c(node); // So the animation always start from the start.
+        var transitionProps = $34a086edf97707f6b7c3bca2c17fe7cd$import$12a01df6e73ce411$dd26807d75f92780({
+            style: style,
+            timeout: timeout
+        }, {
+            mode: 'enter'
+        });
+        node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
+        node.style.transition = theme.transitions.create('transform', transitionProps);
+        if (onEnter) onEnter(node, isAppearing);
+    });
+    var handleEntered = normalizedTransitionCallback(onEntered);
+    var handleExiting = normalizedTransitionCallback(onExiting);
+    var handleExit = normalizedTransitionCallback(function(node) {
+        var transitionProps = $34a086edf97707f6b7c3bca2c17fe7cd$import$12a01df6e73ce411$dd26807d75f92780({
+            style: style,
+            timeout: timeout
+        }, {
+            mode: 'exit'
+        });
+        node.style.webkitTransition = theme.transitions.create('transform', transitionProps);
+        node.style.transition = theme.transitions.create('transform', transitionProps);
+        if (onExit) onExit(node);
+    });
+    var handleExited = normalizedTransitionCallback(onExited);
+    return(/*#__PURE__*/ $34a086edf97707f6b7c3bca2c17fe7cd$import$f02ba03fc070e88c$2f8418d37d4320b9(TransitionComponent, $34a086edf97707f6b7c3bca2c17fe7cd$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        appear: true,
+        in: inProp,
+        nodeRef: enableStrictModeCompat ? nodeRef : undefined,
+        onEnter: handleEnter,
+        onEntered: handleEntered,
+        onEntering: handleEntering,
+        onExit: handleExit,
+        onExited: handleExited,
+        onExiting: handleExiting,
+        timeout: timeout
+    }, other), function(state, childProps) {
+        return(/*#__PURE__*/ $34a086edf97707f6b7c3bca2c17fe7cd$import$f02ba03fc070e88c$228915fa085e29fe(children, $34a086edf97707f6b7c3bca2c17fe7cd$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            style: $34a086edf97707f6b7c3bca2c17fe7cd$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                transform: 'scale(0)',
+                visibility: state === 'exited' && !inProp ? 'hidden' : undefined
+            }, $34a086edf97707f6b7c3bca2c17fe7cd$var$styles[state], style, children.props.style),
+            ref: handleRef
+        }, childProps)));
+    }));
+});
+var $34a086edf97707f6b7c3bca2c17fe7cd$export$9099ad97b570f7c = $34a086edf97707f6b7c3bca2c17fe7cd$var$Zoom;

@@ -1,0 +1,80 @@
+import   "2a37392ba76d9eecc9a03bae1b01eae2:@babel/runtime/helpers/esm/extends";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:react";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:clsx";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:prop-types";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:@material-ui/utils";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:hoist-non-react-statics";
+import   "2a37392ba76d9eecc9a03bae1b01eae2:../makeStyles";
+function $2a37392ba76d9eecc9a03bae1b01eae2$var$omit(input, fields) {
+    var output = {
+    };
+    Object.keys(input).forEach(function(prop) {
+        if (fields.indexOf(prop) === -1) output[prop] = input[prop];
+    });
+    return output;
+} // styled-components's API removes the mapping between components and styles.
+function $2a37392ba76d9eecc9a03bae1b01eae2$export$9099ad97b570f7c(Component) {
+    var componentCreator = function componentCreator1(style) {
+        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+        };
+        var name = options.name, stylesOptions = $2a37392ba76d9eecc9a03bae1b01eae2$import$e114c77af6cc4d77$9099ad97b570f7c(options, [
+            "name"
+        ]);
+        var classNamePrefix = name;
+        var displayName;
+        var stylesOrCreator = typeof style === 'function' ? function(theme) {
+            return {
+                root: function root(props) {
+                    return style($2a37392ba76d9eecc9a03bae1b01eae2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                        theme: theme
+                    }, props));
+                }
+            };
+        } : {
+            root: style
+        };
+        var useStyles = $2a37392ba76d9eecc9a03bae1b01eae2$import$768328ffd9ceef8$9099ad97b570f7c(stylesOrCreator, $2a37392ba76d9eecc9a03bae1b01eae2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            Component: Component,
+            name: name || Component.displayName,
+            classNamePrefix: classNamePrefix
+        }, stylesOptions));
+        var filterProps;
+        var propTypes = {
+        };
+        if (style.filterProps) {
+            filterProps = style.filterProps;
+            delete style.filterProps;
+        }
+        /* eslint-disable react/forbid-foreign-prop-types */ if (style.propTypes) {
+            propTypes = style.propTypes;
+            delete style.propTypes;
+        }
+        /* eslint-enable react/forbid-foreign-prop-types */ var StyledComponent = /*#__PURE__*/ $2a37392ba76d9eecc9a03bae1b01eae2$import$f02ba03fc070e88c$9099ad97b570f7c.forwardRef(function StyledComponent1(props, ref) {
+            var children = props.children, classNameProp = props.className, clone = props.clone, ComponentProp = props.component, other = $2a37392ba76d9eecc9a03bae1b01eae2$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+                "children",
+                "className",
+                "clone",
+                "component"
+            ]);
+            var classes = useStyles(props);
+            var className = $2a37392ba76d9eecc9a03bae1b01eae2$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classNameProp);
+            var spread = other;
+            if (filterProps) spread = $2a37392ba76d9eecc9a03bae1b01eae2$var$omit(spread, filterProps);
+            if (clone) return(/*#__PURE__*/ $2a37392ba76d9eecc9a03bae1b01eae2$import$f02ba03fc070e88c$9099ad97b570f7c.cloneElement(children, $2a37392ba76d9eecc9a03bae1b01eae2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                className: $2a37392ba76d9eecc9a03bae1b01eae2$import$3e54c96927a352a4$9099ad97b570f7c(children.props.className, className)
+            }, spread)));
+            if (typeof children === 'function') return children($2a37392ba76d9eecc9a03bae1b01eae2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                className: className
+            }, spread));
+            var FinalComponent = ComponentProp || Component;
+            return(/*#__PURE__*/ $2a37392ba76d9eecc9a03bae1b01eae2$import$f02ba03fc070e88c$9099ad97b570f7c.createElement(FinalComponent, $2a37392ba76d9eecc9a03bae1b01eae2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                ref: ref,
+                className: className
+            }, spread), children));
+        });
+        $2a37392ba76d9eecc9a03bae1b01eae2$import$96277b2d9dcb8ffd$9099ad97b570f7c(StyledComponent, Component);
+        return StyledComponent;
+    };
+    return componentCreator;
+}

@@ -1,0 +1,68 @@
+import   "5efeb8f6d74ecf66ae320b63abf0117e:@babel/runtime/helpers/esm/extends";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:react";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:react-is";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:prop-types";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:clsx";
+import   "5efeb8f6d74ecf66ae320b63abf0117e:../styles/withStyles";
+var $5efeb8f6d74ecf66ae320b63abf0117e$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+    },
+    /* Styles applied to the root element if `orientation="horizontal"`. */ horizontal: {
+        paddingLeft: 8,
+        paddingRight: 8
+    },
+    /* Styles applied to the root element if `orientation="vertical"`. */ vertical: {
+    },
+    /* Styles applied to the root element if `alternativeLabel={true}`. */ alternativeLabel: {
+        flex: 1,
+        position: 'relative'
+    },
+    /* Pseudo-class applied to the root element if `completed={true}`. */ completed: {
+    }
+};
+var $5efeb8f6d74ecf66ae320b63abf0117e$var$Step = /*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$ac92bb288368c37c(function Step(props, ref) {
+    var _props$active = props.active, active = _props$active === void 0 ? false : _props$active, alternativeLabel = props.alternativeLabel, children = props.children, classes = props.classes, className = props.className, _props$completed = props.completed, completed = _props$completed === void 0 ? false : _props$completed, connectorProp = props.connector, _props$disabled = props.disabled, disabled = _props$disabled === void 0 ? false : _props$disabled, _props$expanded = props.expanded, expanded = _props$expanded === void 0 ? false : _props$expanded, index = props.index, last = props.last, orientation = props.orientation, other = $5efeb8f6d74ecf66ae320b63abf0117e$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "active",
+        "alternativeLabel",
+        "children",
+        "classes",
+        "className",
+        "completed",
+        "connector",
+        "disabled",
+        "expanded",
+        "index",
+        "last",
+        "orientation"
+    ]);
+    var connector = connectorProp ? /*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$228915fa085e29fe(connectorProp, {
+        orientation: orientation,
+        alternativeLabel: alternativeLabel,
+        index: index,
+        active: active,
+        completed: completed,
+        disabled: disabled
+    }) : null;
+    var newChildren = /*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $5efeb8f6d74ecf66ae320b63abf0117e$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $5efeb8f6d74ecf66ae320b63abf0117e$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes[orientation], className, alternativeLabel && classes.alternativeLabel, completed && classes.completed),
+        ref: ref
+    }, other), connector && alternativeLabel && index !== 0 ? connector : null, $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$4a1442b8e7333aeb.map(children, function(child) {
+        if (!/*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$64e9a1defe72209(child)) return null;
+        return(/*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$228915fa085e29fe(child, $5efeb8f6d74ecf66ae320b63abf0117e$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            active: active,
+            alternativeLabel: alternativeLabel,
+            completed: completed,
+            disabled: disabled,
+            expanded: expanded,
+            last: last,
+            icon: index + 1,
+            orientation: orientation
+        }, child.props)));
+    }));
+    if (connector && !alternativeLabel && index !== 0) return(/*#__PURE__*/ $5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$2f8418d37d4320b9($5efeb8f6d74ecf66ae320b63abf0117e$import$f02ba03fc070e88c$44f93cb792444969, null, connector, newChildren));
+    return newChildren;
+});
+var $5efeb8f6d74ecf66ae320b63abf0117e$export$9099ad97b570f7c = $5efeb8f6d74ecf66ae320b63abf0117e$import$abdf0c7fda13cc01$9099ad97b570f7c($5efeb8f6d74ecf66ae320b63abf0117e$export$1155669653ed4fad, {
+    name: 'MuiStep'
+})($5efeb8f6d74ecf66ae320b63abf0117e$var$Step);

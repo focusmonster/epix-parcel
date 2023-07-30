@@ -1,0 +1,26 @@
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:@babel/runtime/helpers/esm/extends";
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:react";
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:prop-types";
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:clsx";
+import   "d00598c1b950d1e2c1bd4f6aef6ba1a7:../styles/withStyles";
+var $d00598c1b950d1e2c1bd4f6aef6ba1a7$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        width: '100%',
+        overflowX: 'auto'
+    }
+};
+var $d00598c1b950d1e2c1bd4f6aef6ba1a7$var$TableContainer = /*#__PURE__*/ $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$f02ba03fc070e88c$ac92bb288368c37c(function TableContainer(props, ref) {
+    var classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, other = $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "component"
+    ]);
+    return(/*#__PURE__*/ $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        ref: ref,
+        className: $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className)
+    }, other)));
+});
+var $d00598c1b950d1e2c1bd4f6aef6ba1a7$export$9099ad97b570f7c = $d00598c1b950d1e2c1bd4f6aef6ba1a7$import$abdf0c7fda13cc01$9099ad97b570f7c($d00598c1b950d1e2c1bd4f6aef6ba1a7$export$1155669653ed4fad, {
+    name: 'MuiTableContainer'
+})($d00598c1b950d1e2c1bd4f6aef6ba1a7$var$TableContainer);

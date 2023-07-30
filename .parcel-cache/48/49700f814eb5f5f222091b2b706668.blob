@@ -1,0 +1,58 @@
+import   "cfc83d1ff72ca5645e723e2c69b79de1:@babel/runtime/helpers/esm/extends";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:react";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:prop-types";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:clsx";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:../styles/withStyles";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:../Table/Tablelvl2Context";
+import   "cfc83d1ff72ca5645e723e2c69b79de1:../styles/colorManipulator";
+var $cfc83d1ff72ca5645e723e2c69b79de1$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            color: 'inherit',
+            display: 'table-row',
+            verticalAlign: 'middle',
+            // We disable the focus ring for mouse, touch and keyboard users.
+            outline: 0,
+            '&$hover:hover': {
+                backgroundColor: theme.palette.action.hover
+            },
+            '&$selected, &$selected:hover': {
+                backgroundColor: $cfc83d1ff72ca5645e723e2c69b79de1$import$78cd920a0798486b$9ea11009bc462ef5(theme.palette.secondary.main, theme.palette.action.selectedOpacity)
+            }
+        },
+        /* Pseudo-class applied to the root element if `selected={true}`. */ selected: {
+        },
+        /* Pseudo-class applied to the root element if `hover={true}`. */ hover: {
+        },
+        /* Styles applied to the root element if table variant="head". */ head: {
+        },
+        /* Styles applied to the root element if table variant="footer". */ footer: {
+        }
+    };
+};
+var $cfc83d1ff72ca5645e723e2c69b79de1$var$defaultComponent = 'tr';
+/**
+ * Will automatically set dynamic row height
+ * based on the material table element parent (head, body, etc).
+ */ var $cfc83d1ff72ca5645e723e2c69b79de1$var$TableRow = /*#__PURE__*/ $cfc83d1ff72ca5645e723e2c69b79de1$import$f02ba03fc070e88c$ac92bb288368c37c(function TableRow(props, ref) {
+    var classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? $cfc83d1ff72ca5645e723e2c69b79de1$var$defaultComponent : _props$component, _props$hover = props.hover, hover = _props$hover === void 0 ? false : _props$hover, _props$selected = props.selected, selected = _props$selected === void 0 ? false : _props$selected, other = $cfc83d1ff72ca5645e723e2c69b79de1$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "component",
+        "hover",
+        "selected"
+    ]);
+    var tablelvl2 = $cfc83d1ff72ca5645e723e2c69b79de1$import$f02ba03fc070e88c$d532f802c57568ca($cfc83d1ff72ca5645e723e2c69b79de1$import$3f5f1395ee53a57a$9099ad97b570f7c);
+    return(/*#__PURE__*/ $cfc83d1ff72ca5645e723e2c69b79de1$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $cfc83d1ff72ca5645e723e2c69b79de1$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        ref: ref,
+        className: $cfc83d1ff72ca5645e723e2c69b79de1$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, tablelvl2 && {
+            'head': classes.head,
+            'footer': classes.footer
+        }[tablelvl2.variant], hover && classes.hover, selected && classes.selected),
+        role: Component === $cfc83d1ff72ca5645e723e2c69b79de1$var$defaultComponent ? null : 'row'
+    }, other)));
+});
+var $cfc83d1ff72ca5645e723e2c69b79de1$export$9099ad97b570f7c = $cfc83d1ff72ca5645e723e2c69b79de1$import$abdf0c7fda13cc01$9099ad97b570f7c($cfc83d1ff72ca5645e723e2c69b79de1$export$1155669653ed4fad, {
+    name: 'MuiTableRow'
+})($cfc83d1ff72ca5645e723e2c69b79de1$var$TableRow);

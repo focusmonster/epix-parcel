@@ -1,0 +1,18 @@
+import   "af0f83c880e1cf3f52d852ea03dc8ff3:react";
+import   "af0f83c880e1cf3f52d852ea03dc8ff3:./setRef";
+function $af0f83c880e1cf3f52d852ea03dc8ff3$export$9099ad97b570f7c(refA, refB) {
+    /**
+   * This will create a new function if the ref props change and are defined.
+   * This means react will call the old forkRef with `null` and the new forkRef
+   * with the ref. Cleanup naturally emerges from this behavior
+   */ return $af0f83c880e1cf3f52d852ea03dc8ff3$import$f02ba03fc070e88c$fe55aea32a6cbc49(function() {
+        if (refA == null && refB == null) return null;
+        return function(refValue) {
+            $af0f83c880e1cf3f52d852ea03dc8ff3$import$3d822a5e08118098$9099ad97b570f7c(refA, refValue);
+            $af0f83c880e1cf3f52d852ea03dc8ff3$import$3d822a5e08118098$9099ad97b570f7c(refB, refValue);
+        };
+    }, [
+        refA,
+        refB
+    ]);
+}

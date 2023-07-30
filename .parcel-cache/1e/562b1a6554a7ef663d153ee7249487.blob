@@ -1,0 +1,67 @@
+import   "c8f840981cb9651b4d7a8f04a70f0e99:react";
+import   "c8f840981cb9651b4d7a8f04a70f0e99:styled-components";
+import   "c8f840981cb9651b4d7a8f04a70f0e99:@material-ui/core";
+import   "c8f840981cb9651b4d7a8f04a70f0e99:@material-ui/icons";
+// Styled Components
+const $c8f840981cb9651b4d7a8f04a70f0e99$var$CellElement = $c8f840981cb9651b4d7a8f04a70f0e99$import$89728ad6d1138102$9099ad97b570f7c.div.withConfig({
+    displayName: "bugLinks__CellElement",
+    componentId: "sc-1hiyrty-0"
+})([
+    "cursor:pointer !important;color:blue;text-decoration:underline;"
+]);
+const $c8f840981cb9651b4d7a8f04a70f0e99$var$DialogContainer = $c8f840981cb9651b4d7a8f04a70f0e99$import$89728ad6d1138102$9099ad97b570f7c.div.withConfig({
+    displayName: "bugLinks__DialogContainer",
+    componentId: "sc-1hiyrty-1"
+})([
+    "width:30rem;height:30rem;background-color:white;padding:20px;"
+]);
+const $c8f840981cb9651b4d7a8f04a70f0e99$var$DialogHeader = $c8f840981cb9651b4d7a8f04a70f0e99$import$89728ad6d1138102$9099ad97b570f7c.div.withConfig({
+    displayName: "bugLinks__DialogHeader",
+    componentId: "sc-1hiyrty-2"
+})([
+    "border-bottom:1px solid #ccc;padding:10px;font-weight:bold;font-size:1rem;"
+]);
+// BugLink Class Component which accepts 2 props: href and text
+class $c8f840981cb9651b4d7a8f04a70f0e99$var$BugLink extends $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.Component {
+    constructor(props){
+        super(props);
+        this.redirectToIssue = ()=>{
+            this.setState({
+                open: false
+            }, ()=>window.location.href = this.props.href
+            );
+        };
+        this.state = {
+            open: false
+        };
+    }
+    render() {
+        return(// <a href={this.props.data.href} target="_blank" rel="noopener noreferrer">{this.props.data.text}</a>
+        /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.Fragment, null, /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", {
+            style: {
+                color: 'blue',
+                cursor: 'pointer'
+            },
+            onClick: ()=>this.setState({
+                    open: true
+                })
+        }, this.props.text), /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$import$bdf49953f69066e2$d64e687ef4853cae, {
+            open: this.state.open,
+            onClose: ()=>this.setState({
+                    open: false
+                })
+        }, /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$var$DialogHeader, null, "Issue: ", this.props.text, /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$import$bdf49953f69066e2$aa4364103b35a0bd, {
+            size: "small",
+            style: {
+                alignSelf: 'center',
+                marginLeft: '1rem'
+            },
+            onClick: ()=>this.redirectToIssue()
+        }, /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$import$c18f4af3fd8d449b$2a81c699e9b13bba, {
+            style: {
+                width: '1rem'
+            }
+        }))), /*#__PURE__*/ $c8f840981cb9651b4d7a8f04a70f0e99$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($c8f840981cb9651b4d7a8f04a70f0e99$var$DialogContainer, null, "Issue Content"))));
+    }
+}
+var $c8f840981cb9651b4d7a8f04a70f0e99$export$9099ad97b570f7c = $c8f840981cb9651b4d7a8f04a70f0e99$var$BugLink;

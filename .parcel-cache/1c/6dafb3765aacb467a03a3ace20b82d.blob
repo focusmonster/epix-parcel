@@ -1,0 +1,40 @@
+import   "70b3f335c660589b053f92a0e509660a:hyphenate-style-name";
+/**
+ * Convert camel cased property names to dash separated.
+ */ function $70b3f335c660589b053f92a0e509660a$var$convertCase(style) {
+    var converted = {
+    };
+    for(var prop in style){
+        var key = prop.indexOf('--') === 0 ? prop : $70b3f335c660589b053f92a0e509660a$import$7f1bf525a559f97f$9099ad97b570f7c(prop);
+        converted[key] = style[prop];
+    }
+    if (style.fallbacks) {
+        if (Array.isArray(style.fallbacks)) converted.fallbacks = style.fallbacks.map($70b3f335c660589b053f92a0e509660a$var$convertCase);
+        else converted.fallbacks = $70b3f335c660589b053f92a0e509660a$var$convertCase(style.fallbacks);
+    }
+    return converted;
+}
+/**
+ * Allow camel cased property names by converting them back to dasherized.
+ */ function $70b3f335c660589b053f92a0e509660a$var$camelCase() {
+    function onProcessStyle(style) {
+        if (Array.isArray(style)) {
+            // Handle rules like @font-face, which can have multiple styles in an array
+            for(var index = 0; index < style.length; index++)style[index] = $70b3f335c660589b053f92a0e509660a$var$convertCase(style[index]);
+            return style;
+        }
+        return $70b3f335c660589b053f92a0e509660a$var$convertCase(style);
+    }
+    function onChangeValue(value, prop, rule) {
+        if (prop.indexOf('--') === 0) return value;
+        var hyphenatedProp = $70b3f335c660589b053f92a0e509660a$import$7f1bf525a559f97f$9099ad97b570f7c(prop); // There was no camel case in place
+        if (prop === hyphenatedProp) return value;
+        rule.prop(hyphenatedProp, value); // Core will ignore that property value we set the proper one above.
+        return null;
+    }
+    return {
+        onProcessStyle: onProcessStyle,
+        onChangeValue: onChangeValue
+    };
+}
+var $70b3f335c660589b053f92a0e509660a$export$9099ad97b570f7c = $70b3f335c660589b053f92a0e509660a$var$camelCase;

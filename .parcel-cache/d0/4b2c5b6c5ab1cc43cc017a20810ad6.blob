@@ -1,0 +1,5 @@
+function $7e94c434d5a819c6df9f31571ad44cbb$export$9099ad97b570f7c(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}

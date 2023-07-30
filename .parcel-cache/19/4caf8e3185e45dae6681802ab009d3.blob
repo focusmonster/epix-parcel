@@ -1,0 +1,5 @@
+import   "5775f58b4ce0ec97f95dfce450942ff7:@material-ui/utils";
+function $5775f58b4ce0ec97f95dfce450942ff7$export$9099ad97b570f7c(string) {
+    if (typeof string !== 'string') throw new Error($5775f58b4ce0ec97f95dfce450942ff7$import$4ddfa5b020de25c6$8144764b12c0d2ad(7));
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}

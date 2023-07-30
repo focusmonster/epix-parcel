@@ -1,0 +1,53 @@
+import   "8326544ee3abefebe33f7db60960d82c:@babel/runtime/helpers/esm/extends";
+import   "8326544ee3abefebe33f7db60960d82c:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "8326544ee3abefebe33f7db60960d82c:react";
+import   "8326544ee3abefebe33f7db60960d82c:prop-types";
+import   "8326544ee3abefebe33f7db60960d82c:clsx";
+import   "8326544ee3abefebe33f7db60960d82c:../styles/withStyles";
+import   "8326544ee3abefebe33f7db60960d82c:@material-ui/utils";
+var $8326544ee3abefebe33f7db60960d82c$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        display: 'block',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+    },
+    /* Styles applied to the root element if `component="video, audio, picture, iframe, or img"`. */ media: {
+        width: '100%'
+    },
+    /* Styles applied to the root element if `component="picture or img"`. */ img: {
+        // ⚠️ object-fit is not supported by IE 11.
+        objectFit: 'cover'
+    }
+};
+var $8326544ee3abefebe33f7db60960d82c$var$MEDIA_COMPONENTS = [
+    'video',
+    'audio',
+    'picture',
+    'iframe',
+    'img'
+];
+var $8326544ee3abefebe33f7db60960d82c$var$CardMedia = /*#__PURE__*/ $8326544ee3abefebe33f7db60960d82c$import$f02ba03fc070e88c$ac92bb288368c37c(function CardMedia(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, image = props.image, src = props.src, style = props.style, other = $8326544ee3abefebe33f7db60960d82c$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "component",
+        "image",
+        "src",
+        "style"
+    ]);
+    var isMediaComponent = $8326544ee3abefebe33f7db60960d82c$var$MEDIA_COMPONENTS.indexOf(Component) !== -1;
+    var composedStyle = !isMediaComponent && image ? $8326544ee3abefebe33f7db60960d82c$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        backgroundImage: "url(\"".concat(image, "\")")
+    }, style) : style;
+    return(/*#__PURE__*/ $8326544ee3abefebe33f7db60960d82c$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $8326544ee3abefebe33f7db60960d82c$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $8326544ee3abefebe33f7db60960d82c$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, isMediaComponent && classes.media, "picture img".indexOf(Component) !== -1 && classes.img),
+        ref: ref,
+        style: composedStyle,
+        src: isMediaComponent ? image || src : undefined
+    }, other), children));
+});
+var $8326544ee3abefebe33f7db60960d82c$export$9099ad97b570f7c = $8326544ee3abefebe33f7db60960d82c$import$abdf0c7fda13cc01$9099ad97b570f7c($8326544ee3abefebe33f7db60960d82c$export$1155669653ed4fad, {
+    name: 'MuiCardMedia'
+})($8326544ee3abefebe33f7db60960d82c$var$CardMedia);

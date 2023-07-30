@@ -1,0 +1,41 @@
+import   "b64fc67d07805638e848a884e8dd6cad:./style";
+import   "b64fc67d07805638e848a884e8dd6cad:./compose";
+function $b64fc67d07805638e848a884e8dd6cad$var$getBorder(value) {
+    if (typeof value !== 'number') return value;
+    return "".concat(value, "px solid");
+}
+var $b64fc67d07805638e848a884e8dd6cad$export$84b8d008be39ecc2 = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'border',
+    themeKey: 'borders',
+    transform: $b64fc67d07805638e848a884e8dd6cad$var$getBorder
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$3a8a75a650698d11 = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderTop',
+    themeKey: 'borders',
+    transform: $b64fc67d07805638e848a884e8dd6cad$var$getBorder
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$63a0fdf3390e2cd4 = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderRight',
+    themeKey: 'borders',
+    transform: $b64fc67d07805638e848a884e8dd6cad$var$getBorder
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$35a94b72f155292a = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderBottom',
+    themeKey: 'borders',
+    transform: $b64fc67d07805638e848a884e8dd6cad$var$getBorder
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$6c31a988e558aa9d = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderLeft',
+    themeKey: 'borders',
+    transform: $b64fc67d07805638e848a884e8dd6cad$var$getBorder
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$235d380eccb4a269 = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderColor',
+    themeKey: 'palette'
+});
+var $b64fc67d07805638e848a884e8dd6cad$export$cc50f72c59ac3b7b = $b64fc67d07805638e848a884e8dd6cad$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'borderRadius',
+    themeKey: 'shape'
+});
+var $b64fc67d07805638e848a884e8dd6cad$var$borders = $b64fc67d07805638e848a884e8dd6cad$import$9f51eb572adbfcc$9099ad97b570f7c($b64fc67d07805638e848a884e8dd6cad$export$84b8d008be39ecc2, $b64fc67d07805638e848a884e8dd6cad$export$3a8a75a650698d11, $b64fc67d07805638e848a884e8dd6cad$export$63a0fdf3390e2cd4, $b64fc67d07805638e848a884e8dd6cad$export$35a94b72f155292a, $b64fc67d07805638e848a884e8dd6cad$export$6c31a988e558aa9d, $b64fc67d07805638e848a884e8dd6cad$export$235d380eccb4a269, $b64fc67d07805638e848a884e8dd6cad$export$cc50f72c59ac3b7b);
+var $b64fc67d07805638e848a884e8dd6cad$export$9099ad97b570f7c = $b64fc67d07805638e848a884e8dd6cad$var$borders;

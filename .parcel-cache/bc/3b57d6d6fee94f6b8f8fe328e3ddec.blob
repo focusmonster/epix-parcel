@@ -1,0 +1,4 @@
+// We use the same empty object to ref count the styles that don't need a theme object.
+var $a74c54cebc660b4b52ed27c79fe94670$var$noopTheme = {
+};
+var $a74c54cebc660b4b52ed27c79fe94670$export$9099ad97b570f7c = $a74c54cebc660b4b52ed27c79fe94670$var$noopTheme;

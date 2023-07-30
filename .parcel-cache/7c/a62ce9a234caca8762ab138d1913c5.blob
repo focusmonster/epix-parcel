@@ -1,0 +1,31 @@
+import   "5787ae81f14d4577265d1102647ac735:@babel/runtime/helpers/esm/defineProperty";
+import   "5787ae81f14d4577265d1102647ac735:@babel/runtime/helpers/esm/extends";
+function $5787ae81f14d4577265d1102647ac735$export$9099ad97b570f7c(breakpoints, spacing, mixins) {
+    var _toolbar;
+    return $5787ae81f14d4577265d1102647ac735$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        gutters: function gutters() {
+            var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+            };
+            console.warn([
+                'Material-UI: theme.mixins.gutters() is deprecated.',
+                'You can use the source of the mixin directly:',
+                "\n      paddingLeft: theme.spacing(2),\n      paddingRight: theme.spacing(2),\n      [theme.breakpoints.up('sm')]: {\n        paddingLeft: theme.spacing(3),\n        paddingRight: theme.spacing(3),\n      },\n      "
+            ].join('\n'));
+            return $5787ae81f14d4577265d1102647ac735$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                paddingLeft: spacing(2),
+                paddingRight: spacing(2)
+            }, styles, $5787ae81f14d4577265d1102647ac735$import$1a28daa4a80cb108$9099ad97b570f7c({
+            }, breakpoints.up('sm'), $5787ae81f14d4577265d1102647ac735$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                paddingLeft: spacing(3),
+                paddingRight: spacing(3)
+            }, styles[breakpoints.up('sm')])));
+        },
+        toolbar: (_toolbar = {
+            minHeight: 56
+        }, $5787ae81f14d4577265d1102647ac735$import$1a28daa4a80cb108$9099ad97b570f7c(_toolbar, "".concat(breakpoints.up('xs'), " and (orientation: landscape)"), {
+            minHeight: 48
+        }), $5787ae81f14d4577265d1102647ac735$import$1a28daa4a80cb108$9099ad97b570f7c(_toolbar, breakpoints.up('sm'), {
+            minHeight: 64
+        }), _toolbar)
+    }, mixins);
+}

@@ -1,0 +1,181 @@
+import   "7f8958679a39172e8d24fa13be564c51:@babel/runtime/helpers/esm/extends";
+import   "7f8958679a39172e8d24fa13be564c51:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "7f8958679a39172e8d24fa13be564c51:react";
+import   "7f8958679a39172e8d24fa13be564c51:prop-types";
+import   "7f8958679a39172e8d24fa13be564c51:clsx";
+import   "7f8958679a39172e8d24fa13be564c51:@material-ui/utils";
+import   "7f8958679a39172e8d24fa13be564c51:../styles/withStyles";
+import   "7f8958679a39172e8d24fa13be564c51:../styles/colorManipulator";
+import   "7f8958679a39172e8d24fa13be564c51:../utils/capitalize";
+import   "7f8958679a39172e8d24fa13be564c51:../internal/SwitchBase";
+var $7f8958679a39172e8d24fa13be564c51$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            display: 'inline-flex',
+            width: 58,
+            height: 38,
+            overflow: 'hidden',
+            padding: 12,
+            boxSizing: 'border-box',
+            position: 'relative',
+            flexShrink: 0,
+            zIndex: 0,
+            // Reset the stacking context.
+            verticalAlign: 'middle',
+            // For correct alignment with the text.
+            '@media print': {
+                colorAdjust: 'exact'
+            }
+        },
+        /* Styles applied to the root element if `edge="start"`. */ edgeStart: {
+            marginLeft: -8
+        },
+        /* Styles applied to the root element if `edge="end"`. */ edgeEnd: {
+            marginRight: -8
+        },
+        /* Styles applied to the internal `SwitchBase` component's `root` class. */ switchBase: {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1,
+            // Render above the focus ripple.
+            color: theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[400],
+            transition: theme.transitions.create([
+                'left',
+                'transform'
+            ], {
+                duration: theme.transitions.duration.shortest
+            }),
+            '&$checked': {
+                transform: 'translateX(20px)'
+            },
+            '&$disabled': {
+                color: theme.palette.type === 'light' ? theme.palette.grey[400] : theme.palette.grey[800]
+            },
+            '&$checked + $track': {
+                opacity: 0.5
+            },
+            '&$disabled + $track': {
+                opacity: theme.palette.type === 'light' ? 0.12 : 0.1
+            }
+        },
+        /* Styles applied to the internal SwitchBase component's root element if `color="primary"`. */ colorPrimary: {
+            '&$checked': {
+                color: theme.palette.primary.main,
+                '&:hover': {
+                    backgroundColor: $7f8958679a39172e8d24fa13be564c51$import$78cd920a0798486b$9ea11009bc462ef5(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+                    '@media (hover: none)': {
+                        backgroundColor: 'transparent'
+                    }
+                }
+            },
+            '&$disabled': {
+                color: theme.palette.type === 'light' ? theme.palette.grey[400] : theme.palette.grey[800]
+            },
+            '&$checked + $track': {
+                backgroundColor: theme.palette.primary.main
+            },
+            '&$disabled + $track': {
+                backgroundColor: theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white
+            }
+        },
+        /* Styles applied to the internal SwitchBase component's root element if `color="secondary"`. */ colorSecondary: {
+            '&$checked': {
+                color: theme.palette.secondary.main,
+                '&:hover': {
+                    backgroundColor: $7f8958679a39172e8d24fa13be564c51$import$78cd920a0798486b$9ea11009bc462ef5(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+                    '@media (hover: none)': {
+                        backgroundColor: 'transparent'
+                    }
+                }
+            },
+            '&$disabled': {
+                color: theme.palette.type === 'light' ? theme.palette.grey[400] : theme.palette.grey[800]
+            },
+            '&$checked + $track': {
+                backgroundColor: theme.palette.secondary.main
+            },
+            '&$disabled + $track': {
+                backgroundColor: theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white
+            }
+        },
+        /* Styles applied to the root element if `size="small"`. */ sizeSmall: {
+            width: 40,
+            height: 24,
+            padding: 7,
+            '& $thumb': {
+                width: 16,
+                height: 16
+            },
+            '& $switchBase': {
+                padding: 4,
+                '&$checked': {
+                    transform: 'translateX(16px)'
+                }
+            }
+        },
+        /* Pseudo-class applied to the internal `SwitchBase` component's `checked` class. */ checked: {
+        },
+        /* Pseudo-class applied to the internal SwitchBase component's disabled class. */ disabled: {
+        },
+        /* Styles applied to the internal SwitchBase component's input element. */ input: {
+            left: '-100%',
+            width: '300%'
+        },
+        /* Styles used to create the thumb passed to the internal `SwitchBase` component `icon` prop. */ thumb: {
+            boxShadow: theme.shadows[1],
+            backgroundColor: 'currentColor',
+            width: 20,
+            height: 20,
+            borderRadius: '50%'
+        },
+        /* Styles applied to the track element. */ track: {
+            height: '100%',
+            width: '100%',
+            borderRadius: 7,
+            zIndex: -1,
+            transition: theme.transitions.create([
+                'opacity',
+                'background-color'
+            ], {
+                duration: theme.transitions.duration.shortest
+            }),
+            backgroundColor: theme.palette.type === 'light' ? theme.palette.common.black : theme.palette.common.white,
+            opacity: theme.palette.type === 'light' ? 0.38 : 0.3
+        }
+    };
+};
+var $7f8958679a39172e8d24fa13be564c51$var$Switch = /*#__PURE__*/ $7f8958679a39172e8d24fa13be564c51$import$f02ba03fc070e88c$ac92bb288368c37c(function Switch(props, ref) {
+    var classes = props.classes, className = props.className, _props$color = props.color, color = _props$color === void 0 ? 'secondary' : _props$color, _props$edge = props.edge, edge = _props$edge === void 0 ? false : _props$edge, _props$size = props.size, size = _props$size === void 0 ? 'medium' : _props$size, other = $7f8958679a39172e8d24fa13be564c51$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "color",
+        "edge",
+        "size"
+    ]);
+    var icon = /*#__PURE__*/ $7f8958679a39172e8d24fa13be564c51$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        className: classes.thumb
+    });
+    return(/*#__PURE__*/ $7f8958679a39172e8d24fa13be564c51$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        className: $7f8958679a39172e8d24fa13be564c51$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, {
+            'start': classes.edgeStart,
+            'end': classes.edgeEnd
+        }[edge], size === "small" && classes["size".concat($7f8958679a39172e8d24fa13be564c51$import$f35500a7ba1578c4$9099ad97b570f7c(size))])
+    }, /*#__PURE__*/ $7f8958679a39172e8d24fa13be564c51$import$f02ba03fc070e88c$2f8418d37d4320b9($7f8958679a39172e8d24fa13be564c51$import$974122fe925cb70e$9099ad97b570f7c, $7f8958679a39172e8d24fa13be564c51$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        type: "checkbox",
+        icon: icon,
+        checkedIcon: icon,
+        classes: {
+            root: $7f8958679a39172e8d24fa13be564c51$import$3e54c96927a352a4$9099ad97b570f7c(classes.switchBase, classes["color".concat($7f8958679a39172e8d24fa13be564c51$import$f35500a7ba1578c4$9099ad97b570f7c(color))]),
+            input: classes.input,
+            checked: classes.checked,
+            disabled: classes.disabled
+        },
+        ref: ref
+    }, other)), /*#__PURE__*/ $7f8958679a39172e8d24fa13be564c51$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        className: classes.track
+    })));
+});
+var $7f8958679a39172e8d24fa13be564c51$export$9099ad97b570f7c = $7f8958679a39172e8d24fa13be564c51$import$abdf0c7fda13cc01$9099ad97b570f7c($7f8958679a39172e8d24fa13be564c51$export$1155669653ed4fad, {
+    name: 'MuiSwitch'
+})($7f8958679a39172e8d24fa13be564c51$var$Switch);

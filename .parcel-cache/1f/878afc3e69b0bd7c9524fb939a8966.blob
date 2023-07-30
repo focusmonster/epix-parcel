@@ -1,0 +1,43 @@
+import   "00834e58caa1c03212597f6eac791337:@babel/runtime/helpers/esm/toConsumableArray";
+import   "00834e58caa1c03212597f6eac791337:@babel/runtime/helpers/esm/extends";
+import   "00834e58caa1c03212597f6eac791337:prop-types";
+import   "00834e58caa1c03212597f6eac791337:@material-ui/utils";
+import   "00834e58caa1c03212597f6eac791337:./merge";
+function $00834e58caa1c03212597f6eac791337$var$omit(input, fields) {
+    var output = {
+    };
+    Object.keys(input).forEach(function(prop) {
+        if (fields.indexOf(prop) === -1) output[prop] = input[prop];
+    });
+    return output;
+}
+var $00834e58caa1c03212597f6eac791337$var$warnedOnce = false;
+function $00834e58caa1c03212597f6eac791337$var$styleFunctionSx(styleFunction) {
+    var newStyleFunction = function newStyleFunction1(props) {
+        var output = styleFunction(props);
+        if (props.css) return $00834e58caa1c03212597f6eac791337$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        }, $00834e58caa1c03212597f6eac791337$import$1d8eb37588603931$9099ad97b570f7c(output, styleFunction($00834e58caa1c03212597f6eac791337$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            theme: props.theme
+        }, props.css))), $00834e58caa1c03212597f6eac791337$var$omit(props.css, [
+            styleFunction.filterProps
+        ]));
+        if (props.sx) return $00834e58caa1c03212597f6eac791337$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        }, $00834e58caa1c03212597f6eac791337$import$1d8eb37588603931$9099ad97b570f7c(output, styleFunction($00834e58caa1c03212597f6eac791337$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            theme: props.theme
+        }, props.sx))), $00834e58caa1c03212597f6eac791337$var$omit(props.sx, [
+            styleFunction.filterProps
+        ]));
+        return output;
+    };
+    newStyleFunction.propTypes = {
+    };
+    newStyleFunction.filterProps = [
+        'css',
+        'sx'
+    ].concat($00834e58caa1c03212597f6eac791337$import$4d3a86197f512b9$9099ad97b570f7c(styleFunction.filterProps));
+    return newStyleFunction;
+}
+function $00834e58caa1c03212597f6eac791337$export$ce8efb75507ffb31(styleFunction) {
+    return $00834e58caa1c03212597f6eac791337$var$styleFunctionSx(styleFunction);
+}
+var $00834e58caa1c03212597f6eac791337$export$9099ad97b570f7c = $00834e58caa1c03212597f6eac791337$var$styleFunctionSx;

@@ -1,0 +1,11 @@
+import   "fbabb6f07bbad89ae1ad80ad0ff82a22:@babel/runtime/helpers/esm/extends";
+import   "fbabb6f07bbad89ae1ad80ad0ff82a22:@material-ui/styles";
+import   "fbabb6f07bbad89ae1ad80ad0ff82a22:./defaultTheme";
+function $fbabb6f07bbad89ae1ad80ad0ff82a22$var$makeStyles(stylesOrCreator) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    };
+    return $fbabb6f07bbad89ae1ad80ad0ff82a22$import$c5d6394d37751b43$da02920cb705849a(stylesOrCreator, $fbabb6f07bbad89ae1ad80ad0ff82a22$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        defaultTheme: $fbabb6f07bbad89ae1ad80ad0ff82a22$import$2db9e05cc982790c$9099ad97b570f7c
+    }, options));
+}
+var $fbabb6f07bbad89ae1ad80ad0ff82a22$export$9099ad97b570f7c = $fbabb6f07bbad89ae1ad80ad0ff82a22$var$makeStyles;

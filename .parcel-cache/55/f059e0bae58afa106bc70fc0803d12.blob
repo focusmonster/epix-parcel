@@ -1,0 +1,48 @@
+import   "4d33976a15ed733fed7f747b6cf35b30:@babel/runtime/helpers/esm/extends";
+import   "4d33976a15ed733fed7f747b6cf35b30:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "4d33976a15ed733fed7f747b6cf35b30:react";
+import   "4d33976a15ed733fed7f747b6cf35b30:prop-types";
+import   "4d33976a15ed733fed7f747b6cf35b30:clsx";
+import   "4d33976a15ed733fed7f747b6cf35b30:../styles/withStyles";
+import   "4d33976a15ed733fed7f747b6cf35b30:../Fade";
+var $4d33976a15ed733fed7f747b6cf35b30$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        // Improve scrollable dialog support.
+        zIndex: -1,
+        position: 'fixed',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        right: 0,
+        bottom: 0,
+        top: 0,
+        left: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        WebkitTapHighlightColor: 'transparent'
+    },
+    /* Styles applied to the root element if `invisible={true}`. */ invisible: {
+        backgroundColor: 'transparent'
+    }
+};
+var $4d33976a15ed733fed7f747b6cf35b30$var$Backdrop = /*#__PURE__*/ $4d33976a15ed733fed7f747b6cf35b30$import$f02ba03fc070e88c$ac92bb288368c37c(function Backdrop(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$invisible = props.invisible, invisible = _props$invisible === void 0 ? false : _props$invisible, open = props.open, transitionDuration = props.transitionDuration, _props$TransitionComp = props.TransitionComponent, TransitionComponent = _props$TransitionComp === void 0 ? $4d33976a15ed733fed7f747b6cf35b30$import$bbdb1930db947eef$9099ad97b570f7c : _props$TransitionComp, other = $4d33976a15ed733fed7f747b6cf35b30$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "invisible",
+        "open",
+        "transitionDuration",
+        "TransitionComponent"
+    ]);
+    return(/*#__PURE__*/ $4d33976a15ed733fed7f747b6cf35b30$import$f02ba03fc070e88c$2f8418d37d4320b9(TransitionComponent, $4d33976a15ed733fed7f747b6cf35b30$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        in: open,
+        timeout: transitionDuration
+    }, other), /*#__PURE__*/ $4d33976a15ed733fed7f747b6cf35b30$import$f02ba03fc070e88c$2f8418d37d4320b9("div", {
+        className: $4d33976a15ed733fed7f747b6cf35b30$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, invisible && classes.invisible),
+        "aria-hidden": true,
+        ref: ref
+    }, children)));
+});
+var $4d33976a15ed733fed7f747b6cf35b30$export$9099ad97b570f7c = $4d33976a15ed733fed7f747b6cf35b30$import$abdf0c7fda13cc01$9099ad97b570f7c($4d33976a15ed733fed7f747b6cf35b30$export$1155669653ed4fad, {
+    name: 'MuiBackdrop'
+})($4d33976a15ed733fed7f747b6cf35b30$var$Backdrop);

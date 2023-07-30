@@ -1,0 +1,6 @@
+import   "bf54f8a9fcd3fedb35fe0aa79f693266:react";
+import   "bf54f8a9fcd3fedb35fe0aa79f693266:./ThemeContext";
+function $bf54f8a9fcd3fedb35fe0aa79f693266$export$9099ad97b570f7c() {
+    var theme = $bf54f8a9fcd3fedb35fe0aa79f693266$import$f02ba03fc070e88c$9099ad97b570f7c.useContext($bf54f8a9fcd3fedb35fe0aa79f693266$import$a5b50d6096838430$9099ad97b570f7c);
+    return theme;
+}

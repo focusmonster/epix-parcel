@@ -1,0 +1,34 @@
+import   "91715534cb6145c35ce137371bcc9718:@babel/runtime/helpers/esm/extends";
+import   "91715534cb6145c35ce137371bcc9718:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "91715534cb6145c35ce137371bcc9718:react";
+import   "91715534cb6145c35ce137371bcc9718:prop-types";
+import   "91715534cb6145c35ce137371bcc9718:clsx";
+import   "91715534cb6145c35ce137371bcc9718:../styles/withStyles";
+var $91715534cb6145c35ce137371bcc9718$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap'
+    },
+    /* Styles applied to the root element if `row={true}`. */ row: {
+        flexDirection: 'row'
+    }
+};
+/**
+ * `FormGroup` wraps controls such as `Checkbox` and `Switch`.
+ * It provides compact row layout.
+ * For the `Radio`, you should be using the `RadioGroup` component instead of this one.
+ */ var $91715534cb6145c35ce137371bcc9718$var$FormGroup = /*#__PURE__*/ $91715534cb6145c35ce137371bcc9718$import$f02ba03fc070e88c$ac92bb288368c37c(function FormGroup(props, ref) {
+    var classes = props.classes, className = props.className, _props$row = props.row, row = _props$row === void 0 ? false : _props$row, other = $91715534cb6145c35ce137371bcc9718$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "row"
+    ]);
+    return(/*#__PURE__*/ $91715534cb6145c35ce137371bcc9718$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $91715534cb6145c35ce137371bcc9718$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $91715534cb6145c35ce137371bcc9718$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, row && classes.row),
+        ref: ref
+    }, other)));
+});
+var $91715534cb6145c35ce137371bcc9718$export$9099ad97b570f7c = $91715534cb6145c35ce137371bcc9718$import$abdf0c7fda13cc01$9099ad97b570f7c($91715534cb6145c35ce137371bcc9718$export$1155669653ed4fad, {
+    name: 'MuiFormGroup'
+})($91715534cb6145c35ce137371bcc9718$var$FormGroup);

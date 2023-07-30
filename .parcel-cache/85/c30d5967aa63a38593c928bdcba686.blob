@@ -1,0 +1,102 @@
+import   "3cc889009c6c5e3601af7f00445bbb84:@babel/runtime/helpers/esm/objectWithoutPropertiesLoose";
+import   "3cc889009c6c5e3601af7f00445bbb84:@babel/runtime/helpers/esm/extends";
+import   "3cc889009c6c5e3601af7f00445bbb84:@babel/runtime/helpers/esm/assertThisInitialized";
+import   "3cc889009c6c5e3601af7f00445bbb84:@babel/runtime/helpers/esm/inheritsLoose";
+import   "3cc889009c6c5e3601af7f00445bbb84:prop-types";
+import   "3cc889009c6c5e3601af7f00445bbb84:react";
+import   "3cc889009c6c5e3601af7f00445bbb84:./TransitionGroupContext";
+import   "3cc889009c6c5e3601af7f00445bbb84:./utils/ChildMapping";
+var $3cc889009c6c5e3601af7f00445bbb84$var$values = Object.values || function(obj) {
+    return Object.keys(obj).map(function(k) {
+        return obj[k];
+    });
+};
+var $3cc889009c6c5e3601af7f00445bbb84$var$defaultProps = {
+    component: 'div',
+    childFactory: function childFactory(child) {
+        return child;
+    }
+};
+/**
+ * The `<TransitionGroup>` component manages a set of transition components
+ * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
+ * components, `<TransitionGroup>` is a state machine for managing the mounting
+ * and unmounting of components over time.
+ *
+ * Consider the example below. As items are removed or added to the TodoList the
+ * `in` prop is toggled automatically by the `<TransitionGroup>`.
+ *
+ * Note that `<TransitionGroup>`  does not define any animation behavior!
+ * Exactly _how_ a list item animates is up to the individual transition
+ * component. This means you can mix and match animations across different list
+ * items.
+ */ var $3cc889009c6c5e3601af7f00445bbb84$var$TransitionGroup = /*#__PURE__*/ function(_React$Component) {
+    $3cc889009c6c5e3601af7f00445bbb84$import$8db3e3d0e0460463$9099ad97b570f7c(TransitionGroup, _React$Component);
+    function TransitionGroup(props, context) {
+        var _this;
+        _this = _React$Component.call(this, props, context) || this;
+        var handleExited = _this.handleExited.bind($3cc889009c6c5e3601af7f00445bbb84$import$6b732308db86d830$9099ad97b570f7c(_this)); // Initial children should all be entering, dependent on appear
+        _this.state = {
+            contextValue: {
+                isMounting: true
+            },
+            handleExited: handleExited,
+            firstRender: true
+        };
+        return _this;
+    }
+    var _proto = TransitionGroup.prototype;
+    _proto.componentDidMount = function componentDidMount() {
+        this.mounted = true;
+        this.setState({
+            contextValue: {
+                isMounting: false
+            }
+        });
+    };
+    _proto.componentWillUnmount = function componentWillUnmount() {
+        this.mounted = false;
+    };
+    TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
+        var prevChildMapping = _ref.children, handleExited = _ref.handleExited, firstRender = _ref.firstRender;
+        return {
+            children: firstRender ? $3cc889009c6c5e3601af7f00445bbb84$import$dc5a4e15e5d34b04$cba72bc23453ec6d(nextProps, handleExited) : $3cc889009c6c5e3601af7f00445bbb84$import$dc5a4e15e5d34b04$5e710795e1c1ac79(nextProps, prevChildMapping, handleExited),
+            firstRender: false
+        };
+    };
+    _proto.handleExited = function handleExited(child, node) {
+        var currentChildMapping = $3cc889009c6c5e3601af7f00445bbb84$import$dc5a4e15e5d34b04$ef0fdf876fa72776(this.props.children);
+        if (child.key in currentChildMapping) return;
+        if (child.props.onExited) child.props.onExited(node);
+        if (this.mounted) this.setState(function(state) {
+            var children = $3cc889009c6c5e3601af7f00445bbb84$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            }, state.children);
+            delete children[child.key];
+            return {
+                children: children
+            };
+        });
+    };
+    _proto.render = function render() {
+        var _this$props = this.props, Component = _this$props.component, childFactory = _this$props.childFactory, props = $3cc889009c6c5e3601af7f00445bbb84$import$555fcbd5081a286a$9099ad97b570f7c(_this$props, [
+            "component",
+            "childFactory"
+        ]);
+        var contextValue = this.state.contextValue;
+        var children = $3cc889009c6c5e3601af7f00445bbb84$var$values(this.state.children).map(childFactory);
+        delete props.appear;
+        delete props.enter;
+        delete props.exit;
+        if (Component === null) return(/*#__PURE__*/ $3cc889009c6c5e3601af7f00445bbb84$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($3cc889009c6c5e3601af7f00445bbb84$import$732d81f71fcc18f6$9099ad97b570f7c.Provider, {
+            value: contextValue
+        }, children));
+        return(/*#__PURE__*/ $3cc889009c6c5e3601af7f00445bbb84$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($3cc889009c6c5e3601af7f00445bbb84$import$732d81f71fcc18f6$9099ad97b570f7c.Provider, {
+            value: contextValue
+        }, /*#__PURE__*/ $3cc889009c6c5e3601af7f00445bbb84$import$f02ba03fc070e88c$9099ad97b570f7c.createElement(Component, props, children)));
+    };
+    return TransitionGroup;
+}($3cc889009c6c5e3601af7f00445bbb84$import$f02ba03fc070e88c$9099ad97b570f7c.Component);
+$3cc889009c6c5e3601af7f00445bbb84$var$TransitionGroup.propTypes = {
+};
+$3cc889009c6c5e3601af7f00445bbb84$var$TransitionGroup.defaultProps = $3cc889009c6c5e3601af7f00445bbb84$var$defaultProps;
+var $3cc889009c6c5e3601af7f00445bbb84$export$9099ad97b570f7c = $3cc889009c6c5e3601af7f00445bbb84$var$TransitionGroup;

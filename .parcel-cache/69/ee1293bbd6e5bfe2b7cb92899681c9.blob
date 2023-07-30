@@ -1,0 +1,74 @@
+import   "0392600267a2ee2dd7d546df0804d8d0:@babel/runtime/helpers/esm/extends";
+import   "0392600267a2ee2dd7d546df0804d8d0:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "0392600267a2ee2dd7d546df0804d8d0:react";
+import   "0392600267a2ee2dd7d546df0804d8d0:prop-types";
+import   "0392600267a2ee2dd7d546df0804d8d0:clsx";
+import   "0392600267a2ee2dd7d546df0804d8d0:@material-ui/utils";
+import   "0392600267a2ee2dd7d546df0804d8d0:../styles/withStyles";
+import   "0392600267a2ee2dd7d546df0804d8d0:../utils/capitalize";
+var $0392600267a2ee2dd7d546df0804d8d0$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            userSelect: 'none',
+            width: '1em',
+            height: '1em',
+            display: 'inline-block',
+            fill: 'currentColor',
+            flexShrink: 0,
+            fontSize: theme.typography.pxToRem(24),
+            transition: theme.transitions.create('fill', {
+                duration: theme.transitions.duration.shorter
+            })
+        },
+        /* Styles applied to the root element if `color="primary"`. */ colorPrimary: {
+            color: theme.palette.primary.main
+        },
+        /* Styles applied to the root element if `color="secondary"`. */ colorSecondary: {
+            color: theme.palette.secondary.main
+        },
+        /* Styles applied to the root element if `color="action"`. */ colorAction: {
+            color: theme.palette.action.active
+        },
+        /* Styles applied to the root element if `color="error"`. */ colorError: {
+            color: theme.palette.error.main
+        },
+        /* Styles applied to the root element if `color="disabled"`. */ colorDisabled: {
+            color: theme.palette.action.disabled
+        },
+        /* Styles applied to the root element if `fontSize="inherit"`. */ fontSizeInherit: {
+            fontSize: 'inherit'
+        },
+        /* Styles applied to the root element if `fontSize="small"`. */ fontSizeSmall: {
+            fontSize: theme.typography.pxToRem(20)
+        },
+        /* Styles applied to the root element if `fontSize="large"`. */ fontSizeLarge: {
+            fontSize: theme.typography.pxToRem(35)
+        }
+    };
+};
+var $0392600267a2ee2dd7d546df0804d8d0$var$SvgIcon = /*#__PURE__*/ $0392600267a2ee2dd7d546df0804d8d0$import$f02ba03fc070e88c$ac92bb288368c37c(function SvgIcon(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$color = props.color, color = _props$color === void 0 ? 'inherit' : _props$color, _props$component = props.component, Component = _props$component === void 0 ? 'svg' : _props$component, _props$fontSize = props.fontSize, fontSize = _props$fontSize === void 0 ? 'medium' : _props$fontSize, htmlColor = props.htmlColor, titleAccess = props.titleAccess, _props$viewBox = props.viewBox, viewBox = _props$viewBox === void 0 ? '0 0 24 24' : _props$viewBox, other = $0392600267a2ee2dd7d546df0804d8d0$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "color",
+        "component",
+        "fontSize",
+        "htmlColor",
+        "titleAccess",
+        "viewBox"
+    ]);
+    return(/*#__PURE__*/ $0392600267a2ee2dd7d546df0804d8d0$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $0392600267a2ee2dd7d546df0804d8d0$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $0392600267a2ee2dd7d546df0804d8d0$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, color !== 'inherit' && classes["color".concat($0392600267a2ee2dd7d546df0804d8d0$import$f35500a7ba1578c4$9099ad97b570f7c(color))], fontSize !== 'default' && fontSize !== 'medium' && classes["fontSize".concat($0392600267a2ee2dd7d546df0804d8d0$import$f35500a7ba1578c4$9099ad97b570f7c(fontSize))]),
+        focusable: "false",
+        viewBox: viewBox,
+        color: htmlColor,
+        "aria-hidden": titleAccess ? undefined : true,
+        role: titleAccess ? 'img' : undefined,
+        ref: ref
+    }, other), children, titleAccess ? /*#__PURE__*/ $0392600267a2ee2dd7d546df0804d8d0$import$f02ba03fc070e88c$2f8418d37d4320b9("title", null, titleAccess) : null));
+});
+$0392600267a2ee2dd7d546df0804d8d0$var$SvgIcon.muiName = 'SvgIcon';
+var $0392600267a2ee2dd7d546df0804d8d0$export$9099ad97b570f7c = $0392600267a2ee2dd7d546df0804d8d0$import$abdf0c7fda13cc01$9099ad97b570f7c($0392600267a2ee2dd7d546df0804d8d0$export$1155669653ed4fad, {
+    name: 'MuiSvgIcon'
+})($0392600267a2ee2dd7d546df0804d8d0$var$SvgIcon);

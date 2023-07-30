@@ -1,0 +1,27 @@
+import   "47a78f8390290095ae45b9db60e33b79:@babel/runtime/helpers/esm/extends";
+import   "47a78f8390290095ae45b9db60e33b79:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "47a78f8390290095ae45b9db60e33b79:react";
+import   "47a78f8390290095ae45b9db60e33b79:prop-types";
+import   "47a78f8390290095ae45b9db60e33b79:clsx";
+import   "47a78f8390290095ae45b9db60e33b79:@material-ui/utils";
+import   "47a78f8390290095ae45b9db60e33b79:../utils/capitalize";
+/**
+ * @ignore - internal component.
+ */ var $47a78f8390290095ae45b9db60e33b79$var$NativeSelectInput = /*#__PURE__*/ $47a78f8390290095ae45b9db60e33b79$import$f02ba03fc070e88c$ac92bb288368c37c(function NativeSelectInput(props, ref) {
+    var classes = props.classes, className = props.className, disabled = props.disabled, IconComponent = props.IconComponent, inputRef = props.inputRef, _props$variant = props.variant, variant = _props$variant === void 0 ? 'standard' : _props$variant, other = $47a78f8390290095ae45b9db60e33b79$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "disabled",
+        "IconComponent",
+        "inputRef",
+        "variant"
+    ]);
+    return(/*#__PURE__*/ $47a78f8390290095ae45b9db60e33b79$import$f02ba03fc070e88c$2f8418d37d4320b9($47a78f8390290095ae45b9db60e33b79$import$f02ba03fc070e88c$44f93cb792444969, null, /*#__PURE__*/ $47a78f8390290095ae45b9db60e33b79$import$f02ba03fc070e88c$2f8418d37d4320b9("select", $47a78f8390290095ae45b9db60e33b79$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $47a78f8390290095ae45b9db60e33b79$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes.select, classes[variant], className, disabled && classes.disabled),
+        disabled: disabled,
+        ref: inputRef || ref
+    }, other)), props.multiple ? null : /*#__PURE__*/ $47a78f8390290095ae45b9db60e33b79$import$f02ba03fc070e88c$2f8418d37d4320b9(IconComponent, {
+        className: $47a78f8390290095ae45b9db60e33b79$import$3e54c96927a352a4$9099ad97b570f7c(classes.icon, classes["icon".concat($47a78f8390290095ae45b9db60e33b79$import$f35500a7ba1578c4$9099ad97b570f7c(variant))], disabled && classes.disabled)
+    })));
+});
+var $47a78f8390290095ae45b9db60e33b79$export$9099ad97b570f7c = $47a78f8390290095ae45b9db60e33b79$var$NativeSelectInput;

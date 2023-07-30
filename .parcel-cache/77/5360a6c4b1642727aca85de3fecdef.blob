@@ -1,0 +1,88 @@
+import   "da57f35418ce7c90d276a100ef57d206:@babel/runtime/helpers/esm/extends";
+import   "da57f35418ce7c90d276a100ef57d206:@babel/runtime/helpers/esm/toConsumableArray";
+import   "da57f35418ce7c90d276a100ef57d206:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "da57f35418ce7c90d276a100ef57d206:react";
+import   "da57f35418ce7c90d276a100ef57d206:prop-types";
+import   "da57f35418ce7c90d276a100ef57d206:clsx";
+import   "da57f35418ce7c90d276a100ef57d206:../styles/withStyles";
+import   "da57f35418ce7c90d276a100ef57d206:../Paper";
+import   "da57f35418ce7c90d276a100ef57d206:../utils/capitalize";
+import   "da57f35418ce7c90d276a100ef57d206:../LinearProgress";
+var $da57f35418ce7c90d276a100ef57d206$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            background: theme.palette.background.default,
+            padding: 8
+        },
+        /* Styles applied to the root element if `position="bottom"`. */ positionBottom: {
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: theme.zIndex.mobileStepper
+        },
+        /* Styles applied to the root element if `position="top"`. */ positionTop: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: theme.zIndex.mobileStepper
+        },
+        /* Styles applied to the root element if `position="static"`. */ positionStatic: {
+        },
+        /* Styles applied to the dots container if `variant="dots"`. */ dots: {
+            display: 'flex',
+            flexDirection: 'row'
+        },
+        /* Styles applied to each dot if `variant="dots"`. */ dot: {
+            backgroundColor: theme.palette.action.disabled,
+            borderRadius: '50%',
+            width: 8,
+            height: 8,
+            margin: '0 2px'
+        },
+        /* Styles applied to a dot if `variant="dots"` and this is the active step. */ dotActive: {
+            backgroundColor: theme.palette.primary.main
+        },
+        /* Styles applied to the Linear Progress component if `variant="progress"`. */ progress: {
+            width: '50%'
+        }
+    };
+};
+var $da57f35418ce7c90d276a100ef57d206$var$MobileStepper = /*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$ac92bb288368c37c(function MobileStepper(props, ref) {
+    var _props$activeStep = props.activeStep, activeStep = _props$activeStep === void 0 ? 0 : _props$activeStep, backButton = props.backButton, classes = props.classes, className = props.className, LinearProgressProps = props.LinearProgressProps, nextButton = props.nextButton, _props$position = props.position, position = _props$position === void 0 ? 'bottom' : _props$position, steps = props.steps, _props$variant = props.variant, variant = _props$variant === void 0 ? 'dots' : _props$variant, other = $da57f35418ce7c90d276a100ef57d206$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "activeStep",
+        "backButton",
+        "classes",
+        "className",
+        "LinearProgressProps",
+        "nextButton",
+        "position",
+        "steps",
+        "variant"
+    ]);
+    return(/*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$2f8418d37d4320b9($da57f35418ce7c90d276a100ef57d206$import$881d8cc84965099$9099ad97b570f7c, $da57f35418ce7c90d276a100ef57d206$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        square: true,
+        elevation: 0,
+        className: $da57f35418ce7c90d276a100ef57d206$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes["position".concat($da57f35418ce7c90d276a100ef57d206$import$f35500a7ba1578c4$9099ad97b570f7c(position))], className),
+        ref: ref
+    }, other), backButton, variant === 'text' && /*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$2f8418d37d4320b9($da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$44f93cb792444969, null, activeStep + 1, " / ", steps), variant === 'dots' && /*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$2f8418d37d4320b9("div", {
+        className: classes.dots
+    }, $da57f35418ce7c90d276a100ef57d206$import$4d3a86197f512b9$9099ad97b570f7c(new Array(steps)).map(function(_, index) {
+        return(/*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$2f8418d37d4320b9("div", {
+            key: index,
+            className: $da57f35418ce7c90d276a100ef57d206$import$3e54c96927a352a4$9099ad97b570f7c(classes.dot, index === activeStep && classes.dotActive)
+        }));
+    })), variant === 'progress' && /*#__PURE__*/ $da57f35418ce7c90d276a100ef57d206$import$f02ba03fc070e88c$2f8418d37d4320b9($da57f35418ce7c90d276a100ef57d206$import$15ad3e7648bc150a$9099ad97b570f7c, $da57f35418ce7c90d276a100ef57d206$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: classes.progress,
+        variant: "determinate",
+        value: Math.ceil(activeStep / (steps - 1) * 100)
+    }, LinearProgressProps)), nextButton));
+});
+var $da57f35418ce7c90d276a100ef57d206$export$9099ad97b570f7c = $da57f35418ce7c90d276a100ef57d206$import$abdf0c7fda13cc01$9099ad97b570f7c($da57f35418ce7c90d276a100ef57d206$export$1155669653ed4fad, {
+    name: 'MuiMobileStepper'
+})($da57f35418ce7c90d276a100ef57d206$var$MobileStepper);

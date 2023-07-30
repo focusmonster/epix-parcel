@@ -1,0 +1,99 @@
+import   "3ef488129ef5ffd73b6d467db605f5b5:@babel/runtime/helpers/esm/extends";
+import   "3ef488129ef5ffd73b6d467db605f5b5:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "3ef488129ef5ffd73b6d467db605f5b5:react";
+import   "3ef488129ef5ffd73b6d467db605f5b5:prop-types";
+import   "3ef488129ef5ffd73b6d467db605f5b5:@material-ui/styles";
+import   "3ef488129ef5ffd73b6d467db605f5b5:./SelectInput";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../FormControl/formControlState";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../FormControl/useFormControl";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../styles/withStyles";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../internal/svg-icons/ArrowDropDown";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../Input";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../NativeSelect/NativeSelect";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../NativeSelect/NativeSelectInput";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../FilledInput";
+import   "3ef488129ef5ffd73b6d467db605f5b5:../OutlinedInput";
+var $3ef488129ef5ffd73b6d467db605f5b5$export$1155669653ed4fad = $3ef488129ef5ffd73b6d467db605f5b5$import$9d8c9fa1b1912b1c$1155669653ed4fad;
+var $3ef488129ef5ffd73b6d467db605f5b5$var$_ref = /*#__PURE__*/ $3ef488129ef5ffd73b6d467db605f5b5$import$f02ba03fc070e88c$2f8418d37d4320b9($3ef488129ef5ffd73b6d467db605f5b5$import$ba00c9527c5138a0$9099ad97b570f7c, null);
+var $3ef488129ef5ffd73b6d467db605f5b5$var$_ref2 = /*#__PURE__*/ $3ef488129ef5ffd73b6d467db605f5b5$import$f02ba03fc070e88c$2f8418d37d4320b9($3ef488129ef5ffd73b6d467db605f5b5$import$9bfdcd3a4c736e11$9099ad97b570f7c, null);
+var $3ef488129ef5ffd73b6d467db605f5b5$var$Select = /*#__PURE__*/ $3ef488129ef5ffd73b6d467db605f5b5$import$f02ba03fc070e88c$ac92bb288368c37c(function Select(props, ref) {
+    var _props$autoWidth = props.autoWidth, autoWidth = _props$autoWidth === void 0 ? false : _props$autoWidth, children = props.children, classes = props.classes, _props$displayEmpty = props.displayEmpty, displayEmpty = _props$displayEmpty === void 0 ? false : _props$displayEmpty, _props$IconComponent = props.IconComponent, IconComponent = _props$IconComponent === void 0 ? $3ef488129ef5ffd73b6d467db605f5b5$import$583c1da36813325b$9099ad97b570f7c : _props$IconComponent, id = props.id, input = props.input, inputProps = props.inputProps, label = props.label, labelId = props.labelId, _props$labelWidth = props.labelWidth, labelWidth = _props$labelWidth === void 0 ? 0 : _props$labelWidth, MenuProps = props.MenuProps, _props$multiple = props.multiple, multiple = _props$multiple === void 0 ? false : _props$multiple, _props$native = props.native, native = _props$native === void 0 ? false : _props$native, onClose = props.onClose, onOpen = props.onOpen, open = props.open, renderValue = props.renderValue, SelectDisplayProps = props.SelectDisplayProps, _props$variant = props.variant, variantProps = _props$variant === void 0 ? 'standard' : _props$variant, other = $3ef488129ef5ffd73b6d467db605f5b5$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "autoWidth",
+        "children",
+        "classes",
+        "displayEmpty",
+        "IconComponent",
+        "id",
+        "input",
+        "inputProps",
+        "label",
+        "labelId",
+        "labelWidth",
+        "MenuProps",
+        "multiple",
+        "native",
+        "onClose",
+        "onOpen",
+        "open",
+        "renderValue",
+        "SelectDisplayProps",
+        "variant"
+    ]);
+    var inputComponent = native ? $3ef488129ef5ffd73b6d467db605f5b5$import$6cbab304bb70700$9099ad97b570f7c : $3ef488129ef5ffd73b6d467db605f5b5$import$d80bac8c3ffdcc9e$9099ad97b570f7c;
+    var muiFormControl = $3ef488129ef5ffd73b6d467db605f5b5$import$d4261346a34c5381$9099ad97b570f7c();
+    var fcs = $3ef488129ef5ffd73b6d467db605f5b5$import$9070252bcfb59814$9099ad97b570f7c({
+        props: props,
+        muiFormControl: muiFormControl,
+        states: [
+            'variant'
+        ]
+    });
+    var variant = fcs.variant || variantProps;
+    var InputComponent = input || {
+        standard: $3ef488129ef5ffd73b6d467db605f5b5$var$_ref,
+        outlined: /*#__PURE__*/ $3ef488129ef5ffd73b6d467db605f5b5$import$f02ba03fc070e88c$2f8418d37d4320b9($3ef488129ef5ffd73b6d467db605f5b5$import$1ca1806fb6c0a795$9099ad97b570f7c, {
+            label: label,
+            labelWidth: labelWidth
+        }),
+        filled: $3ef488129ef5ffd73b6d467db605f5b5$var$_ref2
+    }[variant];
+    return(/*#__PURE__*/ $3ef488129ef5ffd73b6d467db605f5b5$import$f02ba03fc070e88c$228915fa085e29fe(InputComponent, $3ef488129ef5ffd73b6d467db605f5b5$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        // Most of the logic is implemented in `SelectInput`.
+        // The `Select` component is a simple API wrapper to expose something better to play with.
+        inputComponent: inputComponent,
+        inputProps: $3ef488129ef5ffd73b6d467db605f5b5$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            children: children,
+            IconComponent: IconComponent,
+            variant: variant,
+            type: undefined,
+            // We render a select. We can ignore the type provided by the `Input`.
+            multiple: multiple
+        }, native ? {
+            id: id
+        } : {
+            autoWidth: autoWidth,
+            displayEmpty: displayEmpty,
+            labelId: labelId,
+            MenuProps: MenuProps,
+            onClose: onClose,
+            onOpen: onOpen,
+            open: open,
+            renderValue: renderValue,
+            SelectDisplayProps: $3ef488129ef5ffd73b6d467db605f5b5$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                id: id
+            }, SelectDisplayProps)
+        }, inputProps, {
+            classes: inputProps ? $3ef488129ef5ffd73b6d467db605f5b5$import$c5d6394d37751b43$24f3b7e2ea721a24({
+                baseClasses: classes,
+                newClasses: inputProps.classes,
+                Component: Select
+            }) : classes
+        }, input ? input.props.inputProps : {
+        }),
+        ref: ref
+    }, other)));
+});
+$3ef488129ef5ffd73b6d467db605f5b5$var$Select.muiName = 'Select';
+var $3ef488129ef5ffd73b6d467db605f5b5$export$9099ad97b570f7c = $3ef488129ef5ffd73b6d467db605f5b5$import$abdf0c7fda13cc01$9099ad97b570f7c($3ef488129ef5ffd73b6d467db605f5b5$export$1155669653ed4fad, {
+    name: 'MuiSelect'
+})($3ef488129ef5ffd73b6d467db605f5b5$var$Select);

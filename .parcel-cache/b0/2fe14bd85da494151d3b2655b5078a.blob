@@ -1,0 +1,19 @@
+/**
+ * Sort props by length.
+ */ function $680722b2fb96e7de2f8f431a11bb672b$var$jssPropsSort() {
+    var sort = function sort1(prop0, prop1) {
+        if (prop0.length === prop1.length) return prop0 > prop1 ? 1 : -1;
+        return prop0.length - prop1.length;
+    };
+    return {
+        onProcessStyle: function onProcessStyle(style, rule) {
+            if (rule.type !== 'style') return style;
+            var newStyle = {
+            };
+            var props = Object.keys(style).sort(sort);
+            for(var i = 0; i < props.length; i++)newStyle[props[i]] = style[props[i]];
+            return newStyle;
+        }
+    };
+}
+var $680722b2fb96e7de2f8f431a11bb672b$export$9099ad97b570f7c = $680722b2fb96e7de2f8f431a11bb672b$var$jssPropsSort;

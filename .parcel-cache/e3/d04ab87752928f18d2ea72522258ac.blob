@@ -1,0 +1,4 @@
+function $522f4d0cc293359c20ee6da0bc192a2c$export$9099ad97b570f7c(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}

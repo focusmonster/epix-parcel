@@ -1,0 +1,7 @@
+import   "15330719c041b3642e37b5f36aa9b8eb:react";
+import   "15330719c041b3642e37b5f36aa9b8eb:../../utils/createSvgIcon";
+var /**
+ * @ignore - internal component.
+ */ $15330719c041b3642e37b5f36aa9b8eb$export$9099ad97b570f7c = $15330719c041b3642e37b5f36aa9b8eb$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $15330719c041b3642e37b5f36aa9b8eb$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
+    d: "M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+}), 'ArrowDownward');

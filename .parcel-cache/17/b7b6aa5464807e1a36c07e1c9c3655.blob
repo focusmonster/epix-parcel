@@ -1,0 +1,91 @@
+import   "ba0eafa29b001178d66f3578012f9a80:@babel/runtime/helpers/esm/extends";
+import   "ba0eafa29b001178d66f3578012f9a80:@babel/runtime/helpers/esm/toConsumableArray";
+import   "ba0eafa29b001178d66f3578012f9a80:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "ba0eafa29b001178d66f3578012f9a80:react";
+import   "ba0eafa29b001178d66f3578012f9a80:react-is";
+import   "ba0eafa29b001178d66f3578012f9a80:prop-types";
+import   "ba0eafa29b001178d66f3578012f9a80:clsx";
+import   "ba0eafa29b001178d66f3578012f9a80:../styles/withStyles";
+import   "ba0eafa29b001178d66f3578012f9a80:../Typography";
+import   "ba0eafa29b001178d66f3578012f9a80:./BreadcrumbCollapsed";
+var $ba0eafa29b001178d66f3578012f9a80$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+    },
+    /* Styles applied to the ol element. */ ol: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        padding: 0,
+        margin: 0,
+        listStyle: 'none'
+    },
+    /* Styles applied to the li element. */ li: {
+    },
+    /* Styles applied to the separator element. */ separator: {
+        display: 'flex',
+        userSelect: 'none',
+        marginLeft: 8,
+        marginRight: 8
+    }
+};
+function $ba0eafa29b001178d66f3578012f9a80$var$insertSeparators(items, className, separator) {
+    return items.reduce(function(acc, current, index) {
+        if (index < items.length - 1) acc = acc.concat(current, /*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$2f8418d37d4320b9("li", {
+            "aria-hidden": true,
+            key: "separator-".concat(index),
+            className: className
+        }, separator));
+        else acc.push(current);
+        return acc;
+    }, []);
+}
+var $ba0eafa29b001178d66f3578012f9a80$var$Breadcrumbs = /*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$ac92bb288368c37c(function Breadcrumbs(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'nav' : _props$component, _props$expandText = props.expandText, expandText = _props$expandText === void 0 ? 'Show path' : _props$expandText, _props$itemsAfterColl = props.itemsAfterCollapse, itemsAfterCollapse = _props$itemsAfterColl === void 0 ? 1 : _props$itemsAfterColl, _props$itemsBeforeCol = props.itemsBeforeCollapse, itemsBeforeCollapse = _props$itemsBeforeCol === void 0 ? 1 : _props$itemsBeforeCol, _props$maxItems = props.maxItems, maxItems = _props$maxItems === void 0 ? 8 : _props$maxItems, _props$separator = props.separator, separator = _props$separator === void 0 ? '/' : _props$separator, other = $ba0eafa29b001178d66f3578012f9a80$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "component",
+        "expandText",
+        "itemsAfterCollapse",
+        "itemsBeforeCollapse",
+        "maxItems",
+        "separator"
+    ]);
+    var _React$useState = $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$f54936751fc2c51(false), expanded = _React$useState[0], setExpanded = _React$useState[1];
+    var renderItemsBeforeAndAfter = function renderItemsBeforeAndAfter1(allItems) {
+        var handleClickExpand = function handleClickExpand1(event) {
+            setExpanded(true); // The clicked element received the focus but gets removed from the DOM.
+            // Let's keep the focus in the component after expanding.
+            var focusable = event.currentTarget.parentNode.querySelector('a[href],button,[tabindex]');
+            if (focusable) focusable.focus();
+        }; // This defends against someone passing weird input, to ensure that if all
+        // items would be shown anyway, we just show all items without the EllipsisItem
+        if (itemsBeforeCollapse + itemsAfterCollapse >= allItems.length) return allItems;
+        return [].concat($ba0eafa29b001178d66f3578012f9a80$import$4d3a86197f512b9$9099ad97b570f7c(allItems.slice(0, itemsBeforeCollapse)), [
+            /*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$2f8418d37d4320b9($ba0eafa29b001178d66f3578012f9a80$import$4a30d5dce36be271$9099ad97b570f7c, {
+                "aria-label": expandText,
+                key: "ellipsis",
+                onClick: handleClickExpand
+            })
+        ], $ba0eafa29b001178d66f3578012f9a80$import$4d3a86197f512b9$9099ad97b570f7c(allItems.slice(allItems.length - itemsAfterCollapse, allItems.length)));
+    };
+    var allItems = $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$4a1442b8e7333aeb.toArray(children).filter(function(child) {
+        return(/*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$64e9a1defe72209(child));
+    }).map(function(child, index) {
+        return(/*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$2f8418d37d4320b9("li", {
+            className: classes.li,
+            key: "child-".concat(index)
+        }, child));
+    });
+    return(/*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$2f8418d37d4320b9($ba0eafa29b001178d66f3578012f9a80$import$ffac14c38e6e39b9$9099ad97b570f7c, $ba0eafa29b001178d66f3578012f9a80$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        ref: ref,
+        component: Component,
+        color: "textSecondary",
+        className: $ba0eafa29b001178d66f3578012f9a80$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className)
+    }, other), /*#__PURE__*/ $ba0eafa29b001178d66f3578012f9a80$import$f02ba03fc070e88c$2f8418d37d4320b9("ol", {
+        className: classes.ol
+    }, $ba0eafa29b001178d66f3578012f9a80$var$insertSeparators(expanded || maxItems && allItems.length <= maxItems ? allItems : renderItemsBeforeAndAfter(allItems), classes.separator, separator))));
+});
+var $ba0eafa29b001178d66f3578012f9a80$export$9099ad97b570f7c = $ba0eafa29b001178d66f3578012f9a80$import$abdf0c7fda13cc01$9099ad97b570f7c($ba0eafa29b001178d66f3578012f9a80$export$1155669653ed4fad, {
+    name: 'MuiBreadcrumbs'
+})($ba0eafa29b001178d66f3578012f9a80$var$Breadcrumbs);

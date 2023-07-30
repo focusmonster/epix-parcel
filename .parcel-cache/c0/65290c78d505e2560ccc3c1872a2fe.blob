@@ -1,0 +1,7 @@
+import   "65e8a97b1e489b4d2c22db22b47f1c06:react";
+import   "65e8a97b1e489b4d2c22db22b47f1c06:../../utils/createSvgIcon";
+var /**
+ * @ignore - internal component.
+ */ $65e8a97b1e489b4d2c22db22b47f1c06$export$9099ad97b570f7c = $65e8a97b1e489b4d2c22db22b47f1c06$import$317fa3d69c96f4ea$9099ad97b570f7c(/*#__PURE__*/ $65e8a97b1e489b4d2c22db22b47f1c06$import$f02ba03fc070e88c$2f8418d37d4320b9("path", {
+    d: "M7 10l5 5 5-5z"
+}), 'ArrowDropDown');

@@ -1,0 +1,12 @@
+import   "65eb812e78781342e056ad948767e8b9:./toPropertyKey.js";
+function $65eb812e78781342e056ad948767e8b9$export$9099ad97b570f7c(obj, key, value) {
+    key = $65eb812e78781342e056ad948767e8b9$import$ca6f8c5e2f4960e2$9099ad97b570f7c(key);
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}

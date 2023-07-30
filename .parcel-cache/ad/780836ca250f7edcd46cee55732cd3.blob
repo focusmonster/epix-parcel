@@ -1,0 +1,29 @@
+import   "5f3de95c29bace930552f89daceece1e:./style";
+import   "5f3de95c29bace930552f89daceece1e:./compose";
+var $5f3de95c29bace930552f89daceece1e$export$8d759f3178f6b82 = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'fontFamily',
+    themeKey: 'typography'
+});
+var $5f3de95c29bace930552f89daceece1e$export$5f63e484b7f144c9 = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'fontSize',
+    themeKey: 'typography'
+});
+var $5f3de95c29bace930552f89daceece1e$export$d786f5f5483abd47 = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'fontStyle',
+    themeKey: 'typography'
+});
+var $5f3de95c29bace930552f89daceece1e$export$e64e826bff5027af = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'fontWeight',
+    themeKey: 'typography'
+});
+var $5f3de95c29bace930552f89daceece1e$export$6d77f1f031aac926 = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'letterSpacing'
+});
+var $5f3de95c29bace930552f89daceece1e$export$722d21a79a19b274 = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'lineHeight'
+});
+var $5f3de95c29bace930552f89daceece1e$export$633d68e98472d69c = $5f3de95c29bace930552f89daceece1e$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'textAlign'
+});
+var $5f3de95c29bace930552f89daceece1e$var$typography = $5f3de95c29bace930552f89daceece1e$import$9f51eb572adbfcc$9099ad97b570f7c($5f3de95c29bace930552f89daceece1e$export$8d759f3178f6b82, $5f3de95c29bace930552f89daceece1e$export$5f63e484b7f144c9, $5f3de95c29bace930552f89daceece1e$export$d786f5f5483abd47, $5f3de95c29bace930552f89daceece1e$export$e64e826bff5027af, $5f3de95c29bace930552f89daceece1e$export$6d77f1f031aac926, $5f3de95c29bace930552f89daceece1e$export$722d21a79a19b274, $5f3de95c29bace930552f89daceece1e$export$633d68e98472d69c);
+var $5f3de95c29bace930552f89daceece1e$export$9099ad97b570f7c = $5f3de95c29bace930552f89daceece1e$var$typography;

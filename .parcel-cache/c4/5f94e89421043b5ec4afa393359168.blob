@@ -1,0 +1,5 @@
+var $3c60f50763c8b256b5d464d515ac1c53$var$common = {
+    black: '#000',
+    white: '#fff'
+};
+var $3c60f50763c8b256b5d464d515ac1c53$export$9099ad97b570f7c = $3c60f50763c8b256b5d464d515ac1c53$var$common;

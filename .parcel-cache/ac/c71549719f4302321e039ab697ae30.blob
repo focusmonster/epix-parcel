@@ -1,0 +1,40 @@
+import   "cc04c599f83860c64566ff1eee4fa891:@babel/runtime/helpers/esm/extends";
+import   "cc04c599f83860c64566ff1eee4fa891:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "cc04c599f83860c64566ff1eee4fa891:react";
+import   "cc04c599f83860c64566ff1eee4fa891:prop-types";
+import   "cc04c599f83860c64566ff1eee4fa891:clsx";
+import   "cc04c599f83860c64566ff1eee4fa891:../styles/withStyles";
+var $cc04c599f83860c64566ff1eee4fa891$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            flex: '1 1 auto',
+            WebkitOverflowScrolling: 'touch',
+            // Add iOS momentum scrolling.
+            overflowY: 'auto',
+            padding: '8px 24px',
+            '&:first-child': {
+                // dialog without title
+                paddingTop: 20
+            }
+        },
+        /* Styles applied to the root element if `dividers={true}`. */ dividers: {
+            padding: '16px 24px',
+            borderTop: "1px solid ".concat(theme.palette.divider),
+            borderBottom: "1px solid ".concat(theme.palette.divider)
+        }
+    };
+};
+var $cc04c599f83860c64566ff1eee4fa891$var$DialogContent = /*#__PURE__*/ $cc04c599f83860c64566ff1eee4fa891$import$f02ba03fc070e88c$ac92bb288368c37c(function DialogContent(props, ref) {
+    var classes = props.classes, className = props.className, _props$dividers = props.dividers, dividers = _props$dividers === void 0 ? false : _props$dividers, other = $cc04c599f83860c64566ff1eee4fa891$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "dividers"
+    ]);
+    return(/*#__PURE__*/ $cc04c599f83860c64566ff1eee4fa891$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $cc04c599f83860c64566ff1eee4fa891$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $cc04c599f83860c64566ff1eee4fa891$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, dividers && classes.dividers),
+        ref: ref
+    }, other)));
+});
+var $cc04c599f83860c64566ff1eee4fa891$export$9099ad97b570f7c = $cc04c599f83860c64566ff1eee4fa891$import$abdf0c7fda13cc01$9099ad97b570f7c($cc04c599f83860c64566ff1eee4fa891$export$1155669653ed4fad, {
+    name: 'MuiDialogContent'
+})($cc04c599f83860c64566ff1eee4fa891$var$DialogContent);

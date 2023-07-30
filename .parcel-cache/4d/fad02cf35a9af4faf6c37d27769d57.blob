@@ -1,0 +1,95 @@
+import   "f87b166e386df17e857802d69df91bb6:@babel/runtime/helpers/esm/extends";
+import   "f87b166e386df17e857802d69df91bb6:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "f87b166e386df17e857802d69df91bb6:react";
+import   "f87b166e386df17e857802d69df91bb6:prop-types";
+import   "f87b166e386df17e857802d69df91bb6:clsx";
+import   "f87b166e386df17e857802d69df91bb6:@material-ui/utils";
+import   "f87b166e386df17e857802d69df91bb6:../internal/SwitchBase";
+import   "f87b166e386df17e857802d69df91bb6:../internal/svg-icons/CheckBoxOutlineBlank";
+import   "f87b166e386df17e857802d69df91bb6:../internal/svg-icons/CheckBox";
+import   "f87b166e386df17e857802d69df91bb6:../styles/colorManipulator";
+import   "f87b166e386df17e857802d69df91bb6:../internal/svg-icons/IndeterminateCheckBox";
+import   "f87b166e386df17e857802d69df91bb6:../utils/capitalize";
+import   "f87b166e386df17e857802d69df91bb6:../styles/withStyles";
+var $f87b166e386df17e857802d69df91bb6$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            color: theme.palette.text.secondary
+        },
+        /* Pseudo-class applied to the root element if `checked={true}`. */ checked: {
+        },
+        /* Pseudo-class applied to the root element if `disabled={true}`. */ disabled: {
+        },
+        /* Pseudo-class applied to the root element if `indeterminate={true}`. */ indeterminate: {
+        },
+        /* Styles applied to the root element if `color="primary"`. */ colorPrimary: {
+            '&$checked': {
+                color: theme.palette.primary.main,
+                '&:hover': {
+                    backgroundColor: $f87b166e386df17e857802d69df91bb6$import$78cd920a0798486b$9ea11009bc462ef5(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+                    // Reset on touch devices, it doesn't add specificity
+                    '@media (hover: none)': {
+                        backgroundColor: 'transparent'
+                    }
+                }
+            },
+            '&$disabled': {
+                color: theme.palette.action.disabled
+            }
+        },
+        /* Styles applied to the root element if `color="secondary"`. */ colorSecondary: {
+            '&$checked': {
+                color: theme.palette.secondary.main,
+                '&:hover': {
+                    backgroundColor: $f87b166e386df17e857802d69df91bb6$import$78cd920a0798486b$9ea11009bc462ef5(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+                    // Reset on touch devices, it doesn't add specificity
+                    '@media (hover: none)': {
+                        backgroundColor: 'transparent'
+                    }
+                }
+            },
+            '&$disabled': {
+                color: theme.palette.action.disabled
+            }
+        }
+    };
+};
+var $f87b166e386df17e857802d69df91bb6$var$defaultCheckedIcon = /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$2f8418d37d4320b9($f87b166e386df17e857802d69df91bb6$import$8efdbf5c4cb35c57$9099ad97b570f7c, null);
+var $f87b166e386df17e857802d69df91bb6$var$defaultIcon = /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$2f8418d37d4320b9($f87b166e386df17e857802d69df91bb6$import$eaff3737a0d9f624$9099ad97b570f7c, null);
+var $f87b166e386df17e857802d69df91bb6$var$defaultIndeterminateIcon = /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$2f8418d37d4320b9($f87b166e386df17e857802d69df91bb6$import$5e14221fe22ae102$9099ad97b570f7c, null);
+var $f87b166e386df17e857802d69df91bb6$var$Checkbox = /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$ac92bb288368c37c(function Checkbox(props, ref) {
+    var _props$checkedIcon = props.checkedIcon, checkedIcon = _props$checkedIcon === void 0 ? $f87b166e386df17e857802d69df91bb6$var$defaultCheckedIcon : _props$checkedIcon, classes = props.classes, _props$color = props.color, color = _props$color === void 0 ? 'secondary' : _props$color, _props$icon = props.icon, iconProp = _props$icon === void 0 ? $f87b166e386df17e857802d69df91bb6$var$defaultIcon : _props$icon, _props$indeterminate = props.indeterminate, indeterminate = _props$indeterminate === void 0 ? false : _props$indeterminate, _props$indeterminateI = props.indeterminateIcon, indeterminateIconProp = _props$indeterminateI === void 0 ? $f87b166e386df17e857802d69df91bb6$var$defaultIndeterminateIcon : _props$indeterminateI, inputProps = props.inputProps, _props$size = props.size, size = _props$size === void 0 ? 'medium' : _props$size, other = $f87b166e386df17e857802d69df91bb6$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "checkedIcon",
+        "classes",
+        "color",
+        "icon",
+        "indeterminate",
+        "indeterminateIcon",
+        "inputProps",
+        "size"
+    ]);
+    var icon = indeterminate ? indeterminateIconProp : iconProp;
+    var indeterminateIcon = indeterminate ? indeterminateIconProp : checkedIcon;
+    return(/*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$2f8418d37d4320b9($f87b166e386df17e857802d69df91bb6$import$974122fe925cb70e$9099ad97b570f7c, $f87b166e386df17e857802d69df91bb6$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        type: "checkbox",
+        classes: {
+            root: $f87b166e386df17e857802d69df91bb6$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes["color".concat($f87b166e386df17e857802d69df91bb6$import$f35500a7ba1578c4$9099ad97b570f7c(color))], indeterminate && classes.indeterminate),
+            checked: classes.checked,
+            disabled: classes.disabled
+        },
+        color: color,
+        inputProps: $f87b166e386df17e857802d69df91bb6$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            'data-indeterminate': indeterminate
+        }, inputProps),
+        icon: /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$228915fa085e29fe(icon, {
+            fontSize: icon.props.fontSize === undefined && size === "small" ? size : icon.props.fontSize
+        }),
+        checkedIcon: /*#__PURE__*/ $f87b166e386df17e857802d69df91bb6$import$f02ba03fc070e88c$228915fa085e29fe(indeterminateIcon, {
+            fontSize: indeterminateIcon.props.fontSize === undefined && size === "small" ? size : indeterminateIcon.props.fontSize
+        }),
+        ref: ref
+    }, other)));
+});
+var $f87b166e386df17e857802d69df91bb6$export$9099ad97b570f7c = $f87b166e386df17e857802d69df91bb6$import$abdf0c7fda13cc01$9099ad97b570f7c($f87b166e386df17e857802d69df91bb6$export$1155669653ed4fad, {
+    name: 'MuiCheckbox'
+})($f87b166e386df17e857802d69df91bb6$var$Checkbox);

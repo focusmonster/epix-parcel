@@ -1,0 +1,6 @@
+import   "269ba29225aac93baff28c2ae89f70f0:react";
+import   "269ba29225aac93baff28c2ae89f70f0:react-dom";
+const $269ba29225aac93baff28c2ae89f70f0$var$App = ()=>{
+    return(/*#__PURE__*/ $269ba29225aac93baff28c2ae89f70f0$import$f02ba03fc070e88c$9099ad97b570f7c.createElement("div", null, "This is a test option page"));
+};
+$269ba29225aac93baff28c2ae89f70f0$import$9c1aa63963514e3e$9099ad97b570f7c.render(/*#__PURE__*/ $269ba29225aac93baff28c2ae89f70f0$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($269ba29225aac93baff28c2ae89f70f0$var$App, null), document.getElementById('root'));

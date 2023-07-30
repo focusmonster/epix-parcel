@@ -1,0 +1,9 @@
+import   "37da7a760e70be90d9f799e0c31e497d:@babel/runtime/helpers/esm/extends";
+import   "37da7a760e70be90d9f799e0c31e497d:@material-ui/styles";
+import   "37da7a760e70be90d9f799e0c31e497d:./defaultTheme";
+function $37da7a760e70be90d9f799e0c31e497d$var$withStyles(stylesOrCreator, options) {
+    return $37da7a760e70be90d9f799e0c31e497d$import$c5d6394d37751b43$b781774cfd98a99(stylesOrCreator, $37da7a760e70be90d9f799e0c31e497d$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        defaultTheme: $37da7a760e70be90d9f799e0c31e497d$import$2db9e05cc982790c$9099ad97b570f7c
+    }, options));
+}
+var $37da7a760e70be90d9f799e0c31e497d$export$9099ad97b570f7c = $37da7a760e70be90d9f799e0c31e497d$var$withStyles;

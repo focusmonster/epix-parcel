@@ -1,0 +1,13 @@
+/* eslint-disable no-var, prefer-template */ var $04782fcf0a6c530eeb7d43f54a31a732$var$uppercasePattern = /[A-Z]/g;
+var $04782fcf0a6c530eeb7d43f54a31a732$var$msPattern = /^ms-/;
+var $04782fcf0a6c530eeb7d43f54a31a732$var$cache = {
+};
+function $04782fcf0a6c530eeb7d43f54a31a732$var$toHyphenLower(match) {
+    return '-' + match.toLowerCase();
+}
+function $04782fcf0a6c530eeb7d43f54a31a732$var$hyphenateStyleName(name) {
+    if ($04782fcf0a6c530eeb7d43f54a31a732$var$cache.hasOwnProperty(name)) return $04782fcf0a6c530eeb7d43f54a31a732$var$cache[name];
+    var hName = name.replace($04782fcf0a6c530eeb7d43f54a31a732$var$uppercasePattern, $04782fcf0a6c530eeb7d43f54a31a732$var$toHyphenLower);
+    return $04782fcf0a6c530eeb7d43f54a31a732$var$cache[name] = $04782fcf0a6c530eeb7d43f54a31a732$var$msPattern.test(hName) ? '-' + hName : hName;
+}
+var $04782fcf0a6c530eeb7d43f54a31a732$export$9099ad97b570f7c = $04782fcf0a6c530eeb7d43f54a31a732$var$hyphenateStyleName;

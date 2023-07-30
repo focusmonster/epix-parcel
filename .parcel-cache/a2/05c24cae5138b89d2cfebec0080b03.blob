@@ -1,0 +1,85 @@
+import   "5c32069b6095687bfb05dc9f82d67826:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "5c32069b6095687bfb05dc9f82d67826:@babel/runtime/helpers/esm/extends";
+import   "5c32069b6095687bfb05dc9f82d67826:react";
+import   "5c32069b6095687bfb05dc9f82d67826:prop-types";
+import   "5c32069b6095687bfb05dc9f82d67826:clsx";
+import   "5c32069b6095687bfb05dc9f82d67826:../FormControl/formControlState";
+import   "5c32069b6095687bfb05dc9f82d67826:../FormControl/useFormControl";
+import   "5c32069b6095687bfb05dc9f82d67826:../utils/capitalize";
+import   "5c32069b6095687bfb05dc9f82d67826:../styles/withStyles";
+var $5c32069b6095687bfb05dc9f82d67826$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: $5c32069b6095687bfb05dc9f82d67826$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            color: theme.palette.text.secondary
+        }, theme.typography.body1, {
+            lineHeight: 1,
+            padding: 0,
+            '&$focused': {
+                color: theme.palette.primary.main
+            },
+            '&$disabled': {
+                color: theme.palette.text.disabled
+            },
+            '&$error': {
+                color: theme.palette.error.main
+            }
+        }),
+        /* Styles applied to the root element if the color is secondary. */ colorSecondary: {
+            '&$focused': {
+                color: theme.palette.secondary.main
+            }
+        },
+        /* Pseudo-class applied to the root element if `focused={true}`. */ focused: {
+        },
+        /* Pseudo-class applied to the root element if `disabled={true}`. */ disabled: {
+        },
+        /* Pseudo-class applied to the root element if `error={true}`. */ error: {
+        },
+        /* Pseudo-class applied to the root element if `filled={true}`. */ filled: {
+        },
+        /* Pseudo-class applied to the root element if `required={true}`. */ required: {
+        },
+        /* Styles applied to the asterisk element. */ asterisk: {
+            '&$error': {
+                color: theme.palette.error.main
+            }
+        }
+    };
+};
+var $5c32069b6095687bfb05dc9f82d67826$var$FormLabel = /*#__PURE__*/ $5c32069b6095687bfb05dc9f82d67826$import$f02ba03fc070e88c$ac92bb288368c37c(function FormLabel(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, color = props.color, _props$component = props.component, Component = _props$component === void 0 ? 'label' : _props$component, disabled = props.disabled, error = props.error, filled = props.filled, focused = props.focused, required = props.required, other = $5c32069b6095687bfb05dc9f82d67826$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "color",
+        "component",
+        "disabled",
+        "error",
+        "filled",
+        "focused",
+        "required"
+    ]);
+    var muiFormControl = $5c32069b6095687bfb05dc9f82d67826$import$d4261346a34c5381$9099ad97b570f7c();
+    var fcs = $5c32069b6095687bfb05dc9f82d67826$import$9070252bcfb59814$9099ad97b570f7c({
+        props: props,
+        muiFormControl: muiFormControl,
+        states: [
+            'color',
+            'required',
+            'focused',
+            'disabled',
+            'error',
+            'filled'
+        ]
+    });
+    return(/*#__PURE__*/ $5c32069b6095687bfb05dc9f82d67826$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $5c32069b6095687bfb05dc9f82d67826$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $5c32069b6095687bfb05dc9f82d67826$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes["color".concat($5c32069b6095687bfb05dc9f82d67826$import$f35500a7ba1578c4$9099ad97b570f7c(fcs.color || 'primary'))], className, fcs.disabled && classes.disabled, fcs.error && classes.error, fcs.filled && classes.filled, fcs.focused && classes.focused, fcs.required && classes.required),
+        ref: ref
+    }, other), children, fcs.required && /*#__PURE__*/ $5c32069b6095687bfb05dc9f82d67826$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        "aria-hidden": true,
+        className: $5c32069b6095687bfb05dc9f82d67826$import$3e54c96927a352a4$9099ad97b570f7c(classes.asterisk, fcs.error && classes.error)
+    }, "\u2009", '*')));
+});
+var $5c32069b6095687bfb05dc9f82d67826$export$9099ad97b570f7c = $5c32069b6095687bfb05dc9f82d67826$import$abdf0c7fda13cc01$9099ad97b570f7c($5c32069b6095687bfb05dc9f82d67826$export$1155669653ed4fad, {
+    name: 'MuiFormLabel'
+})($5c32069b6095687bfb05dc9f82d67826$var$FormLabel);

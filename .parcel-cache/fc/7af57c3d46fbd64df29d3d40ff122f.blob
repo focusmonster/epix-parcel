@@ -1,0 +1,43 @@
+import   "03d39176728de604b124e7391ef78854:react";
+import   "03d39176728de604b124e7391ef78854:prop-types";
+import   "03d39176728de604b124e7391ef78854:clsx";
+import   "03d39176728de604b124e7391ef78854:../utils/useEventCallback";
+var $03d39176728de604b124e7391ef78854$var$useEnhancedEffect = typeof window === 'undefined' ? $03d39176728de604b124e7391ef78854$import$f02ba03fc070e88c$7e977b4ca969aabd : $03d39176728de604b124e7391ef78854$import$f02ba03fc070e88c$3839ad89c0ec6b31;
+/**
+ * @ignore - internal component.
+ */ function $03d39176728de604b124e7391ef78854$var$Ripple(props) {
+    var classes = props.classes, _props$pulsate = props.pulsate, pulsate = _props$pulsate === void 0 ? false : _props$pulsate, rippleX = props.rippleX, rippleY = props.rippleY, rippleSize = props.rippleSize, inProp = props.in, _props$onExited = props.onExited, onExited = _props$onExited === void 0 ? function() {
+    } : _props$onExited, timeout = props.timeout;
+    var _React$useState = $03d39176728de604b124e7391ef78854$import$f02ba03fc070e88c$f54936751fc2c51(false), leaving = _React$useState[0], setLeaving = _React$useState[1];
+    var rippleClassName = $03d39176728de604b124e7391ef78854$import$3e54c96927a352a4$9099ad97b570f7c(classes.ripple, classes.rippleVisible, pulsate && classes.ripplePulsate);
+    var rippleStyles = {
+        width: rippleSize,
+        height: rippleSize,
+        top: -(rippleSize / 2) + rippleY,
+        left: -(rippleSize / 2) + rippleX
+    };
+    var childClassName = $03d39176728de604b124e7391ef78854$import$3e54c96927a352a4$9099ad97b570f7c(classes.child, leaving && classes.childLeaving, pulsate && classes.childPulsate);
+    var handleExited = $03d39176728de604b124e7391ef78854$import$3575fe9de66b2ef3$9099ad97b570f7c(onExited); // Ripple is used for user feedback (e.g. click or press) so we want to apply styles with the highest priority
+    $03d39176728de604b124e7391ef78854$var$useEnhancedEffect(function() {
+        if (!inProp) {
+            // react-transition-group#onExit
+            setLeaving(true); // react-transition-group#onExited
+            var timeoutId = setTimeout(handleExited, timeout);
+            return function() {
+                clearTimeout(timeoutId);
+            };
+        }
+        return undefined;
+    }, [
+        handleExited,
+        inProp,
+        timeout
+    ]);
+    return(/*#__PURE__*/ $03d39176728de604b124e7391ef78854$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        className: rippleClassName,
+        style: rippleStyles
+    }, /*#__PURE__*/ $03d39176728de604b124e7391ef78854$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        className: childClassName
+    })));
+}
+var $03d39176728de604b124e7391ef78854$export$9099ad97b570f7c = $03d39176728de604b124e7391ef78854$var$Ripple;

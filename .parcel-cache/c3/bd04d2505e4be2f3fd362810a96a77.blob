@@ -1,0 +1,210 @@
+import   "d616464237a3146228a345200c44c100:jss";
+var $d616464237a3146228a345200c44c100$var$px = $d616464237a3146228a345200c44c100$import$d20617c95de8a6c6$32f4b66a0fffad3e && CSS ? CSS.px : 'px';
+var $d616464237a3146228a345200c44c100$var$ms = $d616464237a3146228a345200c44c100$import$d20617c95de8a6c6$32f4b66a0fffad3e && CSS ? CSS.ms : 'ms';
+var $d616464237a3146228a345200c44c100$var$percent = $d616464237a3146228a345200c44c100$import$d20617c95de8a6c6$32f4b66a0fffad3e && CSS ? CSS.percent : '%';
+/**
+ * Generated jss-plugin-default-unit CSS property units
+ */ var $d616464237a3146228a345200c44c100$var$defaultUnits = {
+    // Animation properties
+    'animation-delay': $d616464237a3146228a345200c44c100$var$ms,
+    'animation-duration': $d616464237a3146228a345200c44c100$var$ms,
+    // Background properties
+    'background-position': $d616464237a3146228a345200c44c100$var$px,
+    'background-position-x': $d616464237a3146228a345200c44c100$var$px,
+    'background-position-y': $d616464237a3146228a345200c44c100$var$px,
+    'background-size': $d616464237a3146228a345200c44c100$var$px,
+    // Border Properties
+    border: $d616464237a3146228a345200c44c100$var$px,
+    'border-bottom': $d616464237a3146228a345200c44c100$var$px,
+    'border-bottom-left-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-bottom-right-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-bottom-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-left': $d616464237a3146228a345200c44c100$var$px,
+    'border-left-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-right': $d616464237a3146228a345200c44c100$var$px,
+    'border-right-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-top': $d616464237a3146228a345200c44c100$var$px,
+    'border-top-left-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-top-right-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-top-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-block': $d616464237a3146228a345200c44c100$var$px,
+    'border-block-end': $d616464237a3146228a345200c44c100$var$px,
+    'border-block-end-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-block-start': $d616464237a3146228a345200c44c100$var$px,
+    'border-block-start-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-block-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline-end': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline-end-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline-start': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline-start-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-inline-width': $d616464237a3146228a345200c44c100$var$px,
+    'border-start-start-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-start-end-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-end-start-radius': $d616464237a3146228a345200c44c100$var$px,
+    'border-end-end-radius': $d616464237a3146228a345200c44c100$var$px,
+    // Margin properties
+    margin: $d616464237a3146228a345200c44c100$var$px,
+    'margin-bottom': $d616464237a3146228a345200c44c100$var$px,
+    'margin-left': $d616464237a3146228a345200c44c100$var$px,
+    'margin-right': $d616464237a3146228a345200c44c100$var$px,
+    'margin-top': $d616464237a3146228a345200c44c100$var$px,
+    'margin-block': $d616464237a3146228a345200c44c100$var$px,
+    'margin-block-end': $d616464237a3146228a345200c44c100$var$px,
+    'margin-block-start': $d616464237a3146228a345200c44c100$var$px,
+    'margin-inline': $d616464237a3146228a345200c44c100$var$px,
+    'margin-inline-end': $d616464237a3146228a345200c44c100$var$px,
+    'margin-inline-start': $d616464237a3146228a345200c44c100$var$px,
+    // Padding properties
+    padding: $d616464237a3146228a345200c44c100$var$px,
+    'padding-bottom': $d616464237a3146228a345200c44c100$var$px,
+    'padding-left': $d616464237a3146228a345200c44c100$var$px,
+    'padding-right': $d616464237a3146228a345200c44c100$var$px,
+    'padding-top': $d616464237a3146228a345200c44c100$var$px,
+    'padding-block': $d616464237a3146228a345200c44c100$var$px,
+    'padding-block-end': $d616464237a3146228a345200c44c100$var$px,
+    'padding-block-start': $d616464237a3146228a345200c44c100$var$px,
+    'padding-inline': $d616464237a3146228a345200c44c100$var$px,
+    'padding-inline-end': $d616464237a3146228a345200c44c100$var$px,
+    'padding-inline-start': $d616464237a3146228a345200c44c100$var$px,
+    // Mask properties
+    'mask-position-x': $d616464237a3146228a345200c44c100$var$px,
+    'mask-position-y': $d616464237a3146228a345200c44c100$var$px,
+    'mask-size': $d616464237a3146228a345200c44c100$var$px,
+    // Width and height properties
+    height: $d616464237a3146228a345200c44c100$var$px,
+    width: $d616464237a3146228a345200c44c100$var$px,
+    'min-height': $d616464237a3146228a345200c44c100$var$px,
+    'max-height': $d616464237a3146228a345200c44c100$var$px,
+    'min-width': $d616464237a3146228a345200c44c100$var$px,
+    'max-width': $d616464237a3146228a345200c44c100$var$px,
+    // Position properties
+    bottom: $d616464237a3146228a345200c44c100$var$px,
+    left: $d616464237a3146228a345200c44c100$var$px,
+    top: $d616464237a3146228a345200c44c100$var$px,
+    right: $d616464237a3146228a345200c44c100$var$px,
+    inset: $d616464237a3146228a345200c44c100$var$px,
+    'inset-block': $d616464237a3146228a345200c44c100$var$px,
+    'inset-block-end': $d616464237a3146228a345200c44c100$var$px,
+    'inset-block-start': $d616464237a3146228a345200c44c100$var$px,
+    'inset-inline': $d616464237a3146228a345200c44c100$var$px,
+    'inset-inline-end': $d616464237a3146228a345200c44c100$var$px,
+    'inset-inline-start': $d616464237a3146228a345200c44c100$var$px,
+    // Shadow properties
+    'box-shadow': $d616464237a3146228a345200c44c100$var$px,
+    'text-shadow': $d616464237a3146228a345200c44c100$var$px,
+    // Column properties
+    'column-gap': $d616464237a3146228a345200c44c100$var$px,
+    'column-rule': $d616464237a3146228a345200c44c100$var$px,
+    'column-rule-width': $d616464237a3146228a345200c44c100$var$px,
+    'column-width': $d616464237a3146228a345200c44c100$var$px,
+    // Font and text properties
+    'font-size': $d616464237a3146228a345200c44c100$var$px,
+    'font-size-delta': $d616464237a3146228a345200c44c100$var$px,
+    'letter-spacing': $d616464237a3146228a345200c44c100$var$px,
+    'text-decoration-thickness': $d616464237a3146228a345200c44c100$var$px,
+    'text-indent': $d616464237a3146228a345200c44c100$var$px,
+    'text-stroke': $d616464237a3146228a345200c44c100$var$px,
+    'text-stroke-width': $d616464237a3146228a345200c44c100$var$px,
+    'word-spacing': $d616464237a3146228a345200c44c100$var$px,
+    // Motion properties
+    motion: $d616464237a3146228a345200c44c100$var$px,
+    'motion-offset': $d616464237a3146228a345200c44c100$var$px,
+    // Outline properties
+    outline: $d616464237a3146228a345200c44c100$var$px,
+    'outline-offset': $d616464237a3146228a345200c44c100$var$px,
+    'outline-width': $d616464237a3146228a345200c44c100$var$px,
+    // Perspective properties
+    perspective: $d616464237a3146228a345200c44c100$var$px,
+    'perspective-origin-x': $d616464237a3146228a345200c44c100$var$percent,
+    'perspective-origin-y': $d616464237a3146228a345200c44c100$var$percent,
+    // Transform properties
+    'transform-origin': $d616464237a3146228a345200c44c100$var$percent,
+    'transform-origin-x': $d616464237a3146228a345200c44c100$var$percent,
+    'transform-origin-y': $d616464237a3146228a345200c44c100$var$percent,
+    'transform-origin-z': $d616464237a3146228a345200c44c100$var$percent,
+    // Transition properties
+    'transition-delay': $d616464237a3146228a345200c44c100$var$ms,
+    'transition-duration': $d616464237a3146228a345200c44c100$var$ms,
+    // Alignment properties
+    'vertical-align': $d616464237a3146228a345200c44c100$var$px,
+    'flex-basis': $d616464237a3146228a345200c44c100$var$px,
+    // Some random properties
+    'shape-margin': $d616464237a3146228a345200c44c100$var$px,
+    size: $d616464237a3146228a345200c44c100$var$px,
+    gap: $d616464237a3146228a345200c44c100$var$px,
+    // Grid properties
+    grid: $d616464237a3146228a345200c44c100$var$px,
+    'grid-gap': $d616464237a3146228a345200c44c100$var$px,
+    'row-gap': $d616464237a3146228a345200c44c100$var$px,
+    'grid-row-gap': $d616464237a3146228a345200c44c100$var$px,
+    'grid-column-gap': $d616464237a3146228a345200c44c100$var$px,
+    'grid-template-rows': $d616464237a3146228a345200c44c100$var$px,
+    'grid-template-columns': $d616464237a3146228a345200c44c100$var$px,
+    'grid-auto-rows': $d616464237a3146228a345200c44c100$var$px,
+    'grid-auto-columns': $d616464237a3146228a345200c44c100$var$px,
+    // Not existing properties.
+    // Used to avoid issues with jss-plugin-expand integration.
+    'box-shadow-x': $d616464237a3146228a345200c44c100$var$px,
+    'box-shadow-y': $d616464237a3146228a345200c44c100$var$px,
+    'box-shadow-blur': $d616464237a3146228a345200c44c100$var$px,
+    'box-shadow-spread': $d616464237a3146228a345200c44c100$var$px,
+    'font-line-height': $d616464237a3146228a345200c44c100$var$px,
+    'text-shadow-x': $d616464237a3146228a345200c44c100$var$px,
+    'text-shadow-y': $d616464237a3146228a345200c44c100$var$px,
+    'text-shadow-blur': $d616464237a3146228a345200c44c100$var$px
+};
+/**
+ * Clones the object and adds a camel cased property version.
+ */ function $d616464237a3146228a345200c44c100$var$addCamelCasedVersion(obj) {
+    var regExp = /(-[a-z])/g;
+    var replace = function replace1(str) {
+        return str[1].toUpperCase();
+    };
+    var newObj = {
+    };
+    for(var key in obj){
+        newObj[key] = obj[key];
+        newObj[key.replace(regExp, replace)] = obj[key];
+    }
+    return newObj;
+}
+var $d616464237a3146228a345200c44c100$var$units = $d616464237a3146228a345200c44c100$var$addCamelCasedVersion($d616464237a3146228a345200c44c100$var$defaultUnits);
+/**
+ * Recursive deep style passing function
+ */ function $d616464237a3146228a345200c44c100$var$iterate(prop, value, options) {
+    if (value == null) return value;
+    if (Array.isArray(value)) for(var i = 0; i < value.length; i++)value[i] = $d616464237a3146228a345200c44c100$var$iterate(prop, value[i], options);
+    else if (typeof value === 'object') {
+        if (prop === 'fallbacks') for(var innerProp in value)value[innerProp] = $d616464237a3146228a345200c44c100$var$iterate(innerProp, value[innerProp], options);
+        else for(var _innerProp in value)value[_innerProp] = $d616464237a3146228a345200c44c100$var$iterate(prop + "-" + _innerProp, value[_innerProp], options);
+         // eslint-disable-next-line no-restricted-globals
+    } else if (typeof value === 'number' && isNaN(value) === false) {
+        var unit = options[prop] || $d616464237a3146228a345200c44c100$var$units[prop]; // Add the unit if available, except for the special case of 0px.
+        if (unit && !(value === 0 && unit === $d616464237a3146228a345200c44c100$var$px)) return typeof unit === 'function' ? unit(value).toString() : "" + value + unit;
+        return value.toString();
+    }
+    return value;
+}
+/**
+ * Add unit to numeric values.
+ */ function $d616464237a3146228a345200c44c100$var$defaultUnit(options) {
+    if (options === void 0) options = {
+    };
+    var camelCasedOptions = $d616464237a3146228a345200c44c100$var$addCamelCasedVersion(options);
+    function onProcessStyle(style, rule) {
+        if (rule.type !== 'style') return style;
+        for(var prop in style)style[prop] = $d616464237a3146228a345200c44c100$var$iterate(prop, style[prop], camelCasedOptions);
+        return style;
+    }
+    function onChangeValue(value, prop) {
+        return $d616464237a3146228a345200c44c100$var$iterate(prop, value, camelCasedOptions);
+    }
+    return {
+        onProcessStyle: onProcessStyle,
+        onChangeValue: onChangeValue
+    };
+}
+var $d616464237a3146228a345200c44c100$export$9099ad97b570f7c = $d616464237a3146228a345200c44c100$var$defaultUnit;

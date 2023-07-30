@@ -1,0 +1,44 @@
+import   "e62b270d63f5ee17cd416c07137b23b8:@babel/runtime/helpers/esm/extends";
+import   "e62b270d63f5ee17cd416c07137b23b8:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "e62b270d63f5ee17cd416c07137b23b8:react";
+import   "e62b270d63f5ee17cd416c07137b23b8:react-is";
+import   "e62b270d63f5ee17cd416c07137b23b8:prop-types";
+import   "e62b270d63f5ee17cd416c07137b23b8:clsx";
+import   "e62b270d63f5ee17cd416c07137b23b8:../styles/withStyles";
+var $e62b270d63f5ee17cd416c07137b23b8$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            display: 'flex',
+            justifyContent: 'center',
+            height: 56,
+            backgroundColor: theme.palette.background.paper
+        }
+    };
+};
+var $e62b270d63f5ee17cd416c07137b23b8$var$BottomNavigation = /*#__PURE__*/ $e62b270d63f5ee17cd416c07137b23b8$import$f02ba03fc070e88c$ac92bb288368c37c(function BottomNavigation(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, onChange = props.onChange, _props$showLabels = props.showLabels, showLabels = _props$showLabels === void 0 ? false : _props$showLabels, value = props.value, other = $e62b270d63f5ee17cd416c07137b23b8$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "component",
+        "onChange",
+        "showLabels",
+        "value"
+    ]);
+    return(/*#__PURE__*/ $e62b270d63f5ee17cd416c07137b23b8$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $e62b270d63f5ee17cd416c07137b23b8$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $e62b270d63f5ee17cd416c07137b23b8$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        ref: ref
+    }, other), $e62b270d63f5ee17cd416c07137b23b8$import$f02ba03fc070e88c$4a1442b8e7333aeb.map(children, function(child, childIndex) {
+        if (!/*#__PURE__*/ $e62b270d63f5ee17cd416c07137b23b8$import$f02ba03fc070e88c$64e9a1defe72209(child)) return null;
+        var childValue = child.props.value === undefined ? childIndex : child.props.value;
+        return(/*#__PURE__*/ $e62b270d63f5ee17cd416c07137b23b8$import$f02ba03fc070e88c$228915fa085e29fe(child, {
+            selected: childValue === value,
+            showLabel: child.props.showLabel !== undefined ? child.props.showLabel : showLabels,
+            value: childValue,
+            onChange: onChange
+        }));
+    })));
+});
+var $e62b270d63f5ee17cd416c07137b23b8$export$9099ad97b570f7c = $e62b270d63f5ee17cd416c07137b23b8$import$abdf0c7fda13cc01$9099ad97b570f7c($e62b270d63f5ee17cd416c07137b23b8$export$1155669653ed4fad, {
+    name: 'MuiBottomNavigation'
+})($e62b270d63f5ee17cd416c07137b23b8$var$BottomNavigation);

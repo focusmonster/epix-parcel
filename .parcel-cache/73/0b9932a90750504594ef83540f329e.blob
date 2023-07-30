@@ -1,0 +1,13 @@
+import   "3cc82a272ddd66b1177f5d1d7811c5a8:./style";
+import   "3cc82a272ddd66b1177f5d1d7811c5a8:./compose";
+var $3cc82a272ddd66b1177f5d1d7811c5a8$export$7ff3f2983d751103 = $3cc82a272ddd66b1177f5d1d7811c5a8$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'color',
+    themeKey: 'palette'
+});
+var $3cc82a272ddd66b1177f5d1d7811c5a8$export$6bcbe3725f25c4e3 = $3cc82a272ddd66b1177f5d1d7811c5a8$import$5c37c6c82febb3c4$9099ad97b570f7c({
+    prop: 'bgcolor',
+    cssProperty: 'backgroundColor',
+    themeKey: 'palette'
+});
+var $3cc82a272ddd66b1177f5d1d7811c5a8$var$palette = $3cc82a272ddd66b1177f5d1d7811c5a8$import$9f51eb572adbfcc$9099ad97b570f7c($3cc82a272ddd66b1177f5d1d7811c5a8$export$7ff3f2983d751103, $3cc82a272ddd66b1177f5d1d7811c5a8$export$6bcbe3725f25c4e3);
+var $3cc82a272ddd66b1177f5d1d7811c5a8$export$9099ad97b570f7c = $3cc82a272ddd66b1177f5d1d7811c5a8$var$palette;

@@ -1,0 +1,33 @@
+import   "a966ade1221f05247908f813d17e8a6b:@babel/runtime/helpers/esm/extends";
+import   "a966ade1221f05247908f813d17e8a6b:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "a966ade1221f05247908f813d17e8a6b:react";
+import   "a966ade1221f05247908f813d17e8a6b:prop-types";
+import   "a966ade1221f05247908f813d17e8a6b:clsx";
+import   "a966ade1221f05247908f813d17e8a6b:../styles/withStyles";
+var $a966ade1221f05247908f813d17e8a6b$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: 8,
+        justifyContent: 'flex-end'
+    },
+    /* Styles applied to the root element if `disableSpacing={false}`. */ spacing: {
+        '& > :not(:first-child)': {
+            marginLeft: 8
+        }
+    }
+};
+var $a966ade1221f05247908f813d17e8a6b$var$AccordionActions = /*#__PURE__*/ $a966ade1221f05247908f813d17e8a6b$import$f02ba03fc070e88c$ac92bb288368c37c(function AccordionActions(props, ref) {
+    var classes = props.classes, className = props.className, _props$disableSpacing = props.disableSpacing, disableSpacing = _props$disableSpacing === void 0 ? false : _props$disableSpacing, other = $a966ade1221f05247908f813d17e8a6b$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "disableSpacing"
+    ]);
+    return(/*#__PURE__*/ $a966ade1221f05247908f813d17e8a6b$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $a966ade1221f05247908f813d17e8a6b$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $a966ade1221f05247908f813d17e8a6b$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, !disableSpacing && classes.spacing),
+        ref: ref
+    }, other)));
+});
+var $a966ade1221f05247908f813d17e8a6b$export$9099ad97b570f7c = $a966ade1221f05247908f813d17e8a6b$import$abdf0c7fda13cc01$9099ad97b570f7c($a966ade1221f05247908f813d17e8a6b$export$1155669653ed4fad, {
+    name: 'MuiAccordionActions'
+})($a966ade1221f05247908f813d17e8a6b$var$AccordionActions);

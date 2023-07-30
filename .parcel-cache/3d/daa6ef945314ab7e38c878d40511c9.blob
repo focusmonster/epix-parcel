@@ -1,0 +1,113 @@
+import   "3a5265cd50d58061e0a6751cbe4ca821:react";
+import   "3a5265cd50d58061e0a6751cbe4ca821:react-dom";
+import   "3a5265cd50d58061e0a6751cbe4ca821:./../pages/Issues/bugLinks";
+const $3a5265cd50d58061e0a6751cbe4ca821$var$newDiv = document.createElement('div');
+$3a5265cd50d58061e0a6751cbe4ca821$var$newDiv.setAttribute('id', 'content-app-root');
+document.body.appendChild($3a5265cd50d58061e0a6751cbe4ca821$var$newDiv);
+const $3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS = {
+    cancelKey: 0,
+    tokenRecieved: false
+};
+let $3a5265cd50d58061e0a6751cbe4ca821$var$startTokenMonitor = ()=>{
+    const existingScript = document.querySelector("script#epifi-extension");
+    if (!existingScript) {
+        console.debug("Script does not exists, creating new instance");
+        const script = document.createElement("script");
+        // @ts-ignore
+        script.src = browser.runtime.getURL("/content_scripts/inject.js");
+        script.id = "epifi-extension";
+        document.documentElement.appendChild(script);
+    } else console.debug("Script already exists, skipping");
+    window.addEventListener("message", async (e)=>{
+        if (e?.data?.type == "TOKEN") {
+            let token = e?.data?.token;
+            $3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS.tokenRecieved = true;
+            console.debug({
+                token: token
+            });
+            // @ts-ignore
+            await browser.runtime.sendMessage({
+                action: "STORE_TOKEN",
+                data: token
+            });
+        }
+    });
+};
+let $3a5265cd50d58061e0a6751cbe4ca821$var$sleep = (ms)=>new Promise((resolve)=>setTimeout(resolve, ms)
+    )
+;
+let $3a5265cd50d58061e0a6751cbe4ca821$var$waitForTableLoad = async ()=>{
+    let retryTimeoutSeconds = 30;
+    let startTime = new Date().getTime();
+    // while (!GLOBALS.tokenRecieved) {
+    //     console.debug("Did not recieve token, sleeping for 200ms");
+    //     await sleep(200);
+    // }
+    console.log('waitForTableLoad');
+    // let configs = await api.GetAllConfigs();
+    // console.debug({ configs });
+    $3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS.cancelKey = window.setInterval(()=>{
+        const table = document.querySelector("mr-list-page")?.shadowRoot?.querySelector("mr-issue-list")?.shadowRoot?.querySelector("table");
+        if (table != null && table != undefined) {
+            // processTable(table, configs);
+            console.log("table", table);
+            $3a5265cd50d58061e0a6751cbe4ca821$var$renderSummary(table);
+            clearInterval($3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS.cancelKey);
+            return;
+        }
+        let currentTime = new Date().getTime();
+        if (currentTime - startTime > retryTimeoutSeconds * 1000) {
+            clearInterval($3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS.cancelKey);
+            console.log("Exhausted all retries finding table. Exiting");
+            return;
+        }
+        console.log("Cannot find table, sleeping");
+    }, 200);
+};
+let $3a5265cd50d58061e0a6751cbe4ca821$var$init = ()=>{
+    // @ts-ignore
+    console.log('content script loaded');
+    // if (typeof browser === "undefined") {
+    //     // @ts-ignore
+    //     browser = chrome;
+    // }
+    // startTokenMonitor();
+    let previousUrl = "";
+    // @ts-ignore
+    const observer = new MutationObserver((mutations)=>{
+        if (location.href !== previousUrl) {
+            clearInterval($3a5265cd50d58061e0a6751cbe4ca821$var$GLOBALS.cancelKey);
+            previousUrl = location.href;
+            console.debug("mutation detected, triggering extension re-processing");
+            $3a5265cd50d58061e0a6751cbe4ca821$var$waitForTableLoad();
+        }
+    });
+    const config = {
+        subtree: true,
+        childList: true
+    };
+    observer.observe(document, config);
+};
+$3a5265cd50d58061e0a6751cbe4ca821$var$init();
+let $3a5265cd50d58061e0a6751cbe4ca821$var$renderSummary = (table)=>{
+    const allRows = table.querySelectorAll("tbody tr");
+    allRows.forEach((row)=>{
+        const idCell = row.querySelector("td.col-id");
+        if (!idCell) return;
+        const ticketId = row.querySelector("td.col-id mr-issue-link")?.shadowRoot?.querySelector("a")?.text;
+        if (!ticketId) return;
+        if (!idCell.classList.contains("ignore-navigation")) idCell.classList.add("ignore-navigation");
+        const summaryDiv = document.createElement("div");
+        // summaryDiv.textContent = ticketId;
+        //get href and text from a component in idCell
+        const href = idCell.querySelector("mr-issue-link")?.shadowRoot?.querySelector("a")?.href;
+        const text = idCell.querySelector("mr-issue-link")?.shadowRoot?.querySelector("a")?.text;
+        $3a5265cd50d58061e0a6751cbe4ca821$import$9c1aa63963514e3e$9099ad97b570f7c.render(/*#__PURE__*/ $3a5265cd50d58061e0a6751cbe4ca821$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($3a5265cd50d58061e0a6751cbe4ca821$import$d1b3d9a2bed24a1c$9099ad97b570f7c, {
+            href: href,
+            text: text
+        }), summaryDiv);
+        //replace idcell with summary div
+        idCell.innerHTML = "";
+        idCell.appendChild(summaryDiv);
+    });
+};

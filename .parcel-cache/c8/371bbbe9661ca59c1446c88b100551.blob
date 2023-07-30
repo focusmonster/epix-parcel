@@ -1,0 +1,32 @@
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:@babel/runtime/helpers/esm/extends";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:react";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:prop-types";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:clsx";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:../styles/withStyles";
+import   "3bcbc7335fbd78d1b9e72743ac4c62b2:../List/ListContext";
+var $3bcbc7335fbd78d1b9e72743ac4c62b2$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        minWidth: 56,
+        flexShrink: 0
+    },
+    /* Styles applied to the root element when the parent `ListItem` uses `alignItems="flex-start"`. */ alignItemsFlexStart: {
+        marginTop: 8
+    }
+};
+/**
+ * A simple wrapper to apply `List` styles to an `Avatar`.
+ */ var $3bcbc7335fbd78d1b9e72743ac4c62b2$var$ListItemAvatar = /*#__PURE__*/ $3bcbc7335fbd78d1b9e72743ac4c62b2$import$f02ba03fc070e88c$ac92bb288368c37c(function ListItemAvatar(props, ref) {
+    var classes = props.classes, className = props.className, other = $3bcbc7335fbd78d1b9e72743ac4c62b2$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className"
+    ]);
+    var context = $3bcbc7335fbd78d1b9e72743ac4c62b2$import$f02ba03fc070e88c$d532f802c57568ca($3bcbc7335fbd78d1b9e72743ac4c62b2$import$7965344e060c0499$9099ad97b570f7c);
+    return(/*#__PURE__*/ $3bcbc7335fbd78d1b9e72743ac4c62b2$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $3bcbc7335fbd78d1b9e72743ac4c62b2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $3bcbc7335fbd78d1b9e72743ac4c62b2$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, context.alignItems === 'flex-start' && classes.alignItemsFlexStart),
+        ref: ref
+    }, other)));
+});
+var $3bcbc7335fbd78d1b9e72743ac4c62b2$export$9099ad97b570f7c = $3bcbc7335fbd78d1b9e72743ac4c62b2$import$abdf0c7fda13cc01$9099ad97b570f7c($3bcbc7335fbd78d1b9e72743ac4c62b2$export$1155669653ed4fad, {
+    name: 'MuiListItemAvatar'
+})($3bcbc7335fbd78d1b9e72743ac4c62b2$var$ListItemAvatar);

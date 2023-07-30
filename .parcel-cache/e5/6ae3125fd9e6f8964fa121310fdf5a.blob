@@ -1,0 +1,4 @@
+import   "b4c0c6b035c4b438b20b2a3d317892a6:react";
+function $b4c0c6b035c4b438b20b2a3d317892a6$export$9099ad97b570f7c(element, muiNames) {
+    return(/*#__PURE__*/ $b4c0c6b035c4b438b20b2a3d317892a6$import$f02ba03fc070e88c$64e9a1defe72209(element) && muiNames.indexOf(element.type.muiName) !== -1);
+}

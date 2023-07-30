@@ -1,0 +1,88 @@
+import   "4ec9a1851820d580abb263f51e2eaca2:@babel/runtime/helpers/esm/extends";
+import   "4ec9a1851820d580abb263f51e2eaca2:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "4ec9a1851820d580abb263f51e2eaca2:react";
+import   "4ec9a1851820d580abb263f51e2eaca2:prop-types";
+import   "4ec9a1851820d580abb263f51e2eaca2:clsx";
+import   "4ec9a1851820d580abb263f51e2eaca2:../styles/withStyles";
+import   "4ec9a1851820d580abb263f51e2eaca2:../utils/capitalize";
+import   "4ec9a1851820d580abb263f51e2eaca2:../Paper";
+var $4ec9a1851820d580abb263f51e2eaca2$export$1155669653ed4fad = function styles(theme) {
+    var backgroundColorDefault = theme.palette.type === 'light' ? theme.palette.grey[100] : theme.palette.grey[900];
+    return {
+        /* Styles applied to the root element. */ root: {
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            boxSizing: 'border-box',
+            // Prevent padding issue with the Modal and fixed positioned AppBar.
+            zIndex: theme.zIndex.appBar,
+            flexShrink: 0
+        },
+        /* Styles applied to the root element if `position="fixed"`. */ positionFixed: {
+            position: 'fixed',
+            top: 0,
+            left: 'auto',
+            right: 0,
+            '@media print': {
+                // Prevent the app bar to be visible on each printed page.
+                position: 'absolute'
+            }
+        },
+        /* Styles applied to the root element if `position="absolute"`. */ positionAbsolute: {
+            position: 'absolute',
+            top: 0,
+            left: 'auto',
+            right: 0
+        },
+        /* Styles applied to the root element if `position="sticky"`. */ positionSticky: {
+            // ⚠️ sticky is not supported by IE 11.
+            position: 'sticky',
+            top: 0,
+            left: 'auto',
+            right: 0
+        },
+        /* Styles applied to the root element if `position="static"`. */ positionStatic: {
+            position: 'static'
+        },
+        /* Styles applied to the root element if `position="relative"`. */ positionRelative: {
+            position: 'relative'
+        },
+        /* Styles applied to the root element if `color="default"`. */ colorDefault: {
+            backgroundColor: backgroundColorDefault,
+            color: theme.palette.getContrastText(backgroundColorDefault)
+        },
+        /* Styles applied to the root element if `color="primary"`. */ colorPrimary: {
+            backgroundColor: theme.palette.primary.main,
+            color: theme.palette.primary.contrastText
+        },
+        /* Styles applied to the root element if `color="secondary"`. */ colorSecondary: {
+            backgroundColor: theme.palette.secondary.main,
+            color: theme.palette.secondary.contrastText
+        },
+        /* Styles applied to the root element if `color="inherit"`. */ colorInherit: {
+            color: 'inherit'
+        },
+        /* Styles applied to the root element if `color="transparent"`. */ colorTransparent: {
+            backgroundColor: 'transparent',
+            color: 'inherit'
+        }
+    };
+};
+var $4ec9a1851820d580abb263f51e2eaca2$var$AppBar = /*#__PURE__*/ $4ec9a1851820d580abb263f51e2eaca2$import$f02ba03fc070e88c$ac92bb288368c37c(function AppBar(props, ref) {
+    var classes = props.classes, className = props.className, _props$color = props.color, color = _props$color === void 0 ? 'primary' : _props$color, _props$position = props.position, position = _props$position === void 0 ? 'fixed' : _props$position, other = $4ec9a1851820d580abb263f51e2eaca2$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "color",
+        "position"
+    ]);
+    return(/*#__PURE__*/ $4ec9a1851820d580abb263f51e2eaca2$import$f02ba03fc070e88c$2f8418d37d4320b9($4ec9a1851820d580abb263f51e2eaca2$import$881d8cc84965099$9099ad97b570f7c, $4ec9a1851820d580abb263f51e2eaca2$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        square: true,
+        component: "header",
+        elevation: 4,
+        className: $4ec9a1851820d580abb263f51e2eaca2$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes["position".concat($4ec9a1851820d580abb263f51e2eaca2$import$f35500a7ba1578c4$9099ad97b570f7c(position))], classes["color".concat($4ec9a1851820d580abb263f51e2eaca2$import$f35500a7ba1578c4$9099ad97b570f7c(color))], className, position === 'fixed' && 'mui-fixed'),
+        ref: ref
+    }, other)));
+});
+var $4ec9a1851820d580abb263f51e2eaca2$export$9099ad97b570f7c = $4ec9a1851820d580abb263f51e2eaca2$import$abdf0c7fda13cc01$9099ad97b570f7c($4ec9a1851820d580abb263f51e2eaca2$export$1155669653ed4fad, {
+    name: 'MuiAppBar'
+})($4ec9a1851820d580abb263f51e2eaca2$var$AppBar);

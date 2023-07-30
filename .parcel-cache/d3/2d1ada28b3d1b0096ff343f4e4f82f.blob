@@ -1,0 +1,9 @@
+function $ae49a794002bb07e177bc6a0647bfcd0$var$memoize(fn) {
+    var cache = {
+    };
+    return function(arg) {
+        if (cache[arg] === undefined) cache[arg] = fn(arg);
+        return cache[arg];
+    };
+}
+var $ae49a794002bb07e177bc6a0647bfcd0$export$9099ad97b570f7c = $ae49a794002bb07e177bc6a0647bfcd0$var$memoize;

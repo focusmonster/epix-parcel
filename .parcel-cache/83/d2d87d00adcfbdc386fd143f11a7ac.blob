@@ -1,0 +1,48 @@
+import   "4c738b2cfd80766bd8d848f842f70089:tiny-warning";
+import   "4c738b2cfd80766bd8d848f842f70089:jss";
+var $4c738b2cfd80766bd8d848f842f70089$var$now = Date.now();
+var $4c738b2cfd80766bd8d848f842f70089$var$fnValuesNs = "fnValues" + $4c738b2cfd80766bd8d848f842f70089$var$now;
+var $4c738b2cfd80766bd8d848f842f70089$var$fnRuleNs = "fnStyle" + ++$4c738b2cfd80766bd8d848f842f70089$var$now;
+var $4c738b2cfd80766bd8d848f842f70089$var$functionPlugin = function functionPlugin() {
+    return {
+        onCreateRule: function onCreateRule(name, decl, options) {
+            if (typeof decl !== 'function') return null;
+            var rule = $4c738b2cfd80766bd8d848f842f70089$import$d20617c95de8a6c6$2d7991ecf1a503f0(name, {
+            }, options);
+            rule[$4c738b2cfd80766bd8d848f842f70089$var$fnRuleNs] = decl;
+            return rule;
+        },
+        onProcessStyle: function onProcessStyle(style, rule) {
+            // We need to extract function values from the declaration, so that we can keep core unaware of them.
+            // We need to do that only once.
+            // We don't need to extract functions on each style update, since this can happen only once.
+            // We don't support function values inside of function rules.
+            if ($4c738b2cfd80766bd8d848f842f70089$var$fnValuesNs in rule || $4c738b2cfd80766bd8d848f842f70089$var$fnRuleNs in rule) return style;
+            var fnValues = {
+            };
+            for(var prop in style){
+                var value = style[prop];
+                if (typeof value !== 'function') continue;
+                delete style[prop];
+                fnValues[prop] = value;
+            }
+            rule[$4c738b2cfd80766bd8d848f842f70089$var$fnValuesNs] = fnValues;
+            return style;
+        },
+        onUpdate: function onUpdate(data, rule, sheet, options) {
+            var styleRule = rule;
+            var fnRule = styleRule[$4c738b2cfd80766bd8d848f842f70089$var$fnRuleNs]; // If we have a style function, the entire rule is dynamic and style object
+            // will be returned from that function.
+            if (fnRule) {
+                // Empty object will remove all currently defined props
+                // in case function rule returns a falsy value.
+                styleRule.style = fnRule(data) || {
+                };
+                var prop;
+            }
+            var fnValues = styleRule[$4c738b2cfd80766bd8d848f842f70089$var$fnValuesNs]; // If we have a fn values map, it is a rule with function values.
+            if (fnValues) for(var _prop in fnValues)styleRule.prop(_prop, fnValues[_prop](data), options);
+        }
+    };
+};
+var $4c738b2cfd80766bd8d848f842f70089$export$9099ad97b570f7c = $4c738b2cfd80766bd8d848f842f70089$var$functionPlugin;

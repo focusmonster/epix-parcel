@@ -1,0 +1,5 @@
+import   "f023548ecbb2c7d85e3a86bcbcb7917b:./ownerDocument";
+function $f023548ecbb2c7d85e3a86bcbcb7917b$export$9099ad97b570f7c(node) {
+    var doc = $f023548ecbb2c7d85e3a86bcbcb7917b$import$7edd190028726643$9099ad97b570f7c(node);
+    return doc.defaultView || window;
+}

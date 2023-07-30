@@ -1,0 +1,13 @@
+/* eslint-disable import/prefer-default-export */ // Global index counter to preserve source order.
+// We create the style sheet during the creation of the component,
+// children are handled after the parents, so the order of style elements would be parent->child.
+// It is a problem though when a parent passes a className
+// which needs to override any child's styles.
+// StyleSheet of the child has a higher specificity, because of the source order.
+// So our solution is to render sheets them in the reverse order child->sheet, so
+// that parent has a higher specificity.
+var $d3d86b48388343a0fc18f97acb98fa40$var$indexCounter = -1000000000;
+function $d3d86b48388343a0fc18f97acb98fa40$export$2921b019f20402e5() {
+    $d3d86b48388343a0fc18f97acb98fa40$var$indexCounter += 1;
+    return $d3d86b48388343a0fc18f97acb98fa40$var$indexCounter;
+}

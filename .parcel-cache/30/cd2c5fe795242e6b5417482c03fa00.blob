@@ -1,0 +1,166 @@
+import   "9172383f64269d5929459da5acad70e9:@babel/runtime/helpers/esm/extends";
+import   "9172383f64269d5929459da5acad70e9:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "9172383f64269d5929459da5acad70e9:react";
+import   "9172383f64269d5929459da5acad70e9:prop-types";
+import   "9172383f64269d5929459da5acad70e9:@material-ui/utils";
+import   "9172383f64269d5929459da5acad70e9:clsx";
+import   "9172383f64269d5929459da5acad70e9:../utils/deprecatedPropType";
+import   "9172383f64269d5929459da5acad70e9:../styles/withStyles";
+import   "9172383f64269d5929459da5acad70e9:../InputBase";
+import   "9172383f64269d5929459da5acad70e9:../MenuItem";
+import   "9172383f64269d5929459da5acad70e9:../Select";
+import   "9172383f64269d5929459da5acad70e9:../TableCell";
+import   "9172383f64269d5929459da5acad70e9:../Toolbar";
+import   "9172383f64269d5929459da5acad70e9:../Typography";
+import   "9172383f64269d5929459da5acad70e9:./TablePaginationActions";
+import   "9172383f64269d5929459da5acad70e9:../utils/unstable_useId";
+var $9172383f64269d5929459da5acad70e9$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            color: theme.palette.text.primary,
+            fontSize: theme.typography.pxToRem(14),
+            overflow: 'auto',
+            // Increase the specificity to override TableCell.
+            '&:last-child': {
+                padding: 0
+            }
+        },
+        /* Styles applied to the Toolbar component. */ toolbar: {
+            minHeight: 52,
+            paddingRight: 2
+        },
+        /* Styles applied to the spacer element. */ spacer: {
+            flex: '1 1 100%'
+        },
+        /* Styles applied to the caption Typography components if `variant="caption"`. */ caption: {
+            flexShrink: 0
+        },
+        // TODO v5: `.selectRoot` should be merged with `.input`
+        /* Styles applied to the Select component root element. */ selectRoot: {
+            marginRight: 32,
+            marginLeft: 8
+        },
+        /* Styles applied to the Select component `select` class. */ select: {
+            paddingLeft: 8,
+            paddingRight: 24,
+            textAlign: 'right',
+            textAlignLast: 'right'
+        },
+        // TODO v5: remove
+        /* Styles applied to the Select component `icon` class. */ selectIcon: {
+        },
+        /* Styles applied to the `InputBase` component. */ input: {
+            color: 'inherit',
+            fontSize: 'inherit',
+            flexShrink: 0
+        },
+        /* Styles applied to the MenuItem component. */ menuItem: {
+        },
+        /* Styles applied to the internal `TablePaginationActions` component. */ actions: {
+            flexShrink: 0,
+            marginLeft: 20
+        }
+    };
+};
+var $9172383f64269d5929459da5acad70e9$var$defaultLabelDisplayedRows = function defaultLabelDisplayedRows(_ref) {
+    var from = _ref.from, to = _ref.to, count = _ref.count;
+    return "".concat(from, "-").concat(to, " of ").concat(count !== -1 ? count : "more than ".concat(to));
+};
+var $9172383f64269d5929459da5acad70e9$var$defaultRowsPerPageOptions = [
+    10,
+    25,
+    50,
+    100
+];
+/**
+ * A `TableCell` based component for placing inside `TableFooter` for pagination.
+ */ var $9172383f64269d5929459da5acad70e9$var$TablePagination = /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$ac92bb288368c37c(function TablePagination(props, ref) {
+    var _props$ActionsCompone = props.ActionsComponent, ActionsComponent = _props$ActionsCompone === void 0 ? $9172383f64269d5929459da5acad70e9$import$53f031beb222e675$9099ad97b570f7c : _props$ActionsCompone, backIconButtonProps = props.backIconButtonProps, _props$backIconButton = props.backIconButtonText, backIconButtonText = _props$backIconButton === void 0 ? 'Previous page' : _props$backIconButton, classes = props.classes, className = props.className, colSpanProp = props.colSpan, _props$component = props.component, Component = _props$component === void 0 ? $9172383f64269d5929459da5acad70e9$import$8c5467a84961919a$9099ad97b570f7c : _props$component, count = props.count, _props$labelDisplayed = props.labelDisplayedRows, labelDisplayedRows = _props$labelDisplayed === void 0 ? $9172383f64269d5929459da5acad70e9$var$defaultLabelDisplayedRows : _props$labelDisplayed, _props$labelRowsPerPa = props.labelRowsPerPage, labelRowsPerPage = _props$labelRowsPerPa === void 0 ? 'Rows per page:' : _props$labelRowsPerPa, nextIconButtonProps = props.nextIconButtonProps, _props$nextIconButton = props.nextIconButtonText, nextIconButtonText = _props$nextIconButton === void 0 ? 'Next page' : _props$nextIconButton, onChangePage = props.onChangePage, onPageChange = props.onPageChange, onChangeRowsPerPageProp = props.onChangeRowsPerPage, onRowsPerPageChangeProp = props.onRowsPerPageChange, page = props.page, rowsPerPage = props.rowsPerPage, _props$rowsPerPageOpt = props.rowsPerPageOptions, rowsPerPageOptions = _props$rowsPerPageOpt === void 0 ? $9172383f64269d5929459da5acad70e9$var$defaultRowsPerPageOptions : _props$rowsPerPageOpt, _props$SelectProps = props.SelectProps, SelectProps = _props$SelectProps === void 0 ? {
+    } : _props$SelectProps, other = $9172383f64269d5929459da5acad70e9$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "ActionsComponent",
+        "backIconButtonProps",
+        "backIconButtonText",
+        "classes",
+        "className",
+        "colSpan",
+        "component",
+        "count",
+        "labelDisplayedRows",
+        "labelRowsPerPage",
+        "nextIconButtonProps",
+        "nextIconButtonText",
+        "onChangePage",
+        "onPageChange",
+        "onChangeRowsPerPage",
+        "onRowsPerPageChange",
+        "page",
+        "rowsPerPage",
+        "rowsPerPageOptions",
+        "SelectProps"
+    ]);
+    var onChangeRowsPerPage = onChangeRowsPerPageProp || onRowsPerPageChangeProp;
+    var colSpan;
+    if (Component === $9172383f64269d5929459da5acad70e9$import$8c5467a84961919a$9099ad97b570f7c || Component === 'td') colSpan = colSpanProp || 1000; // col-span over everything
+    var selectId = $9172383f64269d5929459da5acad70e9$import$e0e6653ad55e6d52$9099ad97b570f7c();
+    var labelId = $9172383f64269d5929459da5acad70e9$import$e0e6653ad55e6d52$9099ad97b570f7c();
+    var MenuItemComponent = SelectProps.native ? 'option' : $9172383f64269d5929459da5acad70e9$import$94a282bee09b858c$9099ad97b570f7c;
+    return(/*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $9172383f64269d5929459da5acad70e9$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $9172383f64269d5929459da5acad70e9$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        colSpan: colSpan,
+        ref: ref
+    }, other), /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9($9172383f64269d5929459da5acad70e9$import$509b840634f7b167$9099ad97b570f7c, {
+        className: classes.toolbar
+    }, /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9("div", {
+        className: classes.spacer
+    }), rowsPerPageOptions.length > 1 && /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9($9172383f64269d5929459da5acad70e9$import$ffac14c38e6e39b9$9099ad97b570f7c, {
+        color: "inherit",
+        variant: "body2",
+        className: classes.caption,
+        id: labelId
+    }, labelRowsPerPage), rowsPerPageOptions.length > 1 && /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9($9172383f64269d5929459da5acad70e9$import$e1522a2a0cf0fb30$9099ad97b570f7c, $9172383f64269d5929459da5acad70e9$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        classes: {
+            select: classes.select,
+            icon: classes.selectIcon
+        },
+        input: /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9($9172383f64269d5929459da5acad70e9$import$47bac34e984a7131$9099ad97b570f7c, {
+            className: $9172383f64269d5929459da5acad70e9$import$3e54c96927a352a4$9099ad97b570f7c(classes.input, classes.selectRoot)
+        }),
+        value: rowsPerPage,
+        onChange: onChangeRowsPerPage,
+        id: selectId,
+        labelId: labelId
+    }, SelectProps), rowsPerPageOptions.map(function(rowsPerPageOption) {
+        return(/*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9(MenuItemComponent, {
+            className: classes.menuItem,
+            key: rowsPerPageOption.value ? rowsPerPageOption.value : rowsPerPageOption,
+            value: rowsPerPageOption.value ? rowsPerPageOption.value : rowsPerPageOption
+        }, rowsPerPageOption.label ? rowsPerPageOption.label : rowsPerPageOption));
+    })), /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9($9172383f64269d5929459da5acad70e9$import$ffac14c38e6e39b9$9099ad97b570f7c, {
+        color: "inherit",
+        variant: "body2",
+        className: classes.caption
+    }, labelDisplayedRows({
+        from: count === 0 ? 0 : page * rowsPerPage + 1,
+        to: count !== -1 ? Math.min(count, (page + 1) * rowsPerPage) : (page + 1) * rowsPerPage,
+        count: count === -1 ? -1 : count,
+        page: page
+    })), /*#__PURE__*/ $9172383f64269d5929459da5acad70e9$import$f02ba03fc070e88c$2f8418d37d4320b9(ActionsComponent, {
+        className: classes.actions,
+        backIconButtonProps: $9172383f64269d5929459da5acad70e9$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            title: backIconButtonText,
+            'aria-label': backIconButtonText
+        }, backIconButtonProps),
+        count: count,
+        nextIconButtonProps: $9172383f64269d5929459da5acad70e9$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            title: nextIconButtonText,
+            'aria-label': nextIconButtonText
+        }, nextIconButtonProps),
+        onChangePage: onChangePage,
+        onPageChange: onPageChange,
+        page: page,
+        rowsPerPage: rowsPerPage
+    }))));
+});
+var $9172383f64269d5929459da5acad70e9$export$9099ad97b570f7c = $9172383f64269d5929459da5acad70e9$import$abdf0c7fda13cc01$9099ad97b570f7c($9172383f64269d5929459da5acad70e9$export$1155669653ed4fad, {
+    name: 'MuiTablePagination'
+})($9172383f64269d5929459da5acad70e9$var$TablePagination);

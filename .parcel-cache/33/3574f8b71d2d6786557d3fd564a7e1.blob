@@ -1,0 +1,30 @@
+import   "11c339590bb4b9edfce66a89a314b0cd:@babel/runtime/helpers/esm/extends";
+import   "11c339590bb4b9edfce66a89a314b0cd:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "11c339590bb4b9edfce66a89a314b0cd:react";
+import   "11c339590bb4b9edfce66a89a314b0cd:prop-types";
+import   "11c339590bb4b9edfce66a89a314b0cd:clsx";
+import   "11c339590bb4b9edfce66a89a314b0cd:../styles/withStyles";
+var $11c339590bb4b9edfce66a89a314b0cd$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        position: 'absolute',
+        right: 16,
+        top: '50%',
+        transform: 'translateY(-50%)'
+    }
+};
+/**
+ * Must be used as the last child of ListItem to function properly.
+ */ var $11c339590bb4b9edfce66a89a314b0cd$var$ListItemSecondaryAction = /*#__PURE__*/ $11c339590bb4b9edfce66a89a314b0cd$import$f02ba03fc070e88c$ac92bb288368c37c(function ListItemSecondaryAction(props, ref) {
+    var classes = props.classes, className = props.className, other = $11c339590bb4b9edfce66a89a314b0cd$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className"
+    ]);
+    return(/*#__PURE__*/ $11c339590bb4b9edfce66a89a314b0cd$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $11c339590bb4b9edfce66a89a314b0cd$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $11c339590bb4b9edfce66a89a314b0cd$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        ref: ref
+    }, other)));
+});
+$11c339590bb4b9edfce66a89a314b0cd$var$ListItemSecondaryAction.muiName = 'ListItemSecondaryAction';
+var $11c339590bb4b9edfce66a89a314b0cd$export$9099ad97b570f7c = $11c339590bb4b9edfce66a89a314b0cd$import$abdf0c7fda13cc01$9099ad97b570f7c($11c339590bb4b9edfce66a89a314b0cd$export$1155669653ed4fad, {
+    name: 'MuiListItemSecondaryAction'
+})($11c339590bb4b9edfce66a89a314b0cd$var$ListItemSecondaryAction);

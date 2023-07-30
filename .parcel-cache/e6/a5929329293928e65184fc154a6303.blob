@@ -1,0 +1,75 @@
+import   "8ac7b95e9a5d6a4e5ed79512453c21c6:@babel/runtime/helpers/esm/toConsumableArray";
+import   "8ac7b95e9a5d6a4e5ed79512453c21c6:@babel/runtime/helpers/esm/extends";
+import   "8ac7b95e9a5d6a4e5ed79512453c21c6:@babel/runtime/helpers/esm/typeof";
+import   "8ac7b95e9a5d6a4e5ed79512453c21c6:prop-types";
+import   "8ac7b95e9a5d6a4e5ed79512453c21c6:./merge";
+// For instance with the first breakpoint xs: [xs, sm[.
+var $8ac7b95e9a5d6a4e5ed79512453c21c6$var$values = {
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920
+};
+var $8ac7b95e9a5d6a4e5ed79512453c21c6$var$defaultBreakpoints = {
+    // Sorted ASC by size. That's important.
+    // It can't be configured as it's used statically for propTypes.
+    keys: [
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl'
+    ],
+    up: function up(key) {
+        return "@media (min-width:".concat($8ac7b95e9a5d6a4e5ed79512453c21c6$var$values[key], "px)");
+    }
+};
+function $8ac7b95e9a5d6a4e5ed79512453c21c6$export$8a326a3690773c3e(props, propValue, styleFromPropValue) {
+    if (Array.isArray(propValue)) {
+        var themeBreakpoints = props.theme.breakpoints || $8ac7b95e9a5d6a4e5ed79512453c21c6$var$defaultBreakpoints;
+        return propValue.reduce(function(acc, item, index) {
+            acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
+            return acc;
+        }, {
+        });
+    }
+    if ($8ac7b95e9a5d6a4e5ed79512453c21c6$import$a7922b5050e8afad$9099ad97b570f7c(propValue) === 'object') {
+        var _themeBreakpoints = props.theme.breakpoints || $8ac7b95e9a5d6a4e5ed79512453c21c6$var$defaultBreakpoints;
+        return Object.keys(propValue).reduce(function(acc, breakpoint) {
+            acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
+            return acc;
+        }, {
+        });
+    }
+    var output = styleFromPropValue(propValue);
+    return output;
+}
+function $8ac7b95e9a5d6a4e5ed79512453c21c6$var$breakpoints(styleFunction) {
+    var newStyleFunction = function newStyleFunction1(props) {
+        var base = styleFunction(props);
+        var themeBreakpoints = props.theme.breakpoints || $8ac7b95e9a5d6a4e5ed79512453c21c6$var$defaultBreakpoints;
+        var extended = themeBreakpoints.keys.reduce(function(acc, key) {
+            if (props[key]) {
+                acc = acc || {
+                };
+                acc[themeBreakpoints.up(key)] = styleFunction($8ac7b95e9a5d6a4e5ed79512453c21c6$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                    theme: props.theme
+                }, props[key]));
+            }
+            return acc;
+        }, null);
+        return $8ac7b95e9a5d6a4e5ed79512453c21c6$import$1d8eb37588603931$9099ad97b570f7c(base, extended);
+    };
+    newStyleFunction.propTypes = {
+    };
+    newStyleFunction.filterProps = [
+        'xs',
+        'sm',
+        'md',
+        'lg',
+        'xl'
+    ].concat($8ac7b95e9a5d6a4e5ed79512453c21c6$import$4d3a86197f512b9$9099ad97b570f7c(styleFunction.filterProps));
+    return newStyleFunction;
+}
+var $8ac7b95e9a5d6a4e5ed79512453c21c6$export$9099ad97b570f7c = $8ac7b95e9a5d6a4e5ed79512453c21c6$var$breakpoints;

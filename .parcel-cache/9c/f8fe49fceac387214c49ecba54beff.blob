@@ -1,0 +1,17 @@
+var $1b90b69e4c6bfaf436b57e47d84aece7$var$deepOrange = {
+    50: '#fbe9e7',
+    100: '#ffccbc',
+    200: '#ffab91',
+    300: '#ff8a65',
+    400: '#ff7043',
+    500: '#ff5722',
+    600: '#f4511e',
+    700: '#e64a19',
+    800: '#d84315',
+    900: '#bf360c',
+    A100: '#ff9e80',
+    A200: '#ff6e40',
+    A400: '#ff3d00',
+    A700: '#dd2c00'
+};
+var $1b90b69e4c6bfaf436b57e47d84aece7$export$9099ad97b570f7c = $1b90b69e4c6bfaf436b57e47d84aece7$var$deepOrange;

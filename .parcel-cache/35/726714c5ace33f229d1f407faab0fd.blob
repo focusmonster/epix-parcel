@@ -1,0 +1,62 @@
+import   "1e26cfef48f0f3779da2217364db0e11:@babel/runtime/helpers/esm/extends";
+import   "1e26cfef48f0f3779da2217364db0e11:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "1e26cfef48f0f3779da2217364db0e11:react";
+import   "1e26cfef48f0f3779da2217364db0e11:prop-types";
+import   "1e26cfef48f0f3779da2217364db0e11:hoist-non-react-statics";
+import   "1e26cfef48f0f3779da2217364db0e11:@material-ui/utils";
+import   "1e26cfef48f0f3779da2217364db0e11:../makeStyles";
+import   "1e26cfef48f0f3779da2217364db0e11:../getThemeProps";
+import   "1e26cfef48f0f3779da2217364db0e11:../useTheme";
+// It does not modify the component passed to it;
+// instead, it returns a new component, with a `classes` property.
+var $1e26cfef48f0f3779da2217364db0e11$var$withStyles = function withStyles(stylesOrCreator) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    };
+    return function(Component) {
+        var defaultTheme = options.defaultTheme, _options$withTheme = options.withTheme, withTheme = _options$withTheme === void 0 ? false : _options$withTheme, name = options.name, stylesOptions = $1e26cfef48f0f3779da2217364db0e11$import$e114c77af6cc4d77$9099ad97b570f7c(options, [
+            "defaultTheme",
+            "withTheme",
+            "name"
+        ]);
+        var classNamePrefix = name;
+        var displayName;
+        var useStyles = $1e26cfef48f0f3779da2217364db0e11$import$768328ffd9ceef8$9099ad97b570f7c(stylesOrCreator, $1e26cfef48f0f3779da2217364db0e11$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            defaultTheme: defaultTheme,
+            Component: Component,
+            name: name || Component.displayName,
+            classNamePrefix: classNamePrefix
+        }, stylesOptions));
+        var WithStyles = /*#__PURE__*/ $1e26cfef48f0f3779da2217364db0e11$import$f02ba03fc070e88c$9099ad97b570f7c.forwardRef(function WithStyles1(props, ref) {
+            var classesProp = props.classes, innerRef = props.innerRef, other = $1e26cfef48f0f3779da2217364db0e11$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+                "classes",
+                "innerRef"
+            ]); // The wrapper receives only user supplied props, which could be a subset of
+            // the actual props Component might receive due to merging with defaultProps.
+            // So copying it here would give us the same result in the wrapper as well.
+            var classes = useStyles($1e26cfef48f0f3779da2217364db0e11$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+            }, Component.defaultProps, props));
+            var theme;
+            var more = other;
+            if (typeof name === 'string' || withTheme) {
+                // name and withTheme are invariant in the outer scope
+                // eslint-disable-next-line react-hooks/rules-of-hooks
+                theme = $1e26cfef48f0f3779da2217364db0e11$import$cd58002ab20c36b6$9099ad97b570f7c() || defaultTheme;
+                if (name) more = $1e26cfef48f0f3779da2217364db0e11$import$8c9b827c87604ce5$9099ad97b570f7c({
+                    theme: theme,
+                    name: name,
+                    props: other
+                });
+                 // Provide the theme to the wrapped component.
+                // So we don't have to use the `withTheme()` Higher-order Component.
+                if (withTheme && !more.theme) more.theme = theme;
+            }
+            return(/*#__PURE__*/ $1e26cfef48f0f3779da2217364db0e11$import$f02ba03fc070e88c$9099ad97b570f7c.createElement(Component, $1e26cfef48f0f3779da2217364db0e11$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                ref: innerRef || ref,
+                classes: classes
+            }, more)));
+        });
+        $1e26cfef48f0f3779da2217364db0e11$import$96277b2d9dcb8ffd$9099ad97b570f7c(WithStyles, Component);
+        return WithStyles;
+    };
+};
+var $1e26cfef48f0f3779da2217364db0e11$export$9099ad97b570f7c = $1e26cfef48f0f3779da2217364db0e11$var$withStyles;

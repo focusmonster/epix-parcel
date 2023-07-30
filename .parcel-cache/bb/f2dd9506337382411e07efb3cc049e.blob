@@ -1,0 +1,2 @@
+var $f37e2d8fa236b3dc088e3ffe62d2eea3$var$hasSymbol = typeof Symbol === 'function' && Symbol.for;
+var $f37e2d8fa236b3dc088e3ffe62d2eea3$export$9099ad97b570f7c = $f37e2d8fa236b3dc088e3ffe62d2eea3$var$hasSymbol ? Symbol.for('mui.nested') : '__THEME_NESTED__';

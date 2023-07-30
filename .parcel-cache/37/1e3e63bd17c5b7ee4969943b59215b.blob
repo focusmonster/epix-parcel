@@ -1,0 +1,6 @@
+function $3b2a8991473a32486e7351abc6d5a4fc$export$9099ad97b570f7c(o) {
+    $3b2a8991473a32486e7351abc6d5a4fc$export$9099ad97b570f7c = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o1) {
+        return o1.__proto__ || Object.getPrototypeOf(o1);
+    };
+    return $3b2a8991473a32486e7351abc6d5a4fc$export$9099ad97b570f7c(o);
+}

@@ -1,0 +1,56 @@
+import   "028cc8f658f10bb5043da5f085af62a0:@babel/runtime/helpers/esm/extends";
+import   "028cc8f658f10bb5043da5f085af62a0:react";
+import   "028cc8f658f10bb5043da5f085af62a0:prop-types";
+import   "028cc8f658f10bb5043da5f085af62a0:../styles/withStyles";
+import   "028cc8f658f10bb5043da5f085af62a0:@material-ui/utils";
+var $028cc8f658f10bb5043da5f085af62a0$export$91100b3ec196ccd = {
+    WebkitFontSmoothing: 'antialiased',
+    // Antialiasing.
+    MozOsxFontSmoothing: 'grayscale',
+    // Antialiasing.
+    // Change from `box-sizing: content-box` so that `width`
+    // is not affected by `padding` or `border`.
+    boxSizing: 'border-box'
+};
+var $028cc8f658f10bb5043da5f085af62a0$export$8029bc8a1bcbed4a = function body(theme) {
+    return $028cc8f658f10bb5043da5f085af62a0$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        color: theme.palette.text.primary
+    }, theme.typography.body2, {
+        backgroundColor: theme.palette.background.default,
+        '@media print': {
+            // Save printer ink.
+            backgroundColor: theme.palette.common.white
+        }
+    });
+};
+var $028cc8f658f10bb5043da5f085af62a0$export$1155669653ed4fad = function styles(theme) {
+    return {
+        '@global': {
+            html: $028cc8f658f10bb5043da5f085af62a0$export$91100b3ec196ccd,
+            '*, *::before, *::after': {
+                boxSizing: 'inherit'
+            },
+            'strong, b': {
+                fontWeight: theme.typography.fontWeightBold
+            },
+            body: $028cc8f658f10bb5043da5f085af62a0$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                margin: 0
+            }, $028cc8f658f10bb5043da5f085af62a0$export$8029bc8a1bcbed4a(theme), {
+                // Add support for document.body.requestFullScreen().
+                // Other elements, if background transparent, are not supported.
+                '&::backdrop': {
+                    backgroundColor: theme.palette.background.default
+                }
+            })
+        }
+    };
+};
+/**
+ * Kickstart an elegant, consistent, and simple baseline to build upon.
+ */ function $028cc8f658f10bb5043da5f085af62a0$var$CssBaseline(props) {
+    /* eslint-disable no-unused-vars */ var _props$children = props.children, children = _props$children === void 0 ? null : _props$children, classes = props.classes;
+    /* eslint-enable no-unused-vars */ return(/*#__PURE__*/ $028cc8f658f10bb5043da5f085af62a0$import$f02ba03fc070e88c$2f8418d37d4320b9($028cc8f658f10bb5043da5f085af62a0$import$f02ba03fc070e88c$44f93cb792444969, null, children));
+}
+var $028cc8f658f10bb5043da5f085af62a0$export$9099ad97b570f7c = $028cc8f658f10bb5043da5f085af62a0$import$abdf0c7fda13cc01$9099ad97b570f7c($028cc8f658f10bb5043da5f085af62a0$export$1155669653ed4fad, {
+    name: 'MuiCssBaseline'
+})($028cc8f658f10bb5043da5f085af62a0$var$CssBaseline);

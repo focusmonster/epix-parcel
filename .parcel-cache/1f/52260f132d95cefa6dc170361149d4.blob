@@ -1,0 +1,7 @@
+import   "645f40c4f4cefdc360c4c504d9d7797d:react";
+/**
+ * @ignore - internal component.
+ * @type {React.Context<{} | {expanded: boolean, disabled: boolean, toggle: () => void}>}
+ */ var $645f40c4f4cefdc360c4c504d9d7797d$var$ExpansionPanelContext = $645f40c4f4cefdc360c4c504d9d7797d$import$f02ba03fc070e88c$a4ff86cea5c8127e({
+});
+var $645f40c4f4cefdc360c4c504d9d7797d$export$9099ad97b570f7c = $645f40c4f4cefdc360c4c504d9d7797d$var$ExpansionPanelContext;

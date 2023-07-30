@@ -1,0 +1,28 @@
+import   "2326cd647c969ee74db1026313f3fb03:react";
+import   "2326cd647c969ee74db1026313f3fb03:prop-types";
+import   "2326cd647c969ee74db1026313f3fb03:@material-ui/utils";
+var $2326cd647c969ee74db1026313f3fb03$var$useEnhancedEffect = typeof window !== 'undefined' && true ? $2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$3839ad89c0ec6b31 : $2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$7e977b4ca969aabd;
+/**
+ * NoSsr purposely removes components from the subject of Server Side Rendering (SSR).
+ *
+ * This component can be useful in a variety of situations:
+ * - Escape hatch for broken dependencies not supporting SSR.
+ * - Improve the time-to-first paint on the client by only rendering above the fold.
+ * - Reduce the rendering time on the server.
+ * - Under too heavy server load, you can turn on service degradation.
+ */ function $2326cd647c969ee74db1026313f3fb03$var$NoSsr(props) {
+    var children = props.children, _props$defer = props.defer, defer = _props$defer === void 0 ? false : _props$defer, _props$fallback = props.fallback, fallback = _props$fallback === void 0 ? null : _props$fallback;
+    var _React$useState = $2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$f54936751fc2c51(false), mountedState = _React$useState[0], setMountedState = _React$useState[1];
+    $2326cd647c969ee74db1026313f3fb03$var$useEnhancedEffect(function() {
+        if (!defer) setMountedState(true);
+    }, [
+        defer
+    ]);
+    $2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$7e977b4ca969aabd(function() {
+        if (defer) setMountedState(true);
+    }, [
+        defer
+    ]); // We need the Fragment here to force react-docgen to recognise NoSsr as a component.
+    return(/*#__PURE__*/ $2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$2f8418d37d4320b9($2326cd647c969ee74db1026313f3fb03$import$f02ba03fc070e88c$44f93cb792444969, null, mountedState ? children : fallback));
+}
+var $2326cd647c969ee74db1026313f3fb03$export$9099ad97b570f7c = $2326cd647c969ee74db1026313f3fb03$var$NoSsr;

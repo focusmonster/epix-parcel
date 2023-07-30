@@ -1,0 +1,82 @@
+import   "0663d8c1e9a0e395aac5e1d028d00e50:@babel/runtime/helpers/esm/extends";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:react";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:prop-types";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:clsx";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:../internal/svg-icons/ArrowDownward";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:../styles/withStyles";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:../ButtonBase";
+import   "0663d8c1e9a0e395aac5e1d028d00e50:../utils/capitalize";
+var $0663d8c1e9a0e395aac5e1d028d00e50$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            cursor: 'pointer',
+            display: 'inline-flex',
+            justifyContent: 'flex-start',
+            flexDirection: 'inherit',
+            alignItems: 'center',
+            '&:focus': {
+                color: theme.palette.text.secondary
+            },
+            '&:hover': {
+                color: theme.palette.text.secondary,
+                '& $icon': {
+                    opacity: 0.5
+                }
+            },
+            '&$active': {
+                color: theme.palette.text.primary,
+                // && instead of & is a workaround for https://github.com/cssinjs/jss/issues/1045
+                '&& $icon': {
+                    opacity: 1,
+                    color: theme.palette.text.secondary
+                }
+            }
+        },
+        /* Pseudo-class applied to the root element if `active={true}`. */ active: {
+        },
+        /* Styles applied to the icon component. */ icon: {
+            fontSize: 18,
+            marginRight: 4,
+            marginLeft: 4,
+            opacity: 0,
+            transition: theme.transitions.create([
+                'opacity',
+                'transform'
+            ], {
+                duration: theme.transitions.duration.shorter
+            }),
+            userSelect: 'none'
+        },
+        /* Styles applied to the icon component if `direction="desc"`. */ iconDirectionDesc: {
+            transform: 'rotate(0deg)'
+        },
+        /* Styles applied to the icon component if `direction="asc"`. */ iconDirectionAsc: {
+            transform: 'rotate(180deg)'
+        }
+    };
+};
+/**
+ * A button based label for placing inside `TableCell` for column sorting.
+ */ var $0663d8c1e9a0e395aac5e1d028d00e50$var$TableSortLabel = /*#__PURE__*/ $0663d8c1e9a0e395aac5e1d028d00e50$import$f02ba03fc070e88c$ac92bb288368c37c(function TableSortLabel(props, ref) {
+    var _props$active = props.active, active = _props$active === void 0 ? false : _props$active, children = props.children, classes = props.classes, className = props.className, _props$direction = props.direction, direction = _props$direction === void 0 ? 'asc' : _props$direction, _props$hideSortIcon = props.hideSortIcon, hideSortIcon = _props$hideSortIcon === void 0 ? false : _props$hideSortIcon, _props$IconComponent = props.IconComponent, IconComponent = _props$IconComponent === void 0 ? $0663d8c1e9a0e395aac5e1d028d00e50$import$276079f8efbe1387$9099ad97b570f7c : _props$IconComponent, other = $0663d8c1e9a0e395aac5e1d028d00e50$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "active",
+        "children",
+        "classes",
+        "className",
+        "direction",
+        "hideSortIcon",
+        "IconComponent"
+    ]);
+    return(/*#__PURE__*/ $0663d8c1e9a0e395aac5e1d028d00e50$import$f02ba03fc070e88c$2f8418d37d4320b9($0663d8c1e9a0e395aac5e1d028d00e50$import$b113eefa2a2d89da$9099ad97b570f7c, $0663d8c1e9a0e395aac5e1d028d00e50$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $0663d8c1e9a0e395aac5e1d028d00e50$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, active && classes.active),
+        component: "span",
+        disableRipple: true,
+        ref: ref
+    }, other), children, hideSortIcon && !active ? null : /*#__PURE__*/ $0663d8c1e9a0e395aac5e1d028d00e50$import$f02ba03fc070e88c$2f8418d37d4320b9(IconComponent, {
+        className: $0663d8c1e9a0e395aac5e1d028d00e50$import$3e54c96927a352a4$9099ad97b570f7c(classes.icon, classes["iconDirection".concat($0663d8c1e9a0e395aac5e1d028d00e50$import$f35500a7ba1578c4$9099ad97b570f7c(direction))])
+    })));
+});
+var $0663d8c1e9a0e395aac5e1d028d00e50$export$9099ad97b570f7c = $0663d8c1e9a0e395aac5e1d028d00e50$import$abdf0c7fda13cc01$9099ad97b570f7c($0663d8c1e9a0e395aac5e1d028d00e50$export$1155669653ed4fad, {
+    name: 'MuiTableSortLabel'
+})($0663d8c1e9a0e395aac5e1d028d00e50$var$TableSortLabel);

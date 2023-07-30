@@ -1,0 +1,8 @@
+function $d2d81c863df731eccf1c6f82e29f81bf$export$9099ad97b570f7c(fn) {
+    var cache = {
+    };
+    return function(arg) {
+        if (cache[arg] === undefined) cache[arg] = fn(arg);
+        return cache[arg];
+    };
+}

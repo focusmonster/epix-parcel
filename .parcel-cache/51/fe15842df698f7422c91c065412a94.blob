@@ -1,0 +1,64 @@
+import   "f64986ec7998a97fa10f3437cb80b18f:@babel/runtime/helpers/esm/extends";
+import   "f64986ec7998a97fa10f3437cb80b18f:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "f64986ec7998a97fa10f3437cb80b18f:react";
+import   "f64986ec7998a97fa10f3437cb80b18f:prop-types";
+import   "f64986ec7998a97fa10f3437cb80b18f:clsx";
+import   "f64986ec7998a97fa10f3437cb80b18f:../Typography";
+import   "f64986ec7998a97fa10f3437cb80b18f:../styles/withStyles";
+import   "f64986ec7998a97fa10f3437cb80b18f:../FormControl/FormControlContext";
+var $f64986ec7998a97fa10f3437cb80b18f$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        display: 'flex',
+        height: '0.01em',
+        // Fix IE 11 flexbox alignment. To remove at some point.
+        maxHeight: '2em',
+        alignItems: 'center',
+        whiteSpace: 'nowrap'
+    },
+    /* Styles applied to the root element if `variant="filled"`. */ filled: {
+        '&$positionStart:not($hiddenLabel)': {
+            marginTop: 16
+        }
+    },
+    /* Styles applied to the root element if `position="start"`. */ positionStart: {
+        marginRight: 8
+    },
+    /* Styles applied to the root element if `position="end"`. */ positionEnd: {
+        marginLeft: 8
+    },
+    /* Styles applied to the root element if `disablePointerEvents=true`. */ disablePointerEvents: {
+        pointerEvents: 'none'
+    },
+    /* Styles applied if the adornment is used inside <FormControl hiddenLabel />. */ hiddenLabel: {
+    },
+    /* Styles applied if the adornment is used inside <FormControl margin="dense" />. */ marginDense: {
+    }
+};
+var $f64986ec7998a97fa10f3437cb80b18f$var$InputAdornment = /*#__PURE__*/ $f64986ec7998a97fa10f3437cb80b18f$import$f02ba03fc070e88c$ac92bb288368c37c(function InputAdornment(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, _props$disablePointer = props.disablePointerEvents, disablePointerEvents = _props$disablePointer === void 0 ? false : _props$disablePointer, _props$disableTypogra = props.disableTypography, disableTypography = _props$disableTypogra === void 0 ? false : _props$disableTypogra, position = props.position, variantProp = props.variant, other = $f64986ec7998a97fa10f3437cb80b18f$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "component",
+        "disablePointerEvents",
+        "disableTypography",
+        "position",
+        "variant"
+    ]);
+    var muiFormControl = $f64986ec7998a97fa10f3437cb80b18f$import$abc9826f04991d65$b1f65b92be1a279b() || {
+    };
+    var variant = variantProp;
+    variantProp && muiFormControl.variant;
+    if (muiFormControl && !variant) variant = muiFormControl.variant;
+    return(/*#__PURE__*/ $f64986ec7998a97fa10f3437cb80b18f$import$f02ba03fc070e88c$2f8418d37d4320b9($f64986ec7998a97fa10f3437cb80b18f$import$abc9826f04991d65$9099ad97b570f7c.Provider, {
+        value: null
+    }, /*#__PURE__*/ $f64986ec7998a97fa10f3437cb80b18f$import$f02ba03fc070e88c$2f8418d37d4320b9(Component, $f64986ec7998a97fa10f3437cb80b18f$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $f64986ec7998a97fa10f3437cb80b18f$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className, position === 'end' ? classes.positionEnd : classes.positionStart, disablePointerEvents && classes.disablePointerEvents, muiFormControl.hiddenLabel && classes.hiddenLabel, variant === 'filled' && classes.filled, muiFormControl.margin === 'dense' && classes.marginDense),
+        ref: ref
+    }, other), typeof children === 'string' && !disableTypography ? /*#__PURE__*/ $f64986ec7998a97fa10f3437cb80b18f$import$f02ba03fc070e88c$2f8418d37d4320b9($f64986ec7998a97fa10f3437cb80b18f$import$ffac14c38e6e39b9$9099ad97b570f7c, {
+        color: "textSecondary"
+    }, children) : children)));
+});
+var $f64986ec7998a97fa10f3437cb80b18f$export$9099ad97b570f7c = $f64986ec7998a97fa10f3437cb80b18f$import$abdf0c7fda13cc01$9099ad97b570f7c($f64986ec7998a97fa10f3437cb80b18f$export$1155669653ed4fad, {
+    name: 'MuiInputAdornment'
+})($f64986ec7998a97fa10f3437cb80b18f$var$InputAdornment);

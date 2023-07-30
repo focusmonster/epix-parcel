@@ -1,0 +1,167 @@
+import   "3b9d46ea5b57d6ee412b06040a8c4906:@babel/runtime/helpers/esm/extends";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:react";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:prop-types";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:clsx";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../Modal";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../Backdrop";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../styles/withStyles";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../Slide";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../Paper";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../utils/capitalize";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../styles/transitions";
+import   "3b9d46ea5b57d6ee412b06040a8c4906:../styles/useTheme";
+var $3b9d46ea5b57d6ee412b06040a8c4906$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+        },
+        /* Styles applied to the root element if `variant="permanent or persistent"`. */ docked: {
+            flex: '0 0 auto'
+        },
+        /* Styles applied to the `Paper` component. */ paper: {
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100%',
+            flex: '1 0 auto',
+            zIndex: theme.zIndex.drawer,
+            WebkitOverflowScrolling: 'touch',
+            // Add iOS momentum scrolling.
+            // temporary style
+            position: 'fixed',
+            top: 0,
+            // We disable the focus ring for mouse, touch and keyboard users.
+            // At some point, it would be better to keep it for keyboard users.
+            // :focus-ring CSS pseudo-class will help.
+            outline: 0
+        },
+        /* Styles applied to the `Paper` component if `anchor="left"`. */ paperAnchorLeft: {
+            left: 0,
+            right: 'auto'
+        },
+        /* Styles applied to the `Paper` component if `anchor="right"`. */ paperAnchorRight: {
+            left: 'auto',
+            right: 0
+        },
+        /* Styles applied to the `Paper` component if `anchor="top"`. */ paperAnchorTop: {
+            top: 0,
+            left: 0,
+            bottom: 'auto',
+            right: 0,
+            height: 'auto',
+            maxHeight: '100%'
+        },
+        /* Styles applied to the `Paper` component if `anchor="bottom"`. */ paperAnchorBottom: {
+            top: 'auto',
+            left: 0,
+            bottom: 0,
+            right: 0,
+            height: 'auto',
+            maxHeight: '100%'
+        },
+        /* Styles applied to the `Paper` component if `anchor="left"` and `variant` is not "temporary". */ paperAnchorDockedLeft: {
+            borderRight: "1px solid ".concat(theme.palette.divider)
+        },
+        /* Styles applied to the `Paper` component if `anchor="top"` and `variant` is not "temporary". */ paperAnchorDockedTop: {
+            borderBottom: "1px solid ".concat(theme.palette.divider)
+        },
+        /* Styles applied to the `Paper` component if `anchor="right"` and `variant` is not "temporary". */ paperAnchorDockedRight: {
+            borderLeft: "1px solid ".concat(theme.palette.divider)
+        },
+        /* Styles applied to the `Paper` component if `anchor="bottom"` and `variant` is not "temporary". */ paperAnchorDockedBottom: {
+            borderTop: "1px solid ".concat(theme.palette.divider)
+        },
+        /* Styles applied to the `Modal` component. */ modal: {
+        }
+    };
+};
+var $3b9d46ea5b57d6ee412b06040a8c4906$var$oppositeDirection = {
+    left: 'right',
+    right: 'left',
+    top: 'down',
+    bottom: 'up'
+};
+function $3b9d46ea5b57d6ee412b06040a8c4906$export$b614985bc7b0336f(anchor) {
+    return [
+        'left',
+        'right'
+    ].indexOf(anchor) !== -1;
+}
+function $3b9d46ea5b57d6ee412b06040a8c4906$export$78d2c4ec03c55d6f(theme, anchor) {
+    return theme.direction === 'rtl' && $3b9d46ea5b57d6ee412b06040a8c4906$export$b614985bc7b0336f(anchor) ? $3b9d46ea5b57d6ee412b06040a8c4906$var$oppositeDirection[anchor] : anchor;
+}
+var $3b9d46ea5b57d6ee412b06040a8c4906$var$defaultTransitionDuration = {
+    enter: $3b9d46ea5b57d6ee412b06040a8c4906$import$b1e0cdbd228fdc15$cf96e0e36f6240f8.enteringScreen,
+    exit: $3b9d46ea5b57d6ee412b06040a8c4906$import$b1e0cdbd228fdc15$cf96e0e36f6240f8.leavingScreen
+};
+/**
+ * The props of the [Modal](/api/modal/) component are available
+ * when `variant="temporary"` is set.
+ */ var $3b9d46ea5b57d6ee412b06040a8c4906$var$Drawer = /*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$ac92bb288368c37c(function Drawer(props, ref) {
+    var _props$anchor = props.anchor, anchorProp = _props$anchor === void 0 ? 'left' : _props$anchor, BackdropProps = props.BackdropProps, children = props.children, classes = props.classes, className = props.className, _props$elevation = props.elevation, elevation = _props$elevation === void 0 ? 16 : _props$elevation, _props$ModalProps = props.ModalProps;
+    _props$ModalProps = _props$ModalProps === void 0 ? {
+    } : _props$ModalProps;
+    var BackdropPropsProp = _props$ModalProps.BackdropProps, ModalProps = $3b9d46ea5b57d6ee412b06040a8c4906$import$e114c77af6cc4d77$9099ad97b570f7c(_props$ModalProps, [
+        "BackdropProps"
+    ]), onClose = props.onClose, _props$open = props.open, open = _props$open === void 0 ? false : _props$open, _props$PaperProps = props.PaperProps, PaperProps = _props$PaperProps === void 0 ? {
+    } : _props$PaperProps, SlideProps = props.SlideProps, _props$TransitionComp = props.TransitionComponent, TransitionComponent = _props$TransitionComp === void 0 ? $3b9d46ea5b57d6ee412b06040a8c4906$import$13a8c0867ccfe520$9099ad97b570f7c : _props$TransitionComp, _props$transitionDura = props.transitionDuration, transitionDuration = _props$transitionDura === void 0 ? $3b9d46ea5b57d6ee412b06040a8c4906$var$defaultTransitionDuration : _props$transitionDura, _props$variant = props.variant, variant = _props$variant === void 0 ? 'temporary' : _props$variant, other = $3b9d46ea5b57d6ee412b06040a8c4906$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "anchor",
+        "BackdropProps",
+        "children",
+        "classes",
+        "className",
+        "elevation",
+        "ModalProps",
+        "onClose",
+        "open",
+        "PaperProps",
+        "SlideProps",
+        "TransitionComponent",
+        "transitionDuration",
+        "variant"
+    ]);
+    var theme = $3b9d46ea5b57d6ee412b06040a8c4906$import$d08d112fbc8a4e1d$9099ad97b570f7c(); // Let's assume that the Drawer will always be rendered on user space.
+    // We use this state is order to skip the appear transition during the
+    // initial mount of the component.
+    var mounted = $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$575893c07881cfe8(false);
+    $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$7e977b4ca969aabd(function() {
+        mounted.current = true;
+    }, []);
+    var anchor = $3b9d46ea5b57d6ee412b06040a8c4906$export$78d2c4ec03c55d6f(theme, anchorProp);
+    var drawer = /*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$2f8418d37d4320b9($3b9d46ea5b57d6ee412b06040a8c4906$import$881d8cc84965099$9099ad97b570f7c, $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        elevation: variant === 'temporary' ? elevation : 0,
+        square: true
+    }, PaperProps, {
+        className: $3b9d46ea5b57d6ee412b06040a8c4906$import$3e54c96927a352a4$9099ad97b570f7c(classes.paper, classes["paperAnchor".concat($3b9d46ea5b57d6ee412b06040a8c4906$import$f35500a7ba1578c4$9099ad97b570f7c(anchor))], PaperProps.className, variant !== 'temporary' && classes["paperAnchorDocked".concat($3b9d46ea5b57d6ee412b06040a8c4906$import$f35500a7ba1578c4$9099ad97b570f7c(anchor))])
+    }), children);
+    if (variant === 'permanent') return(/*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $3b9d46ea5b57d6ee412b06040a8c4906$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes.docked, className),
+        ref: ref
+    }, other), drawer));
+    var slidingDrawer = /*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$2f8418d37d4320b9(TransitionComponent, $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        in: open,
+        direction: $3b9d46ea5b57d6ee412b06040a8c4906$var$oppositeDirection[anchor],
+        timeout: transitionDuration,
+        appear: mounted.current
+    }, SlideProps), drawer);
+    if (variant === 'persistent') return(/*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$2f8418d37d4320b9("div", $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $3b9d46ea5b57d6ee412b06040a8c4906$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes.docked, className),
+        ref: ref
+    }, other), slidingDrawer));
+     // variant === temporary
+    return(/*#__PURE__*/ $3b9d46ea5b57d6ee412b06040a8c4906$import$f02ba03fc070e88c$2f8418d37d4320b9($3b9d46ea5b57d6ee412b06040a8c4906$import$9a6e4303ec08c8ae$9099ad97b570f7c, $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        BackdropProps: $3b9d46ea5b57d6ee412b06040a8c4906$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        }, BackdropProps, BackdropPropsProp, {
+            transitionDuration: transitionDuration
+        }),
+        BackdropComponent: $3b9d46ea5b57d6ee412b06040a8c4906$import$3d8cb7f6d2419796$9099ad97b570f7c,
+        className: $3b9d46ea5b57d6ee412b06040a8c4906$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, classes.modal, className),
+        open: open,
+        onClose: onClose,
+        ref: ref
+    }, other, ModalProps), slidingDrawer));
+});
+var $3b9d46ea5b57d6ee412b06040a8c4906$export$9099ad97b570f7c = $3b9d46ea5b57d6ee412b06040a8c4906$import$abdf0c7fda13cc01$9099ad97b570f7c($3b9d46ea5b57d6ee412b06040a8c4906$export$1155669653ed4fad, {
+    name: 'MuiDrawer',
+    flip: false
+})($3b9d46ea5b57d6ee412b06040a8c4906$var$Drawer);

@@ -1,0 +1,27 @@
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:@babel/runtime/helpers/esm/extends";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:react";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:prop-types";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:clsx";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:../Paper";
+import   "e3d1ce1a5db2cc59d4abdd70f7fbb2b6:../styles/withStyles";
+var $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$export$1155669653ed4fad = {
+    /* Styles applied to the root element. */ root: {
+        overflow: 'hidden'
+    }
+};
+var $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$var$Card = /*#__PURE__*/ $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$f02ba03fc070e88c$ac92bb288368c37c(function Card(props, ref) {
+    var classes = props.classes, className = props.className, _props$raised = props.raised, raised = _props$raised === void 0 ? false : _props$raised, other = $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "classes",
+        "className",
+        "raised"
+    ]);
+    return(/*#__PURE__*/ $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$f02ba03fc070e88c$2f8418d37d4320b9($e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$881d8cc84965099$9099ad97b570f7c, $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        className: $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        elevation: raised ? 8 : 1,
+        ref: ref
+    }, other)));
+});
+var $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$export$9099ad97b570f7c = $e3d1ce1a5db2cc59d4abdd70f7fbb2b6$import$abdf0c7fda13cc01$9099ad97b570f7c($e3d1ce1a5db2cc59d4abdd70f7fbb2b6$export$1155669653ed4fad, {
+    name: 'MuiCard'
+})($e3d1ce1a5db2cc59d4abdd70f7fbb2b6$var$Card);

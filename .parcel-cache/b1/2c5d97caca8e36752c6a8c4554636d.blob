@@ -1,0 +1,50 @@
+import   "73820da149f60f5ba8ebb72d83d171dc:@babel/runtime/helpers/esm/extends";
+import   "73820da149f60f5ba8ebb72d83d171dc:@babel/runtime/helpers/esm/classCallCheck";
+import   "73820da149f60f5ba8ebb72d83d171dc:@babel/runtime/helpers/esm/createClass";
+import   "73820da149f60f5ba8ebb72d83d171dc:react";
+import   "73820da149f60f5ba8ebb72d83d171dc:jss";
+import   "73820da149f60f5ba8ebb72d83d171dc:../StylesProvider";
+import   "73820da149f60f5ba8ebb72d83d171dc:../createGenerateClassName";
+var $73820da149f60f5ba8ebb72d83d171dc$export$9099ad97b570f7c = /*#__PURE__*/ function() {
+    function ServerStyleSheets() {
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {
+        };
+        $73820da149f60f5ba8ebb72d83d171dc$import$4466a94fade54de4$9099ad97b570f7c(this, ServerStyleSheets);
+        this.options = options;
+    }
+    $73820da149f60f5ba8ebb72d83d171dc$import$b6c835cc85dadee3$9099ad97b570f7c(ServerStyleSheets, [
+        {
+            key: "collect",
+            value: function collect(children) {
+                // This is needed in order to deduplicate the injection of CSS in the page.
+                var sheetsManager = new Map(); // This is needed in order to inject the critical CSS.
+                this.sheetsRegistry = new $73820da149f60f5ba8ebb72d83d171dc$import$d20617c95de8a6c6$849184fbbeb73cbe(); // A new class name generator
+                var generateClassName = $73820da149f60f5ba8ebb72d83d171dc$import$7a3f14c0dc6dc8c0$9099ad97b570f7c();
+                return(/*#__PURE__*/ $73820da149f60f5ba8ebb72d83d171dc$import$f02ba03fc070e88c$9099ad97b570f7c.createElement($73820da149f60f5ba8ebb72d83d171dc$import$e369d104f66fd558$9099ad97b570f7c, $73820da149f60f5ba8ebb72d83d171dc$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                    sheetsManager: sheetsManager,
+                    serverGenerateClassName: generateClassName,
+                    sheetsRegistry: this.sheetsRegistry
+                }, this.options), children));
+            }
+        },
+        {
+            key: "toString",
+            value: function toString() {
+                return this.sheetsRegistry ? this.sheetsRegistry.toString() : '';
+            }
+        },
+        {
+            key: "getStyleElement",
+            value: function getStyleElement(props) {
+                return(/*#__PURE__*/ $73820da149f60f5ba8ebb72d83d171dc$import$f02ba03fc070e88c$9099ad97b570f7c.createElement('style', $73820da149f60f5ba8ebb72d83d171dc$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+                    id: 'jss-server-side',
+                    key: 'jss-server-side',
+                    dangerouslySetInnerHTML: {
+                        __html: this.toString()
+                    }
+                }, props)));
+            }
+        }
+    ]);
+    return ServerStyleSheets;
+}();

@@ -1,0 +1,12 @@
+import   "569edb5a6d6174f107e2db301e1c558e:@material-ui/styles";
+function $569edb5a6d6174f107e2db301e1c558e$export$9099ad97b570f7c(styles) {
+    // warning(
+    //   warnOnce,
+    //   [
+    //     'Material-UI: createStyles from @material-ui/core/styles is deprecated.',
+    //     'Please use @material-ui/styles/createStyles',
+    //   ].join('\n'),
+    // );
+    // warnOnce = true;
+    return $569edb5a6d6174f107e2db301e1c558e$import$c5d6394d37751b43$70b7e51d5a13618f(styles);
+}

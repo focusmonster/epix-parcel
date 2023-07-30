@@ -1,0 +1,115 @@
+import   "2bd802ba610ba8c5a6237a47c43f6985:@babel/runtime/helpers/esm/defineProperty";
+import   "2bd802ba610ba8c5a6237a47c43f6985:@babel/runtime/helpers/esm/extends";
+import   "2bd802ba610ba8c5a6237a47c43f6985:@babel/runtime/helpers/esm/objectWithoutProperties";
+import   "2bd802ba610ba8c5a6237a47c43f6985:react";
+import   "2bd802ba610ba8c5a6237a47c43f6985:prop-types";
+import   "2bd802ba610ba8c5a6237a47c43f6985:clsx";
+import   "2bd802ba610ba8c5a6237a47c43f6985:../styles/withStyles";
+import   "2bd802ba610ba8c5a6237a47c43f6985:../styles/useTheme";
+import   "2bd802ba610ba8c5a6237a47c43f6985:../utils/capitalize";
+var $2bd802ba610ba8c5a6237a47c43f6985$export$1155669653ed4fad = function styles(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            position: 'absolute',
+            bottom: 0,
+            right: 0,
+            top: -5,
+            left: 0,
+            margin: 0,
+            padding: '0 8px',
+            pointerEvents: 'none',
+            borderRadius: 'inherit',
+            borderStyle: 'solid',
+            borderWidth: 1,
+            overflow: 'hidden'
+        },
+        /* Styles applied to the legend element when `labelWidth` is provided. */ legend: {
+            textAlign: 'left',
+            padding: 0,
+            lineHeight: '11px',
+            // sync with `height` in `legend` styles
+            transition: theme.transitions.create('width', {
+                duration: 150,
+                easing: theme.transitions.easing.easeOut
+            })
+        },
+        /* Styles applied to the legend element. */ legendLabelled: {
+            display: 'block',
+            width: 'auto',
+            textAlign: 'left',
+            padding: 0,
+            height: 11,
+            // sync with `lineHeight` in `legend` styles
+            fontSize: '0.75em',
+            visibility: 'hidden',
+            maxWidth: 0.01,
+            transition: theme.transitions.create('max-width', {
+                duration: 50,
+                easing: theme.transitions.easing.easeOut
+            }),
+            '& > span': {
+                paddingLeft: 5,
+                paddingRight: 5,
+                display: 'inline-block'
+            }
+        },
+        /* Styles applied to the legend element is notched. */ legendNotched: {
+            maxWidth: 1000,
+            transition: theme.transitions.create('max-width', {
+                duration: 100,
+                easing: theme.transitions.easing.easeOut,
+                delay: 50
+            })
+        }
+    };
+};
+/**
+ * @ignore - internal component.
+ */ var $2bd802ba610ba8c5a6237a47c43f6985$var$NotchedOutline = /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$ac92bb288368c37c(function NotchedOutline(props, ref) {
+    var children = props.children, classes = props.classes, className = props.className, label = props.label, labelWidthProp = props.labelWidth, notched = props.notched, style = props.style, other = $2bd802ba610ba8c5a6237a47c43f6985$import$e114c77af6cc4d77$9099ad97b570f7c(props, [
+        "children",
+        "classes",
+        "className",
+        "label",
+        "labelWidth",
+        "notched",
+        "style"
+    ]);
+    var theme = $2bd802ba610ba8c5a6237a47c43f6985$import$d08d112fbc8a4e1d$9099ad97b570f7c();
+    var align = theme.direction === 'rtl' ? 'right' : 'left';
+    if (label !== undefined) return(/*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("fieldset", $2bd802ba610ba8c5a6237a47c43f6985$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        "aria-hidden": true,
+        className: $2bd802ba610ba8c5a6237a47c43f6985$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        ref: ref,
+        style: style
+    }, other), /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("legend", {
+        className: $2bd802ba610ba8c5a6237a47c43f6985$import$3e54c96927a352a4$9099ad97b570f7c(classes.legendLabelled, notched && classes.legendNotched)
+    }, label ? /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("span", null, label) : /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        dangerouslySetInnerHTML: {
+            __html: '&#8203;'
+        }
+    }))));
+    var labelWidth = labelWidthProp > 0 ? labelWidthProp * 0.75 + 8 : 0.01;
+    return(/*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("fieldset", $2bd802ba610ba8c5a6237a47c43f6985$import$b5eba6ed2ba96e9b$9099ad97b570f7c({
+        "aria-hidden": true,
+        style: $2bd802ba610ba8c5a6237a47c43f6985$import$b5eba6ed2ba96e9b$9099ad97b570f7c($2bd802ba610ba8c5a6237a47c43f6985$import$1a28daa4a80cb108$9099ad97b570f7c({
+        }, "padding".concat($2bd802ba610ba8c5a6237a47c43f6985$import$f35500a7ba1578c4$9099ad97b570f7c(align)), 8), style),
+        className: $2bd802ba610ba8c5a6237a47c43f6985$import$3e54c96927a352a4$9099ad97b570f7c(classes.root, className),
+        ref: ref
+    }, other), /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("legend", {
+        className: classes.legend,
+        style: {
+            // IE 11: fieldset with legend does not render
+            // a border radius. This maintains consistency
+            // by always having a legend rendered
+            width: notched ? labelWidth : 0.01
+        }
+    }, /*#__PURE__*/ $2bd802ba610ba8c5a6237a47c43f6985$import$f02ba03fc070e88c$2f8418d37d4320b9("span", {
+        dangerouslySetInnerHTML: {
+            __html: '&#8203;'
+        }
+    }))));
+});
+var $2bd802ba610ba8c5a6237a47c43f6985$export$9099ad97b570f7c = $2bd802ba610ba8c5a6237a47c43f6985$import$abdf0c7fda13cc01$9099ad97b570f7c($2bd802ba610ba8c5a6237a47c43f6985$export$1155669653ed4fad, {
+    name: 'PrivateNotchedOutline'
+})($2bd802ba610ba8c5a6237a47c43f6985$var$NotchedOutline);
