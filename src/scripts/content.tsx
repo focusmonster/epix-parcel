@@ -74,8 +74,8 @@ let waitForTableLoad = async () => {
   let configs = await api.GetAllConfigs();
   console.debug({ configs });
 
-  console.log(await api.GetTicketDetails({ ticketId: "30912" }));
-  console.log(await api.GetTicketComments({ ticketId: "30912" }));
+  // console.log(await api.GetTicketDetails({ ticketId: "30912" }));
+  // console.log(await api.GetTicketComments({ ticketId: "30912" }));
 
   GLOBALS.cancelKey = window.setInterval(() => {
     const table = document
